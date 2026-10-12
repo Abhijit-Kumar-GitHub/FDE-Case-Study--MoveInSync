@@ -6,6 +6,7 @@ pipeline that keeps answering **"How are our Play Store ratings?"** every day wi
 | | |
 |---|---|
 | **The recommendation** (start here) | [`docs/recommendation.md`](docs/recommendation.md) · [web](https://abhijit-kumar-github.github.io/FDE-Case-Study--MoveInSync/recommendation.html) · [PDF](docs/recommendation.pdf) |
+| **Slides** (9, with speaker notes) | [`docs/deck.pptx`](docs/deck.pptx) · [PDF](docs/deck.pdf) |
 | **Live dashboard** | https://abhijit-kumar-github.github.io/FDE-Case-Study--MoveInSync/ |
 | **Fix-first backlog** (imports into Jira or Linear) | [`docs/backlog.csv`](docs/backlog.csv) |
 | **Needs-review queue** | [`docs/needs_review.csv`](docs/needs_review.csv) |
@@ -150,6 +151,7 @@ src/analyze.py            store view, trends, versions (Wilson intervals), repli
 src/themes_metrics.py     journey heat map, attribution, clusters, gating evidence, impact model, rules eval
 src/report.py             dashboard, queue, digest, backlog.csv
 src/memo.py               recommendation.md -> HTML/PDF
+src/deck.js               slide deck from metrics.json (pptxgenjs)
 .claude/skills/           label-reviews · ratings-report · draft-replies
 data/                     raw reviews, daily snapshots, labels, metrics
 docs/                     GitHub Pages: dashboard, recommendation, backlog, queue, digest
