@@ -138,7 +138,7 @@ def digest(metrics, df, queue):
         recent_q = queue[pd.to_datetime(queue["date"]) > end - timedelta(days=28)]
         lines.append(f"- **Needs a person:** {len(recent_q)} new in the last 28 days "
                      f"({int(recent_q['reason'].str.contains('safety').sum())} safety) · {open_safety} safety items on file.")
-    lines += ["", "Dashboard: https://{owner}.github.io/moveinsync-playstore-ratings/ · "
+    lines += ["", f"Dashboard: {config.PAGES_URL} · "
               "Queue: needs_review.csv · Replies: reply_drafts.html · Method: README", ""]
     return "\n".join(lines)
 
@@ -148,6 +148,7 @@ def page(metrics, queue, digest_md):
     payload["queue_top"] = queue.head(15).to_dict("records") if not queue.empty else []
     payload["queue_counts"] = queue["reason"].str.split(", ").explode().value_counts().to_dict() if not queue.empty else {}
     payload["digest_md"] = digest_md
+    payload["repo_url"] = config.REPO_URL
     html = TEMPLATE.read_text(encoding="utf-8")
     blob = json.dumps(payload, default=str, ensure_ascii=False).replace("</", "<\\/")
     return html.replace("__METRICS_JSON__", blob)
@@ -226,7 +227,7 @@ def main(owner="OWNER"):
     replies = write_reply_queue(df)
     metrics["reply_queue"] = {"open": len(replies), "visible_unanswered": int((replies["visible_rank"] != "").sum()),
                               "drafted": int((replies["draft_reply"] != "").sum())}
-    md = digest(metrics, df, queue).replace("{owner}", owner)
+    md = digest(metrics, df, queue)
     (DOCS / "weekly_digest.md").write_text(md, encoding="utf-8")
     (DOCS / "index.html").write_text(page(metrics, queue, md), encoding="utf-8")
     import memo

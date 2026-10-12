@@ -3,6 +3,12 @@
 COUNTRY = "in"
 LANG = "en"
 
+# Where this project is published (links in the memo, dashboard and digest derive from these).
+GITHUB_OWNER = "Abhijit-Kumar-GitHub"
+REPO_NAME = "FDE-Case-Study--MoveInSync"
+REPO_URL = f"https://github.com/{GITHUB_OWNER}/{REPO_NAME}"
+PAGES_URL = f"https://{GITHUB_OWNER.lower()}.github.io/{REPO_NAME}/"
+
 # Primary subject of the analysis: the employee app (effectively "the" MoveInSync rating).
 PRIMARY_APP = "com.moveinsync.ets"
 

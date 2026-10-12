@@ -5,8 +5,8 @@ pipeline that keeps answering **"How are our Play Store ratings?"** every day wi
 
 | | |
 |---|---|
-| **The recommendation** (start here) | [`docs/recommendation.md`](docs/recommendation.md) · [web](https://OWNER.github.io/moveinsync-playstore-ratings/recommendation.html) · [PDF](docs/recommendation.pdf) |
-| **Live dashboard** | https://OWNER.github.io/moveinsync-playstore-ratings/ |
+| **The recommendation** (start here) | [`docs/recommendation.md`](docs/recommendation.md) · [web](https://abhijit-kumar-github.github.io/FDE-Case-Study--MoveInSync/recommendation.html) · [PDF](docs/recommendation.pdf) |
+| **Live dashboard** | https://abhijit-kumar-github.github.io/FDE-Case-Study--MoveInSync/ |
 | **Fix-first backlog** (imports into Jira or Linear) | [`docs/backlog.csv`](docs/backlog.csv) |
 | **Needs-review queue** | [`docs/needs_review.csv`](docs/needs_review.csv) |
 | **This week's digest** | [`docs/weekly_digest.md`](docs/weekly_digest.md), also posted weekly as a GitHub Issue |

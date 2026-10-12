@@ -83,9 +83,7 @@ def pymd_compat(md):
 
 
 def render(owner=None):
-    owner = owner or getattr(config, "GITHUB_OWNER", "OWNER")
-    dash = f"https://{owner}.github.io/moveinsync-playstore-ratings/"
-    repo = f"https://github.com/{owner}/moveinsync-playstore-ratings"
+    dash, repo = config.PAGES_URL, config.REPO_URL
     md = (DOCS / "recommendation.md").read_text(encoding="utf-8")
     md = md.replace("{{DASHBOARD_URL}}", dash).replace("{{REPO_URL}}", repo).replace("{{AUDIT_SENTENCE}}", audit_sentence())
     body = markdown.markdown(pymd_compat(md), extensions=["tables", "sane_lists"])
@@ -123,7 +121,7 @@ def render_docs():
     for src, title, desc in pages:
         p = DOCS / src
         if p.exists():
-            md = p.read_text(encoding="utf-8").replace("(../README.md)", "(https://github.com/" + getattr(config, "GITHUB_OWNER", "OWNER") + "/moveinsync-playstore-ratings#readme)")
+            md = p.read_text(encoding="utf-8").replace("(../README.md)", "(" + config.REPO_URL + "#readme)")
             (DOCS / src.replace(".md", ".html")).write_text(md_page(md, title, desc), encoding="utf-8")
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")
 
