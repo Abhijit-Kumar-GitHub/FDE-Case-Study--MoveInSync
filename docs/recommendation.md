@@ -218,7 +218,7 @@ The displayed store rating moves more slowly, because it includes about 115,000 
   - **Comparisons:** seven competitor apps and two driver apps.
   - **History:** archived copies of the listing (Wayback Machine) for the growth in rating count.
 - **Labelling:**
-  - **What was labelled:** 1,400 reviews, using a versioned prompt (`prompts/classify_v1.md`) with 30 journey codes, plus who would fix it, text sentiment and a safety flag.
+  - **What was labelled:** 1,400 reviews, using a versioned prompt (`prompts/classify_v1.md`, now v1.1) with 31 journey codes, plus who would fix it, text sentiment and a safety flag.
   - **Who labelled:** Claude (Opus 5.5, through Claude Code). {{AUDIT_SENTENCE}}
   - **What the audit changed:** it led to codebook v1.1. Routing complaints are now attributed to both MoveInSync's routing engine and operations, and home-address problems have their own code. All 1,400 labels were updated, and every change is recorded in `data/labels/human_overrides.csv`.
   - **The free fallback:** keyword rules are built for precision. On 420 reviews held out from their tuning, 86% of the themes they flag match the AI labels (0.90 or more for 5 of 10 themes). They catch 55% and leave the rest for a person. They also act as a second opinion for the review queue.
@@ -241,3 +241,4 @@ The displayed store rating moves more slowly, because it includes about 115,000 
 - **A7:** Only English reviews are analysed. Hindi-language reviews are negligible in volume.
 - **A8:** Google Play rounds to one decimal. The "about 3,600 extra 5★" figure treats the displayed distribution as raw counts. Google weights recent ratings and localises by country, so the figure is indicative only.
 - **A9:** Ratings differ by country storefront, while rating counts are global. India is used throughout.
+- **A10:** Scope is the employee app on Google Play, as the brief asks. The iOS App Store and the driver apps are not analysed; the Driver Partner app has only 46 ratings.

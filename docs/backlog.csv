@@ -21,7 +21,7 @@ Acceptance criteria: Every release uses staged rollout; halt criteria documented
 Success metric: No version with a significant 1-star regression reaches 100% rollout; stability share of negative reviews back under 15% within one quarter.
 
 Check on day 1: Pull per-version crash/ANR rates from Play Console for the last 10 releases and line them up against the release-watch table on the dashboard."
-REP-1,"Restart replying to reviews — visible ones first, with real fixes",High,play-ratings this-week,Support / CX,This week,S (about 1 hour a day),"Evidence: Reply rate fell from ~97% (98.6% of 1-star reviews in 2023) to 0.6% after June 2024. Safetrax replies to 100%, Routematic to 92%. 9 of the 10 reviews a visitor sees first are 1-2 stars and 9 are unanswered. 63% of past replies were identical templates.
+REP-1,"Restart replying to reviews — visible ones first, with real fixes",High,play-ratings this-week,Support / CX,This week,S (about 1 hour a day),"Evidence: Reply rate fell from ~97% (98.6% of 1-star reviews in 2023) to about 3% over the last 12 months, and 0.6% in the last 90 days. Safetrax replies to 100%, Routematic to 92%. 9 of the 10 reviews a visitor sees first are 1-2 stars and 9 are unanswered. 63% of past replies were identical templates.
 
 Likely cause: The reply programme lost its owner in mid-2024; nothing replaced it.
 

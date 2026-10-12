@@ -532,7 +532,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 </ul>
 </li>
 <li><strong>Labelling:</strong><ul>
-<li><strong>What was labelled:</strong> 1,400 reviews, using a versioned prompt (<code>prompts/classify_v1.md</code>) with 30 journey codes, plus who would fix it, text sentiment and a safety flag.</li>
+<li><strong>What was labelled:</strong> 1,400 reviews, using a versioned prompt (<code>prompts/classify_v1.md</code>, now v1.1) with 31 journey codes, plus who would fix it, text sentiment and a safety flag.</li>
 <li><strong>Who labelled:</strong> Claude (Opus 5.5, through Claude Code). A person checked 50 randomly chosen labels: 47 were right (94%) and 28 of 30 safety flags were confirmed.</li>
 <li><strong>What the audit changed:</strong> it led to codebook v1.1. Routing complaints are now attributed to both MoveInSync's routing engine and operations, and home-address problems have their own code. All 1,400 labels were updated, and every change is recorded in <code>data/labels/human_overrides.csv</code>.</li>
 <li><strong>The free fallback:</strong> keyword rules are built for precision. On 420 reviews held out from their tuning, 86% of the themes they flag match the AI labels (0.90 or more for 5 of 10 themes). They catch 55% and leave the rest for a person. They also act as a second opinion for the review queue.</li>
@@ -561,4 +561,5 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li><strong>A7:</strong> Only English reviews are analysed. Hindi-language reviews are negligible in volume.</li>
 <li><strong>A8:</strong> Google Play rounds to one decimal. The "about 3,600 extra 5★" figure treats the displayed distribution as raw counts. Google weights recent ratings and localises by country, so the figure is indicative only.</li>
 <li><strong>A9:</strong> Ratings differ by country storefront, while rating counts are global. India is used throughout.</li>
+<li><strong>A10:</strong> Scope is the employee app on Google Play, as the brief asks. The iOS App Store and the driver apps are not analysed; the Driver Partner app has only 46 ratings.</li>
 </ul></main></body></html>
