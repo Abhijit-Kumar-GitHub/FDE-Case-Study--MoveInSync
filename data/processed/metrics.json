@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-13T00:18:45",
+  "generated_at": "2026-10-12T19:08:29",
   "store": {
     "app_id": "com.moveinsync.ets",
     "displayed_score_exact": 4.6388,
     "displayed_score": 4.6,
     "ratings": 114880,
-    "text_reviews": 23624,
+    "text_reviews": 23625,
     "histogram": {
       "1": 7316,
       "2": 839,
@@ -71,7 +71,7 @@
       "role": "competitor",
       "score": 4.339,
       "displayed": 4.3,
-      "ratings": 34914,
+      "ratings": 34915,
       "installs": "1,000,000+",
       "reviews_90d": 243,
       "mean_90d": 3.56,
@@ -7323,7 +7323,7 @@
       {
         "rank": 7,
         "score": 1,
-        "date": "2019-09-16",
+        "date": "2019-09-15",
         "thumbs": 26,
         "text": "The worst experience I had with the transport company and also with the app. I never ever recommend anyone to download this app. There is no proper options to cancel the ride after 24 hrs. Multiple locations cannot be selected for bus transport. The service of the tranaport company is more than worst. I would suggest to remove the vendor and make some changes where employee can get the option to a",
         "replied": true
