@@ -7,3 +7,4 @@ __pycache__/
 data/scrape.log
 data/labels/queue/
 .env
+submission/
