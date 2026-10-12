@@ -1,0 +1,9 @@
+# Recruitment material: not ours to publish
+*.pdf
+!docs/*.pdf
+.venv/
+__pycache__/
+*.pyc
+data/scrape.log
+data/labels/queue/
+.env

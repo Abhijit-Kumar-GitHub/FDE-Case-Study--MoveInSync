@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play Store Ratings Monitor</title>
+<meta name="description" content="MoveInSync employee app — how the Play Store rating is doing, why, and what to fix first. Refreshed automatically.">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface-1: #fcfcfb; --surface-2: #f3f2ee;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --neutral: #b4b2aa;
+  --accent-wash: #e8f1fc; --critical: #d03b3b; --good-text: #006300; --warn-wash: #fdf3dd;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321;
+    --text-primary: #ffffff; --text-secondary: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --neutral: #5c5b56;
+    --accent-wash: #16263a; --critical: #e66767; --good-text: #0ca30c; --warn-wash: #2e2512;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321;
+  --text-primary: #ffffff; --text-secondary: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --neutral: #5c5b56;
+  --accent-wash: #16263a; --critical: #e66767; --good-text: #0ca30c; --warn-wash: #2e2512;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--text-primary);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 24px 16px 64px; }
+header h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+.sub { color: var(--text-secondary); margin: 0; }
+.links { margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.links a { color: var(--text-primary); text-decoration: none; border: 1px solid var(--border);
+  background: var(--surface-1); padding: 6px 12px; border-radius: 999px; font-size: 14px; }
+.links a.primary { background: var(--s1); color: #fff; border-color: transparent; }
+section { margin-top: 36px; }
+h2 { font-size: 19px; margin: 0 0 4px; }
+.lede { color: var(--text-secondary); margin: 0 0 14px; max-width: 760px; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.answer { border-left: 4px solid var(--s1); }
+.answer ul { margin: 8px 0 0; padding-left: 20px; }
+.answer li { margin: 4px 0; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.tile .label { color: var(--text-secondary); font-size: 13px; }
+.tile .value { font-size: 28px; font-weight: 600; margin-top: 2px; }
+.tile .note { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+.chart { width: 100%; min-height: 260px; }
+.chart-title { font-weight: 600; font-size: 14px; margin: 0 0 2px; }
+.chart-sub { color: var(--text-secondary); font-size: 13px; margin: 0 0 6px; }
+details { margin-top: 8px; }
+summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 600; white-space: nowrap; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); white-space: nowrap; }
+.pill.crit { color: var(--critical); border-color: var(--critical); }
+.stars { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.quote { color: var(--text-secondary); }
+.warnbox { background: var(--warn-wash); border-radius: 10px; padding: 12px 14px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+.themebtn { float: right; background: var(--surface-1); color: var(--text-secondary); border: 1px solid var(--border);
+  border-radius: 999px; padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; }
+@media (max-width: 600px) { header h1 { font-size: 22px; } .tile .value { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <button class="themebtn" id="themebtn" type="button">Theme</button>
+  <h1>MoveInSync · Play Store ratings</h1>
+  <p class="sub" id="subline"></p>
+  <nav class="links">
+    <a class="primary" href="recommendation.html">Read the recommendation</a>
+    <a href="backlog.csv">Fix-first backlog (CSV)</a>
+    <a href="needs_review.csv">Needs-review queue (CSV)</a>
+    <a href="weekly_digest.md">This week's digest</a>
+    <a id="repolink" href="#">Code &amp; method</a>
+  </nav>
+</header>
+
+<section>
+  <div class="card answer">
+    <h2>How are our ratings?</h2>
+    <div id="answer"></div>
+  </div>
+</section>
+
+<section>
+  <div class="tiles" id="tiles"></div>
+</section>
+
+<section>
+  <h2>Against the market</h2>
+  <p class="lede" id="bench-lede"></p>
+  <div class="card"><div id="c-bench" class="chart"></div>
+    <details><summary>Show as table</summary><div class="tablewrap" id="t-bench"></div></details></div>
+</section>
+
+<section>
+  <h2>What riders actually write</h2>
+  <p class="lede">The store number is carried by silent ratings (about 4 in 5 new ratings have no text). Written reviews — what people read — tell a harsher story. Monthly, India storefront, English.</p>
+  <div class="grid2">
+    <div class="card"><p class="chart-title">Average stars of written reviews</p><p class="chart-sub">Last 24 months</p><div id="c-mean" class="chart"></div></div>
+    <div class="card"><p class="chart-title">Share of written reviews that are 1★</p><p class="chart-sub">Last 24 months</p><div id="c-one" class="chart"></div></div>
+  </div>
+  <div class="card" style="margin-top:12px"><p class="chart-title">Share of reviews that got a developer reply</p>
+    <p class="chart-sub">Since 2022 — replies stopped in mid-2024; competitors reply to almost every review</p>
+    <div id="c-reply" class="chart"></div>
+    <details><summary>Show monthly table</summary><div class="tablewrap" id="t-monthly"></div></details></div>
+</section>
+
+<section>
+  <h2>Where in the journey it breaks</h2>
+  <p class="lede" id="journey-lede"></p>
+  <div class="card"><p class="chart-title">1–2★ written reviews mentioning each stage, last 12 months</p>
+    <p class="chart-sub">Colour = who would have to fix it. A review can mention more than one stage.</p>
+    <div id="c-journey" class="chart"></div>
+    <details><summary>Show as table</summary><div class="tablewrap" id="t-journey"></div></details></div>
+</section>
+
+<section>
+  <h2>What is changing</h2>
+  <p class="lede">Share of ≤3★ reviews mentioning each theme, by quarter. Stability complaints rose sharply in Q3 2026 while login complaints fell.</p>
+  <div class="card"><div id="c-trend" class="chart"></div>
+    <details><summary>Show as table</summary><div class="tablewrap" id="t-trend"></div></details></div>
+</section>
+
+<section>
+  <h2>Release watch</h2>
+  <p class="lede">One-star share of written reviews per app version (versions with ≥30 reviews, last 12 months), with 95% intervals. A version is flagged when its interval sits entirely above the 12-month baseline.</p>
+  <div class="card tablewrap" id="t-versions"></div>
+</section>
+
+<section>
+  <h2>Ticket-sized problems</h2>
+  <p class="lede">Specific, fixable issues found in the last 12 months of reviews.</p>
+  <div class="card tablewrap" id="t-clusters"></div>
+</section>
+
+<section>
+  <h2>What a visitor sees first</h2>
+  <p class="lede" id="visitor-lede"></p>
+  <div class="card tablewrap" id="t-visitor"></div>
+</section>
+
+<section>
+  <h2>Needs a person</h2>
+  <p class="lede" id="queue-lede"></p>
+  <div class="card tablewrap" id="t-queue"></div>
+</section>
+
+<section>
+  <h2>How this is built</h2>
+  <div class="card">
+    <p style="margin-top:0">Public Play Store data is pulled daily (<code>google-play-scraper</code>). Each new review is labelled once — journey stage, who would fix it, sentiment of the words, safety — using a versioned prompt (<code>prompts/classify_v1.md</code>). In production that prompt runs on Claude Sonnet 5.5 via the Batch API; this submission's labels were produced by Claude through Claude Code with the identical prompt and audited by a person. Keyword rules run free as a fallback and a second opinion; where they disagree, the review lands in the queue above.</p>
+    <p class="chart-sub" style="margin:10px 0 4px">How well the free keyword rules match the AI labels (per theme)</p>
+    <div class="tablewrap" id="t-rules"></div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+</div>
+
+<script>
+const M = __METRICS_JSON__;
+const $ = (id) => document.getElementById(id);
+const fmtPct = (x, d = 0) => (x == null ? "–" : (x * 100).toFixed(d) + "%");
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const stars = (n) => "★".repeat(n) + "☆".repeat(5 - n);
+
+function table(el, cols, rows) {
+  const head = cols.map((c) => `<th class="${c.num ? "num" : ""}">${esc(c.h)}</th>`).join("");
+  const body = rows.map((r) => "<tr>" + cols.map((c) => `<td class="${c.num ? "num" : ""}">${c.html ? c.f(r) : esc(c.f(r))}</td>`).join("") + "</tr>").join("");
+  $(el).innerHTML = `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+
+// ---------- text ----------
+const S = M.store, W = M.windows, T = M.themes || {};
+$("subline").textContent = `Employee app (${S.app_id}), India storefront · reviews through ${W.data_end} · refreshed ${M.generated_at.slice(0, 10)}`;
+$("answer").innerHTML = "<ul>" + M.digest_md.split("\n").filter((l) => l.startsWith("- ") || l.startsWith("**Store")).map((l) =>
+  "<li>" + esc(l.replace(/^- /, "")).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>") + "</li>").join("") + "</ul>";
+
+const vv = M.visitor_view || {};
+const tiles = [
+  {label: "Store rating (India)", value: S.displayed_score_exact.toFixed(2) + "★", note: `shows ${S.displayed_score} · ${S.ratings.toLocaleString()} ratings`},
+  {label: "Gap to showing " + (S.next_display_threshold + 0.05).toFixed(1), value: S.gap_to_threshold.toFixed(3), note: "Play rounds to one decimal"},
+  {label: "Written reviews, 12 months", value: W.last_365d.mean.toFixed(2) + "★", note: `${W.last_365d.n.toLocaleString()} reviews`},
+  {label: "1★ share, 12 months", value: fmtPct(W.last_365d.share_1star), note: "of written reviews"},
+  {label: "Developer reply rate, 90 days", value: fmtPct(M.replies.reply_rate_90d, 1), note: `was ${fmtPct(M.replies.reply_rate_all)} historically`},
+  {label: "Top 10 reviews a visitor sees", value: Math.round((vv.share_1_2star_top10 || 0) * 10) + " of 10", note: "are 1–2★ ('most relevant' sort)"},
+];
+$("tiles").innerHTML = tiles.map((t) => `<div class="card tile"><div class="label">${esc(t.label)}</div><div class="value">${esc(t.value)}</div><div class="note">${esc(t.note)}</div></div>`).join("");
+
+// ---------- charts ----------
+function tok() {
+  const cs = getComputedStyle(document.documentElement);
+  const g = (n) => cs.getPropertyValue(n).trim();
+  return {surface: g("--surface-1"), text: g("--text-primary"), text2: g("--text-secondary"), muted: g("--muted"),
+          grid: g("--grid"), axis: g("--axis"), s1: g("--s1"), s2: g("--s2"), s3: g("--s3"), s4: g("--s4"), neutral: g("--neutral")};
+}
+function base(t, extra = {}) {
+  return Object.assign({
+    paper_bgcolor: t.surface, plot_bgcolor: t.surface,
+    font: {family: 'system-ui, -apple-system, "Segoe UI", sans-serif', size: 12, color: t.text2},
+    margin: {l: 48, r: 24, t: 8, b: 36},
+    xaxis: {gridcolor: t.grid, linecolor: t.axis, zeroline: false, tickfont: {color: t.muted}},
+    yaxis: {gridcolor: t.grid, linecolor: t.axis, zeroline: false, tickfont: {color: t.muted}},
+    hoverlabel: {bgcolor: t.surface, bordercolor: t.axis, font: {color: t.text}},
+    showlegend: false,
+  }, extra);
+}
+const cfg = {displayModeBar: false, responsive: true};
+
+function lineChart(el, xs, ys, t, opts = {}) {
+  const tr = {x: xs, y: ys, type: "scatter", mode: "lines+markers", line: {color: t.s1, width: 2, shape: "linear"},
+              marker: {size: 6, color: t.s1, line: {color: t.surface, width: 2}},
+              hovertemplate: opts.hover || "%{x}: %{y}<extra></extra>"};
+  const last = {x: [xs[xs.length - 1]], y: [ys[ys.length - 1]], type: "scatter", mode: "markers+text",
+                marker: {size: 9, color: t.s1, line: {color: t.surface, width: 2}}, text: [opts.lastLabel ? opts.lastLabel(ys[ys.length - 1]) : ""],
+                textposition: "top left", textfont: {color: t.text}, hoverinfo: "skip"};
+  const layout = base(t, {yaxis: Object.assign(base(t).yaxis, opts.yaxis || {}), shapes: opts.shapes || [], annotations: opts.annotations || []});
+  Plotly.react(el, [tr, last], layout, cfg);
+}
+
+function render() {
+  const t = tok();
+  // Benchmark dot plot (dots, not bars, so the axis need not start at zero).
+  const bench = M.benchmark.filter((b) => b.score != null).sort((a, b) => a.score - b.score);
+  Plotly.react("c-bench", [{
+    x: bench.map((b) => b.score), y: bench.map((b) => b.name), type: "scatter", mode: "markers+text",
+    marker: {size: bench.map((b) => (b.role === "employee" ? 14 : 10)), color: bench.map((b) => (b.role === "employee" ? t.s1 : t.neutral)), line: {color: t.surface, width: 2}},
+    text: bench.map((b) => b.score.toFixed(2)), textposition: "middle right", textfont: {color: t.text},
+    customdata: bench.map((b) => [b.ratings, b.installs]),
+    hovertemplate: "<b>%{y}</b><br>%{x:.3f}★ · %{customdata[0]:,} ratings · %{customdata[1]} installs<extra></extra>",
+  }], base(t, {height: 300, margin: {l: 150, r: 40, t: 8, b: 36}, xaxis: Object.assign(base(t).xaxis, {range: [2.2, 5.0], title: {text: "Play Store rating (India)", font: {color: t.muted}}}),
+       shapes: [{type: "line", x0: 4.65, x1: 4.65, y0: -0.5, y1: bench.length - 0.5, line: {color: t.axis, width: 1}}],
+       annotations: [{x: 4.65, y: bench.length - 0.5, text: "shows 4.7 from here", showarrow: false, yanchor: "bottom", font: {color: t.muted, size: 11}}]}), cfg);
+
+  const mo = M.monthly.slice(-24);
+  lineChart("c-mean", mo.map((m) => m.month), mo.map((m) => m.mean), t,
+            {yaxis: {range: [3, 4.5]}, lastLabel: (v) => v.toFixed(2) + "★", hover: "%{x}: %{y:.2f}★<extra></extra>"});
+  lineChart("c-one", mo.map((m) => m.month), mo.map((m) => m.share_1star), t,
+            {yaxis: {tickformat: ".0%", range: [0, 0.4]}, lastLabel: (v) => fmtPct(v), hover: "%{x}: %{y:.1%}<extra></extra>"});
+  const rp = M.monthly.filter((m) => m.month >= "2022-01");
+  lineChart("c-reply", rp.map((m) => m.month), rp.map((m) => m.reply_rate), t,
+            {yaxis: {tickformat: ".0%", range: [0, 1.05]}, lastLabel: (v) => fmtPct(v, 1), hover: "%{x}: %{y:.1%} replied<extra></extra>"});
+
+  // Journey: stacked by attribution.
+  const order = ["J1", "J2", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "X1", "X2", "X3", "U"];
+  const fams = order.map((f) => (T.families || []).find((r) => r.family === f)).filter((r) => r && r.mentions >= 3).reverse();
+  const kinds = [["app", "App", t.s1], ["ops", "Transport service", t.s2], ["policy", "Employer policy", t.s3], ["mixed", "Mixed", t.neutral], ["none", "Unclear", t.grid]];
+  const traces = kinds.map(([k, name, color]) => ({
+    type: "bar", orientation: "h", name, y: fams.map((r) => r.label), x: fams.map((r) => Math.round(r.mentions * (r.attribution[k] || 0))),
+    marker: {color, line: {color: t.surface, width: 2}}, hovertemplate: `%{y}<br>${name}: %{x}<extra></extra>`,
+  }));
+  traces.push({type: "scatter", mode: "text", y: fams.map((r) => r.label), x: fams.map((r) => r.mentions), text: fams.map((r) => " " + r.mentions + " · " + fmtPct(r.share_mentions)),
+               textposition: "middle right", textfont: {color: t.text}, hoverinfo: "skip", showlegend: false});
+  Plotly.react("c-journey", traces, base(t, {barmode: "stack", bargap: 0.38, height: 40 + fams.length * 34, showlegend: true,
+    legend: {orientation: "h", y: 1.08, x: 0, font: {color: t.text2}}, margin: {l: 190, r: 70, t: 30, b: 30},
+    xaxis: Object.assign(base(t).xaxis, {range: [0, Math.max(...fams.map((r) => r.mentions)) * 1.22], title: {text: "1–2★ reviews (12 months)", font: {color: t.muted}}})}), cfg);
+
+  // Quarterly theme shares.
+  const q = T.quarterly_trend || [];
+  const series = [["X1", "App stability & speed", t.s1], ["J1", "Onboarding & login", t.s2], ["X2", "UI & interruptions", t.s3], ["J3", "Self-booking", t.s4]];
+  Plotly.react("c-trend", series.map(([k, name, color]) => ({
+    type: "scatter", mode: "lines+markers", name, x: q.map((r) => r.quarter), y: q.map((r) => r[k]),
+    line: {color, width: 2}, marker: {size: 8, color, line: {color: t.surface, width: 2}},
+    hovertemplate: `${name}<br>%{x}: %{y:.0%}<extra></extra>`,
+  })), base(t, {height: 320, showlegend: true, legend: {orientation: "h", y: 1.12, x: 0}, margin: {l: 48, r: 24, t: 30, b: 36},
+                yaxis: Object.assign(base(t).yaxis, {tickformat: ".0%", rangemode: "tozero"})}), cfg);
+}
+
+// ---------- tables ----------
+table("t-bench", [{h: "App", f: (b) => b.name}, {h: "Rating", num: 1, f: (b) => b.score?.toFixed(3) ?? "–"}, {h: "Ratings", num: 1, f: (b) => b.ratings?.toLocaleString() ?? "–"},
+                  {h: "Installs", f: (b) => b.installs ?? "–"}, {h: "Written 90d avg", num: 1, f: (b) => b.mean_90d ?? "–"}, {h: "Reply rate 90d", num: 1, f: (b) => fmtPct(b.reply_rate_90d)}],
+      M.benchmark.filter((b) => b.score != null));
+const others = M.benchmark.filter((b) => b.role === "competitor" && b.score != null);
+const higher = others.filter((b) => b.score > S.displayed_score_exact).length;
+const totalOthers = others.reduce((a, b) => a + (b.ratings || 0), 0);
+$("bench-lede").textContent = `MoveInSync ranks #${higher + 1} of ${others.length + 1} employee-commute apps on rating and has more ratings (${S.ratings.toLocaleString()}) than the other ${others.length} combined (${totalOthers.toLocaleString()}). It is ${S.gap_to_threshold.toFixed(3)} stars from showing ${(S.next_display_threshold + 0.05).toFixed(1)}.`;
+
+table("t-monthly", [{h: "Month", f: (m) => m.month}, {h: "Reviews", num: 1, f: (m) => m.reviews}, {h: "Avg ★", num: 1, f: (m) => m.mean.toFixed(2)},
+                    {h: "1★ share", num: 1, f: (m) => fmtPct(m.share_1star, 1)}, {h: "Reply rate", num: 1, f: (m) => fmtPct(m.reply_rate, 1)}], M.monthly.slice(-36).reverse());
+
+if (T.families) {
+  const spec = T.attribution_1_2star_specific || {};
+  $("journey-lede").textContent = `Of 1–2★ reviews that name a specific problem, ${fmtPct(spec.app)} are about the app itself, ${fmtPct(spec.ops)} about the transport service and ${fmtPct(spec.policy)} about employer rules. A late cab — the obvious suspect — appears in only ${fmtPct(T.named_failures.late_cab.share, 1)} of them. ${fmtPct(T.share_unclear_1_2star)} are too vague to place ("worst app").`;
+  table("t-journey", [{h: "Stage", f: (r) => r.label}, {h: "Mentions", num: 1, f: (r) => r.mentions}, {h: "Share of 1–2★", num: 1, f: (r) => fmtPct(r.share_mentions, 1)},
+                      {h: "App", num: 1, f: (r) => fmtPct(r.attribution.app)}, {h: "Ops", num: 1, f: (r) => fmtPct(r.attribution.ops)}, {h: "Policy", num: 1, f: (r) => fmtPct(r.attribution.policy)}], T.families);
+  table("t-trend", [{h: "Quarter", f: (r) => r.quarter}, {h: "n", num: 1, f: (r) => r.n}, {h: "Stability", num: 1, f: (r) => fmtPct(r.X1)}, {h: "Login", num: 1, f: (r) => fmtPct(r.J1)},
+                    {h: "UI & interruptions", num: 1, f: (r) => fmtPct(r.X2)}, {h: "Booking", num: 1, f: (r) => fmtPct(r.J3)}], T.quarterly_trend);
+  const cl = Object.entries(T.clusters).map(([k, v]) => ({k, ...v})).sort((a, b) => b.n_12m - a.n_12m);
+  table("t-clusters", [{h: "Problem", f: (c) => c.description}, {h: "Reviews (12m)", num: 1, f: (c) => c.n_12m}, {h: "of which 1–2★", num: 1, f: (c) => c.n_12m_1_2star},
+                       {h: "Example", html: 1, f: (c) => c.quotes[0] ? `<span class="quote">“${esc(c.quotes[0].text.slice(0, 180))}${c.quotes[0].text.length > 180 ? "…" : ""}”</span>` : ""}], cl);
+}
+
+const start = T.window ? T.window.start : "0000";
+const vers = M.versions.versions.filter((v) => v.first_seen >= start);
+const base1 = W.last_365d.share_1star;
+table("t-versions", [{h: "Version", f: (v) => v.version}, {h: "First seen", f: (v) => v.first_seen}, {h: "Reviews", num: 1, f: (v) => v.n}, {h: "Avg ★", num: 1, f: (v) => v.mean.toFixed(2)},
+                     {h: "1★ share (95% CI)", num: 1, f: (v) => `${fmtPct(v.share_1star)} (${fmtPct(v.share_1star_ci[0])}–${fmtPct(v.share_1star_ci[1])})`},
+                     {h: "", html: 1, f: (v) => v.share_1star_ci[0] > base1 ? '<span class="pill crit">⚠ regression</span>' : (v.share_1star > base1 + 0.05 ? '<span class="pill">watch</span>' : "")}],
+      vers.slice().reverse());
+
+$("visitor-lede").textContent = `Play shows reviews by "most relevant" by default. Right now ${Math.round((vv.share_1_2star_top10 || 0) * 10)} of the first 10 are 1–2★ and ${vv.top10 ? vv.top10.filter((r) => !r.replied).length : "–"} have no reply. Answering these — with a fix, not a template — is the cheapest visible win.`;
+table("t-visitor", [{h: "#", num: 1, f: (r) => r.rank}, {h: "Stars", html: 1, f: (r) => `<span class="stars">${stars(r.score)}</span>`}, {h: "Date", f: (r) => r.date},
+                    {h: "👍", num: 1, f: (r) => r.thumbs}, {h: "Replied", f: (r) => (r.replied ? "yes" : "no")}, {h: "Review", html: 1, f: (r) => `<span class="quote">${esc(r.text.slice(0, 220))}${r.text.length > 220 ? "…" : ""}</span>`}], vv.top10 || []);
+
+const qc = M.queue_counts || {};
+$("queue-lede").textContent = `Reviews the pipeline hands to a person: safety reports (always, ${qc.safety || 0} on file), stars that contradict the words (${qc.mismatch || 0}), reviews the AI could not place (${(qc.unclear || 0) + (qc["possible miss"] || 0)}), and new reviews the free rules could not place. The full list is in needs_review.csv.`;
+table("t-queue", [{h: "Reason", html: 1, f: (r) => `<span class="pill ${r.reason.startsWith("safety") ? "crit" : ""}">${esc(r.reason)}</span>`}, {h: "Date", f: (r) => r.date},
+                  {h: "Stars", html: 1, f: (r) => `<span class="stars">${stars(r.stars)}</span>`}, {h: "Review", html: 1, f: (r) => `<span class="quote">${esc(r.text.slice(0, 200))}${r.text.length > 200 ? "…" : ""}</span>`}, {h: "Owner", f: (r) => r.owner}],
+      M.queue_top || []);
+
+if (M.rules_eval) table("t-rules", [{h: "Theme", f: (r) => r.label}, {h: "AI-labelled", num: 1, f: (r) => r.ai_n}, {h: "Precision", num: 1, f: (r) => r.precision ?? "–"}, {h: "Recall", num: 1, f: (r) => r.recall ?? "–"}], M.rules_eval.by_family);
+
+$("footer").textContent = `Generated ${M.generated_at} from public Google Play data. Ratings are storefront-specific (this page uses India); written-review figures cover reviews with text in English. Assumptions are listed in the recommendation.`;
+$("repolink").href = M.repo_url || "#";
+
+// theme toggle
+const root = document.documentElement;
+$("themebtn").addEventListener("click", () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  render();
+});
+try { const s = localStorage.getItem("theme"); if (s) root.dataset.theme = s; } catch (e) {}
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+render();
+</script>
+</body>
+</html>

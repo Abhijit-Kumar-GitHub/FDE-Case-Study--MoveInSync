@@ -1,0 +1,150 @@
+{
+  "prompt_version": "v1",
+  "codes": {
+    "stages": {
+      "J1.otp": "Login OTP/verification code not received, late, or expired",
+      "J1.session": "Logged out repeatedly, forced to log in/OTP every time, SSO re-login, falls back to a web login page",
+      "J1.other": "Other onboarding: registration, company access/subscription denied, profile or home address set-up",
+      "J2": "Roster & shift: shift schedule, roster not updated, shift times wrong",
+      "J3.fail": "Self-booking fails: error, stuck, booking not saved or not going through, booked trip disappears, no trips available to book",
+      "J3.window": "Self-booking blocked by rules: booking window closed, cut-off time, must book days ahead, not allowed to cancel late",
+      "J3.steps": "Self-booking effort: too many steps, confusing booking flow, unclear whether booking succeeded, must book repeatedly",
+      "J3.modify": "Changing a booking: cancel, reschedule, change pickup address/time for a trip",
+      "J3.other": "Other booking problem not covered above",
+      "J4.route": "Routing & pooling: wrong or long route, detours, illogical pickup order, unrelated co-passengers clubbed",
+      "J4.time": "Pickup time: too early, long total travel time, pickup time keeps changing",
+      "J4.alloc": "Allocation: cab not assigned, assigned too late, no cab available",
+      "J5.missing": "Notifications missing/late/wrong: pickup time or cab details not shared, wrong 'not booked' alerts",
+      "J5.noise": "Too many or irrelevant notifications and alerts",
+      "J6": "Live tracking & trip visibility: GPS lag, vehicle location wrong, ETA wrong, map not updating, can't see co-passengers/sequence",
+      "J7.late": "Cab late, did not wait, or never came",
+      "J7.board": "Boarding: OTP/QR at pickup, check-in, driver verification problems",
+      "J7.noshow": "Wrongly marked as no-show/absent, or penalised (e.g. return trip auto-cancelled) after a no-show",
+      "J7.contact": "Cannot contact the driver: in-app call fails, no chat option, driver unreachable",
+      "J8.driver": "Driver behaviour: rude, unprofessional, rash driving, does not follow route",
+      "J8.vehicle": "Vehicle: condition, AC, cleanliness, wrong vehicle type",
+      "J8.drop": "Drop: wrong drop point, dropped far from home, drop delays",
+      "J9": "Issue reporting & resolution: helpdesk unreachable, complaints ignored, no status on raised requests, rude transport team",
+      "X1.crash": "Stability: crashes, freezes, won't open, stuck loading, broken after update, device incompatibility",
+      "X1.slow": "Performance: slow loading, lag, heavy app, battery or data drain",
+      "X2.design": "UI/UX: confusing interface, redesign made it worse, hard to find features, too many screens",
+      "X2.interrupt": "Interruptions: terms to accept on every open, launch banners/pop-ups, forced trip rating or feedback before access, repeated rating requests",
+      "X3": "Workplace features: desk booking, meeting rooms, office attendance, parking",
+      "P": "Praise or general positive with no specific problem",
+      "U": "Unclear, irrelevant, or too vague to place (e.g. 'worst app' with nothing else)"
+    },
+    "attribution": {
+      "app": "The app itself is at fault (bug, crash, design, missing feature, tracking accuracy)",
+      "ops": "The transport service is at fault (cab late, driver, vehicle, routing decisions by the ops team)",
+      "policy": "A rule set by the employer is the cause (cut-off times, booking windows, eligibility, roster rules)",
+      "mixed": "Clearly more than one of app / ops / policy",
+      "none": "No complaint (praise, neutral, or unclear)"
+    },
+    "sentiment": {
+      "pos": "Text is positive",
+      "neg": "Text is negative",
+      "mixed": "Text has both clear praise and clear complaint",
+      "neu": "Neutral or no opinion"
+    }
+  },
+  "label_line": {
+    "i": "integer — the review's local id in the chunk",
+    "st": "list of 1-3 stage codes, most important first",
+    "d": "string, <= 8 words — the specific issue in plain words",
+    "a": "attribution code",
+    "se": "sentiment of the TEXT ONLY, ignoring the star rating",
+    "sf": "boolean — true if the review describes a personal-safety risk"
+  },
+  "json_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "labels"
+    ],
+    "properties": {
+      "labels": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "i",
+            "st",
+            "d",
+            "a",
+            "se",
+            "sf"
+          ],
+          "properties": {
+            "i": {
+              "type": "integer"
+            },
+            "st": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "J1.otp",
+                  "J1.session",
+                  "J1.other",
+                  "J2",
+                  "J3.fail",
+                  "J3.window",
+                  "J3.steps",
+                  "J3.modify",
+                  "J3.other",
+                  "J4.route",
+                  "J4.time",
+                  "J4.alloc",
+                  "J5.missing",
+                  "J5.noise",
+                  "J6",
+                  "J7.late",
+                  "J7.board",
+                  "J7.noshow",
+                  "J7.contact",
+                  "J8.driver",
+                  "J8.vehicle",
+                  "J8.drop",
+                  "J9",
+                  "X1.crash",
+                  "X1.slow",
+                  "X2.design",
+                  "X2.interrupt",
+                  "X3",
+                  "P",
+                  "U"
+                ]
+              }
+            },
+            "d": {
+              "type": "string"
+            },
+            "a": {
+              "type": "string",
+              "enum": [
+                "app",
+                "ops",
+                "policy",
+                "mixed",
+                "none"
+              ]
+            },
+            "se": {
+              "type": "string",
+              "enum": [
+                "pos",
+                "neg",
+                "mixed",
+                "neu"
+              ]
+            },
+            "sf": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  }
+}

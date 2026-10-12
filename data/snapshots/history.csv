@@ -1,0 +1,12 @@
+date,app_id,score,ratings,reviews,stars_1,stars_2,stars_3,stars_4,stars_5
+2026-10-12,com.moveinsync.ets,4.638811,114880.0,23624.0,7316,839,1224,7253,98242
+2026-10-12,com.moveinsync.publictransit,,,,0,0,0,0,0
+2026-10-12,com.moveinsync.driver.dco,3.5,46.0,7.0,14,1,3,4,24
+2026-10-12,com.moveinsync.driver.lite,4.25,703.0,111.0,91,21,21,56,512
+2026-10-12,in.mtap.iincube.safetrax.commuter,4.719568,24144.0,1645.0,922,149,310,2006,20753
+2026-10-12,com.routematic.employee,4.338831,34914.0,7165.0,2686,807,2009,5889,23517
+2026-10-12,in.iincube.commuter,4.556604,1064.0,62.0,70,0,40,110,842
+2026-10-12,com.agiledge.myatom,3.49,253.0,109.0,80,7,2,30,131
+2026-10-12,in.smarttransport.emp,3.1747572,835.0,334.0,275,56,80,88,331
+2026-10-12,com.app.newt.employee,2.8138075,4865.0,1741.0,2319,223,213,253,1851
+2026-10-12,com.proficio.commute,2.52,609.0,256.0,310,60,30,24,182

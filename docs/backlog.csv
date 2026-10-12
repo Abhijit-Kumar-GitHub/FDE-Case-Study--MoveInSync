@@ -1,0 +1,155 @@
+﻿Issue key,Summary,Priority,Labels,Component,Horizon,Effort (assumed),Description
+INT-1,Stop false 'not installed from Play Store' lock-outs,Highest,play-ratings this-week,Android engineering,This week,S (2-4 days),"Evidence: 11 reviews in 12 months (9 of them 1-2 stars), 9 of those in Jul-Sep 2026 alone. Riders reinstall every few days; one reinstalled 10 times in 3 weeks. Same failure class as the 2023 'cannot open on a rooted device' wave (false root detection).
+
+Likely cause: An installer/integrity check treats legitimate installs as sideloaded after app auto-updates, device restores or app-data clears (installer package name missing or Play Integrity verdict not yet available), and blocks the app instead of degrading.
+
+Change: Make the integrity check fail-open with server-side logging for 2 releases: never block launch on an inconclusive verdict; show a soft banner only when Play Integrity returns a definite UNRECOGNIZED_VERSION. Add a remote kill-switch for the check.
+
+Acceptance criteria: No launch is blocked when the installer is com.android.vending or the verdict is unavailable; kill-switch flips without a release; telemetry counts every would-have-blocked event by device/OS.
+
+Success metric: Integrity-related reviews: 9 last quarter -> 0 next quarter; crash-free/launch-success rate for 12.19+ back to pre-12.16 level.
+
+Check on day 1: Play Console > Android vitals for 12.16-12.19: startup failures by device; grep backend logs for integrity-check rejections and their verdict codes."
+REL-1,Gate releases on crash and review signals (staged rollout + automatic halt),Highest,play-ratings this-week,Engineering release owner,This week,"M (1 week setup, then routine)","Evidence: Stability complaints went from ~13% to 25% of <=3-star reviews in Q3 2026. Versions 12.16.0 (32%), 12.17.0 (22%) and 12.19.0 (31%) carry them; 12.19.0's 1-star share is 31% (95% CI 23-41%) vs a 24% baseline.
+
+Likely cause: Releases go to 100% before crash and review signals have time to show; regressions then sit in production for weeks.
+
+Change: Ship via Play staged rollout (5% -> 20% -> 100% over 7 days). Halt automatically if user-perceived crash rate or ANR rate exceeds the previous version by >20%, or the ratings monitor flags the version's 1-star share above baseline (this repo's release-watch rule).
+
+Acceptance criteria: Every release uses staged rollout; halt criteria documented and wired to an alert; release-watch line appears in the weekly digest.
+
+Success metric: No version with a significant 1-star regression reaches 100% rollout; stability share of negative reviews back under 15% within one quarter.
+
+Check on day 1: Pull per-version crash/ANR rates from Play Console for the last 10 releases and line them up against the release-watch table on the dashboard."
+REP-1,"Restart replying to reviews — visible ones first, with real fixes",High,play-ratings this-week,Support / CX,This week,S (about 1 hour a day),"Evidence: Reply rate fell from ~97% (98.6% of 1-star reviews in 2023) to 0.6% after June 2024. Safetrax replies to 100%, Routematic to 92%. 9 of the 10 reviews a visitor sees first are 1-2 stars and 9 are unanswered. 63% of past replies were identical templates.
+
+Likely cause: The reply programme lost its owner in mid-2024; nothing replaced it.
+
+Change: Reply to every 1-3 star review within 48 hours, starting with the 'most relevant' top 20. Each reply names the issue, gives the fix or workaround (e.g. 'update to 12.20 fixes the install error'), and offers a channel. Re-reply when a fix ships — riders can update their rating.
+
+Acceptance criteria: Owner named; reply SLA tracked in the weekly digest; template library per top issue (login, install error, booking, tracking) with mandatory personalisation.
+
+Success metric: Reply rate on 1-3 star reviews >= 90% within 48h; top-10 visible reviews all answered; share of rating updates after reply (Play Console).
+
+Check on day 1: Find out who owned replies until June 2024 and why it stopped; get Play Console reply access for Support."
+RAT-1,Remove the forced trip-rating wall and check the rating flow against Google Play policy,High,play-ratings this-week,Product (rider app) + Legal,This week,S (2-3 days),"Evidence: 23 reviews in 12 months complain about forced or repeated rating prompts ('can't see my current ride until I rate the last one', 'no skip option'). One rider cut their store rating from 5 to 3 because of it. One review says the rating step offers only 4-5 stars (16 Jul 2026, v12.15.0); another says it was 'not accepting until I gave 5 star' (Dec 2025); another asks to stop Play Store review prompts after every ride (24 Jul 2026).
+
+Likely cause: A mandatory in-app trip rating blocks the trip screen; a pre-prompt may route only happy riders to the Play Store. If so, that is 'review gating', which Google Play policy prohibits and which puts the store rating itself at risk.
+
+Change: Make trip rating skippable and never block the trip/OTP screen. If any in-app step precedes the Play Store prompt, remove star pre-filtering: everyone who is asked sees the same, unfiltered Play In-App Review dialog. Cap prompts (see ASK-1).
+
+Acceptance criteria: Trip screen reachable without rating; no code path decides who sees the Play prompt based on a rating they gave; Legal sign-off on the flow.
+
+Success metric: Forced-rating complaints -> 0; no Play policy warnings.
+
+Check on day 1: Walk through the rating flow on a test account; read the code that triggers the Play review request."
+SAFE-1,Route safety reports in reviews to the safety desk within 24 hours,High,play-ratings this-week,Safety desk,This week,S (process),"Evidence: 24 reviews in 12 months describe a safety risk (harassment, rash driving, women dropped alone at night, SOS blocked by pop-ups or forced logouts). Today they sit unanswered on a public page.
+
+Likely cause: Reviews are not monitored, so safety reports that never reached the in-app SOS/grievance flow are lost.
+
+Change: The ratings monitor already flags these (needs_review.csv, reason 'safety'). The safety desk triages daily, contacts the rider via a reply, and links to the incident process.
+
+Acceptance criteria: Daily triage owner; every safety-flagged review has a reply and an incident reference within 24h.
+
+Success metric: 100% of safety-flagged reviews actioned within 24h.
+
+Check on day 1: Review the 30 safety-flagged reviews on file; check which already have incidents."
+LOG-1,Keep riders signed in,High,play-ratings 30-days,Backend / identity + Android,30 days,M (2-3 weeks),"Evidence: Forced re-login is 5.9% of 1-2 star reviews (45 in 12 months), peaking at 27% of <=3-star reviews in Oct 2025 (v12.6). Riders get logged out while the cab is waiting and lose access to the OTP and driver details; OTP-at-every-open is described at 4:30 AM.
+
+Likely cause: Short access-token lifetime without silent refresh, and session invalidation on network loss or app update; for SSO clients, re-auth policy applied on every launch.
+
+Change: Silent token refresh with long-lived refresh tokens (e.g. 30 days, per-client configurable); never log out on network loss; keep the last trip card (cab, OTP, driver) cached and viewable offline; biometric unlock instead of OTP on re-entry.
+
+Acceptance criteria: A rider who opened the app in the last 30 days opens straight to the trip card; the trip card works in airplane mode for the current trip.
+
+Success metric: Session-related reviews -> under 1% of negative reviews; OTP requests per active user per week down by >= 70%.
+
+Check on day 1: Check access/refresh token TTLs and which clients force SSO re-auth; count OTP sends per user per week."
+LOG-2,Make OTP login reliable and say why it fails,High,play-ratings 30-days,Backend / identity,30 days,M (2 weeks),"Evidence: OTP not arriving is 6.4% of 1-2 star reviews (49 in 12 months) — 'no OTP on SMS, email or WhatsApp', 'tried 50 times'. Another 3.4% are other login failures ('user not present in system', 'No Active Subscription') with no explanation.
+
+Likely cause: SMS delivery failures on some operators plus unregistered numbers silently getting no OTP; error states not surfaced to the rider.
+
+Change: Tell the rider immediately if the number/email is not registered and who to contact (their company's transport desk); auto-fallback SMS -> WhatsApp -> email with delivery status; rate-limit with a visible timer; alert when OTP delivery success drops below 97% per operator.
+
+Acceptance criteria: Every login failure shows a specific reason and next step; delivery dashboard by channel/operator.
+
+Success metric: OTP/login reviews down 70%; OTP delivery success >= 98%.
+
+Check on day 1: Pull OTP delivery success by operator/channel for the last 90 days; list login error codes and how often each is shown."
+BOOK-1,Make self-booking unambiguous,High,play-ratings 30-days,Product (rider app),30 days,M (2-3 weeks),"Evidence: Self-booking — the step the business depends on — is 10.5% of 1-2 star reviews (81 in 12 months): bookings failing or vanishing (26), changing/cancelling (20), extra steps (13), cut-off rules (13). Since 12.14 'booking is a 2-step process; I thought I had booked but hadn't'; the booking date auto-jumps to the wrong day; editing silently cancels schedules.
+
+Likely cause: The 2026 booking redesign removed a clear success state and introduced defaults (date auto-advance, auto-suggested rosters) that riders don't notice.
+
+Change: One clear confirmation screen + push/SMS receipt for every booking/cancellation; no automatic date change; edit a booking without cancelling it; show 'waitlisted' vs 'confirmed' explicitly; AM/PM on every time.
+
+Acceptance criteria: Every booking state change produces a visible confirmation and a receipt; usability test: 5/5 riders correctly say whether they are booked.
+
+Success metric: Booking-related share of negative reviews from 10.5% to under 5%; booking-to-trip conversion and booking-support tickets (internal).
+
+Check on day 1: Funnel analytics for the booking flow before/after 12.14; booking API error rate by client."
+BOOK-2,Explain employer rules in the app instead of failing silently,Medium,play-ratings 30-days,Product (rider app),30 days,S (1 week),"Evidence: Cut-off and window rules (book 8/12/48 hours ahead, cancel before X, waitlist rules, post-midnight logout limits) cause 13+ negative reviews and several 'the app said cancelled but transport says I missed the cut-off' disputes. The app is blamed for rules the employer set.
+
+Likely cause: Rules are configured per client but not shown at the moment they bite.
+
+Change: Show the rule and the deadline inline ('Your company's cut-off for this trip is 6:00 PM today'), and block an action with the reason instead of accepting it and reversing later.
+
+Acceptance criteria: Every rule-based rejection names the rule, its owner (your company's transport policy) and the next valid option.
+
+Success metric: Policy-attributed and 'mixed' booking complaints halved.
+
+Check on day 1: List the rule types configurable per client and which ones produce silent failures."
+INT-2,"Clear the path to the trip card: terms once, no blocking banners, permissions on demand",Medium,play-ratings 30-days,Product (rider app),30 days,S (1 week),"Evidence: Interruptions are 5.2% of 1-2 star reviews: terms/transport policy accepted 'more than 500 times', full-screen banners on every launch, microphone permission nagging, a seat-belt confirmation placed in front of the boarding OTP, pop-ups that can't be closed (one rider notes they cover the SOS button).
+
+Likely cause: Acceptance state not persisted; marketing/comms banners treated as blocking modals; permissions requested at launch rather than at use.
+
+Change: Ask for terms once per terms version; banners non-blocking and dismissible for good; request microphone only when the rider taps Call; show the OTP first and the seat-belt reminder beside it; never cover SOS.
+
+Acceptance criteria: Cold start to trip card in <= 1 tap for a returning rider; no modal on launch unless legally required and not yet accepted.
+
+Success metric: Interruption complaints -> near zero; time-to-trip-card (analytics).
+
+Check on day 1: Record a cold start on a returning account and count taps/modals before the trip card."
+TRK-1,Make tracking and ETAs trustworthy,Medium,play-ratings 90-days,Android + driver app + routing,90 days,L (4-6 weeks),"Evidence: Live tracking/ETA is 8.8% of 1-2 star reviews (stale positions for 20-30 minutes, ETA jumping from 5 to 30 minutes, map zoom resetting every 20-30 seconds, co-rider sequence removed). Notifications that are missing or wrong add 4.6%.
+
+Likely cause: Driver-device location gaps (background limits, battery optimisation) plus ETA computed from schedule rather than live position; UI resets zoom on refresh.
+
+Change: Show the timestamp of the last position and a 'location delayed' state instead of a confident wrong dot; ETA from live position + traffic; keep the user's zoom; bring back co-rider sequence ('you are stop 3 of 5'); alert at 5 minutes based on position, not schedule.
+
+Acceptance criteria: Stale location (>2 min) always labelled; ETA error measured per trip.
+
+Success metric: Median ETA error at T-10 minutes; tracking share of negative reviews under 5%.
+
+Check on day 1: Measure location-ping gaps per driver device/OS from the driver app; compare ETA shown at T-10 with actual arrival."
+LOOP-1,Close the complaint loop so riders don't need the Play Store to be heard,Medium,play-ratings 90-days,Product + Support + Transport operations,90 days,M (3-4 weeks),"Evidence: Issue reporting/support is 9.9% of 1-2 star reviews: helpdesk unreachable or hanging up, complaints with no status, feedback box limited to 20 words, can't rate a badly routed trip or dispute a false no-show (2.6%), can't reach the driver (3.0%).
+
+Likely cause: The in-app grievance path is one-way: riders can't see that anything happened, so they escalate in public.
+
+Change: Raise an issue from any trip (including no-shows) with status tracking and a closure message; no-show dispute with GPS evidence; route operational complaints by client/city to the transport desk with an SLA; monthly 'you said, we did' note in the app.
+
+Acceptance criteria: Every in-app complaint gets a status and an owner; no-show disputes resolved within 48h.
+
+Success metric: Support-related share of negative reviews halved; in-app complaint time-to-close.
+
+Check on day 1: Pull in-app complaint volumes, categories and time-to-close for the last 90 days."
+OPS-1,Send operations-related reviews to the people who can fix them,Medium,play-ratings 90-days,Transport operations,90 days,M (process + weekly report),"Evidence: 19% of specific complaints are about the service, not the app: routing and pooling (9.1% of 1-2 star reviews), late or missed cabs (2.5%), driver behaviour (2.2%), drops (1%). Many name a city or site (Gurugram, Hyderabad, CNX, Tech Mahindra).
+
+Likely cause: Review feedback never reaches site-level transport teams.
+
+Change: Weekly ops digest from the monitor: routing/late/driver complaints with city/site mentions, sent to the relevant transport desks; track repeat locations.
+
+Acceptance criteria: Weekly digest delivered; each repeated site issue has an owner.
+
+Success metric: Ops-attributed negative reviews trend down quarter over quarter.
+
+Check on day 1: Check whether app flavours/versions or reviewer emails can map reviews to a client or site."
+ASK-1,Ask satisfied riders at the right moment — the lever that moves the displayed number,Medium,play-ratings 90-days,Product (rider app),90 days (after INT-1/REL-1/RAT-1),S (1 week),"Evidence: About 1,260 new ratings arrive a month and ~4 in 5 have no text; the displayed 4.639 needs to reach 4.65 to show 4.7 — on the order of a few thousand extra 5-star ratings if every rating counted equally (Google weights recent ratings, so likely fewer). That is under 0.25% of 1.5M daily riders asked once.
+
+Likely cause: Prompts reportedly fire after every ride, which annoys riders; the right trigger is a good moment, rarely.
+
+Change: Request the Play In-App Review dialog only after an on-time completed trip with no open issue, at most once every 90 days per rider, never during boarding; no pre-filtering (policy).
+
+Acceptance criteria: Trigger rules implemented server-driven; prompt frequency and post-prompt rating tracked.
+
+Success metric: Displayed India rating crosses 4.65 (shows 4.7); new-rating volume and mix tracked by the daily snapshot.
+
+Check on day 1: Confirm current In-App Review trigger and frequency; baseline daily new ratings from the snapshot series."

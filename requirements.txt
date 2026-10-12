@@ -1,0 +1,6 @@
+google-play-scraper==1.2.7
+pandas>=2.2
+markdown>=3.6
+pytest>=8.0
+# Optional: only for the production labelling runner (src/classify_api.py)
+anthropic>=1.0

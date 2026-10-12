@@ -1,0 +1,62 @@
+name: Ratings monitor
+
+on:
+  schedule:
+    - cron: "30 1 * * *"        # daily 07:00 IST: snapshot + new reviews + dashboard
+  workflow_dispatch:
+    inputs:
+      digest:
+        description: "Post the weekly digest issue now"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ratings-monitor
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Tests
+        run: python -m pytest -q tests
+
+      - name: Scrape, label, analyse, publish
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional; without it keyword rules label new reviews
+        run: python run.py --owner "${{ github.repository_owner }}"
+
+      - name: Commit refreshed data and dashboard
+        run: |
+          git config user.name "ratings-monitor"
+          git config user.email "actions@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet || git commit -m "Ratings refresh $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Weekly digest issue (Mondays, or on manual run)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%a)" != "Mon" ]; then exit 0; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.digest }}" != "true" ]; then exit 0; fi
+          title="Ratings digest — $(date -u +%d\ %b\ %Y)"
+          labels="ratings-digest"
+          if grep -q "🚨" docs/weekly_digest.md; then labels="ratings-digest,regression"; fi
+          gh label create ratings-digest --color 2a78d6 --force >/dev/null 2>&1 || true
+          gh label create regression --color d03b3b --force >/dev/null 2>&1 || true
+          gh issue create --title "$title" --body-file docs/weekly_digest.md --label "$labels"
