@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T22:55:36",
+  "generated_at": "2026-10-12T23:17:11",
   "store": {
     "app_id": "com.moveinsync.ets",
     "displayed_score_exact": 4.6388,
@@ -220,7 +220,8 @@
       "share_1star": 0.3571,
       "share_5star": 0.6429,
       "short_5star": 3,
-      "reply_rate": 0.3571
+      "reply_rate": 0.3571,
+      "partial": false
     },
     {
       "month": "2014-04",
@@ -229,7 +230,8 @@
       "share_1star": 0.6,
       "share_5star": 0.2,
       "short_5star": 1,
-      "reply_rate": 0.6
+      "reply_rate": 0.6,
+      "partial": false
     },
     {
       "month": "2014-05",
@@ -238,7 +240,8 @@
       "share_1star": 0.25,
       "share_5star": 0.25,
       "short_5star": 1,
-      "reply_rate": 0.5
+      "reply_rate": 0.5,
+      "partial": false
     },
     {
       "month": "2014-06",
@@ -247,7 +250,8 @@
       "share_1star": 0.0,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2014-07",
@@ -256,7 +260,8 @@
       "share_1star": 0.75,
       "share_5star": 0.25,
       "short_5star": 0,
-      "reply_rate": 0.75
+      "reply_rate": 0.75,
+      "partial": false
     },
     {
       "month": "2014-08",
@@ -265,7 +270,8 @@
       "share_1star": 0.0,
       "share_5star": 1.0,
       "short_5star": 0,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2014-09",
@@ -274,7 +280,8 @@
       "share_1star": 0.75,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2014-11",
@@ -283,7 +290,8 @@
       "share_1star": 1.0,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 0.6667
+      "reply_rate": 0.6667,
+      "partial": false
     },
     {
       "month": "2014-12",
@@ -292,7 +300,8 @@
       "share_1star": 0.5,
       "share_5star": 0.25,
       "short_5star": 1,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2015-01",
@@ -301,7 +310,8 @@
       "share_1star": 0.3333,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2015-02",
@@ -310,7 +320,8 @@
       "share_1star": 0.2,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2015-03",
@@ -319,7 +330,8 @@
       "share_1star": 0.6667,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2015-04",
@@ -328,7 +340,8 @@
       "share_1star": 0.6,
       "share_5star": 0.2,
       "short_5star": 0,
-      "reply_rate": 0.8
+      "reply_rate": 0.8,
+      "partial": false
     },
     {
       "month": "2015-05",
@@ -337,7 +350,8 @@
       "share_1star": 0.2,
       "share_5star": 0.4,
       "short_5star": 1,
-      "reply_rate": 0.6
+      "reply_rate": 0.6,
+      "partial": false
     },
     {
       "month": "2015-06",
@@ -346,7 +360,8 @@
       "share_1star": 0.2857,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2015-07",
@@ -355,7 +370,8 @@
       "share_1star": 0.1667,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2015-08",
@@ -364,7 +380,8 @@
       "share_1star": 0.2,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2015-09",
@@ -373,7 +390,8 @@
       "share_1star": 0.5,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2015-10",
@@ -382,7 +400,8 @@
       "share_1star": 0.6774,
       "share_5star": 0.0645,
       "short_5star": 0,
-      "reply_rate": 0.9355
+      "reply_rate": 0.9355,
+      "partial": false
     },
     {
       "month": "2015-11",
@@ -391,7 +410,8 @@
       "share_1star": 0.5652,
       "share_5star": 0.087,
       "short_5star": 0,
-      "reply_rate": 0.4783
+      "reply_rate": 0.4783,
+      "partial": false
     },
     {
       "month": "2015-12",
@@ -400,7 +420,8 @@
       "share_1star": 0.4167,
       "share_5star": 0.0833,
       "short_5star": 1,
-      "reply_rate": 0.75
+      "reply_rate": 0.75,
+      "partial": false
     },
     {
       "month": "2016-01",
@@ -409,7 +430,8 @@
       "share_1star": 0.5,
       "share_5star": 0.125,
       "short_5star": 1,
-      "reply_rate": 0.375
+      "reply_rate": 0.375,
+      "partial": false
     },
     {
       "month": "2016-02",
@@ -418,7 +440,8 @@
       "share_1star": 0.7333,
       "share_5star": 0.0667,
       "short_5star": 1,
-      "reply_rate": 0.9333
+      "reply_rate": 0.9333,
+      "partial": false
     },
     {
       "month": "2016-03",
@@ -427,7 +450,8 @@
       "share_1star": 0.5,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 0.9167
+      "reply_rate": 0.9167,
+      "partial": false
     },
     {
       "month": "2016-04",
@@ -436,7 +460,8 @@
       "share_1star": 0.5714,
       "share_5star": 0.0,
       "short_5star": 0,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2016-05",
@@ -445,7 +470,8 @@
       "share_1star": 0.4762,
       "share_5star": 0.1905,
       "short_5star": 2,
-      "reply_rate": 0.8571
+      "reply_rate": 0.8571,
+      "partial": false
     },
     {
       "month": "2016-06",
@@ -454,7 +480,8 @@
       "share_1star": 0.6471,
       "share_5star": 0.1176,
       "short_5star": 0,
-      "reply_rate": 0.8824
+      "reply_rate": 0.8824,
+      "partial": false
     },
     {
       "month": "2016-07",
@@ -463,7 +490,8 @@
       "share_1star": 0.2414,
       "share_5star": 0.2414,
       "short_5star": 2,
-      "reply_rate": 0.8966
+      "reply_rate": 0.8966,
+      "partial": false
     },
     {
       "month": "2016-08",
@@ -472,7 +500,8 @@
       "share_1star": 0.5,
       "share_5star": 0.2143,
       "short_5star": 3,
-      "reply_rate": 0.8214
+      "reply_rate": 0.8214,
+      "partial": false
     },
     {
       "month": "2016-09",
@@ -481,7 +510,8 @@
       "share_1star": 0.4722,
       "share_5star": 0.2778,
       "short_5star": 5,
-      "reply_rate": 0.9444
+      "reply_rate": 0.9444,
+      "partial": false
     },
     {
       "month": "2016-10",
@@ -490,7 +520,8 @@
       "share_1star": 0.4466,
       "share_5star": 0.1456,
       "short_5star": 11,
-      "reply_rate": 0.4466
+      "reply_rate": 0.4466,
+      "partial": false
     },
     {
       "month": "2016-11",
@@ -499,7 +530,8 @@
       "share_1star": 0.6066,
       "share_5star": 0.1148,
       "short_5star": 5,
-      "reply_rate": 0.2459
+      "reply_rate": 0.2459,
+      "partial": false
     },
     {
       "month": "2016-12",
@@ -508,7 +540,8 @@
       "share_1star": 0.5094,
       "share_5star": 0.1509,
       "short_5star": 5,
-      "reply_rate": 0.1321
+      "reply_rate": 0.1321,
+      "partial": false
     },
     {
       "month": "2017-01",
@@ -517,7 +550,8 @@
       "share_1star": 0.5179,
       "share_5star": 0.1786,
       "short_5star": 5,
-      "reply_rate": 0.0714
+      "reply_rate": 0.0714,
+      "partial": false
     },
     {
       "month": "2017-02",
@@ -526,7 +560,8 @@
       "share_1star": 0.506,
       "share_5star": 0.1566,
       "short_5star": 4,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2017-03",
@@ -535,7 +570,8 @@
       "share_1star": 0.3553,
       "share_5star": 0.25,
       "short_5star": 8,
-      "reply_rate": 0.1579
+      "reply_rate": 0.1579,
+      "partial": false
     },
     {
       "month": "2017-04",
@@ -544,7 +580,8 @@
       "share_1star": 0.4621,
       "share_5star": 0.1862,
       "short_5star": 14,
-      "reply_rate": 0.2828
+      "reply_rate": 0.2828,
+      "partial": false
     },
     {
       "month": "2017-05",
@@ -553,7 +590,8 @@
       "share_1star": 0.4643,
       "share_5star": 0.2054,
       "short_5star": 10,
-      "reply_rate": 0.0625
+      "reply_rate": 0.0625,
+      "partial": false
     },
     {
       "month": "2017-06",
@@ -562,7 +600,8 @@
       "share_1star": 0.4464,
       "share_5star": 0.1964,
       "short_5star": 15,
-      "reply_rate": 0.3036
+      "reply_rate": 0.3036,
+      "partial": false
     },
     {
       "month": "2017-07",
@@ -571,7 +610,8 @@
       "share_1star": 0.5052,
       "share_5star": 0.1546,
       "short_5star": 8,
-      "reply_rate": 0.0722
+      "reply_rate": 0.0722,
+      "partial": false
     },
     {
       "month": "2017-08",
@@ -580,7 +620,8 @@
       "share_1star": 0.3293,
       "share_5star": 0.2561,
       "short_5star": 13,
-      "reply_rate": 0.122
+      "reply_rate": 0.122,
+      "partial": false
     },
     {
       "month": "2017-09",
@@ -589,7 +630,8 @@
       "share_1star": 0.3163,
       "share_5star": 0.3061,
       "short_5star": 20,
-      "reply_rate": 0.4898
+      "reply_rate": 0.4898,
+      "partial": false
     },
     {
       "month": "2017-10",
@@ -598,7 +640,8 @@
       "share_1star": 0.4536,
       "share_5star": 0.2165,
       "short_5star": 12,
-      "reply_rate": 0.268
+      "reply_rate": 0.268,
+      "partial": false
     },
     {
       "month": "2017-11",
@@ -607,7 +650,8 @@
       "share_1star": 0.3475,
       "share_5star": 0.2966,
       "short_5star": 16,
-      "reply_rate": 0.5932
+      "reply_rate": 0.5932,
+      "partial": false
     },
     {
       "month": "2017-12",
@@ -616,7 +660,8 @@
       "share_1star": 0.4429,
       "share_5star": 0.2143,
       "short_5star": 6,
-      "reply_rate": 0.5714
+      "reply_rate": 0.5714,
+      "partial": false
     },
     {
       "month": "2018-01",
@@ -625,7 +670,8 @@
       "share_1star": 0.3939,
       "share_5star": 0.197,
       "short_5star": 6,
-      "reply_rate": 0.5303
+      "reply_rate": 0.5303,
+      "partial": false
     },
     {
       "month": "2018-02",
@@ -634,7 +680,8 @@
       "share_1star": 0.6569,
       "share_5star": 0.1961,
       "short_5star": 9,
-      "reply_rate": 0.7255
+      "reply_rate": 0.7255,
+      "partial": false
     },
     {
       "month": "2018-03",
@@ -643,7 +690,8 @@
       "share_1star": 0.4146,
       "share_5star": 0.2805,
       "short_5star": 9,
-      "reply_rate": 0.7683
+      "reply_rate": 0.7683,
+      "partial": false
     },
     {
       "month": "2018-04",
@@ -652,7 +700,8 @@
       "share_1star": 0.3723,
       "share_5star": 0.3191,
       "short_5star": 16,
-      "reply_rate": 0.734
+      "reply_rate": 0.734,
+      "partial": false
     },
     {
       "month": "2018-05",
@@ -661,7 +710,8 @@
       "share_1star": 0.4304,
       "share_5star": 0.2278,
       "short_5star": 7,
-      "reply_rate": 0.5949
+      "reply_rate": 0.5949,
+      "partial": false
     },
     {
       "month": "2018-06",
@@ -670,7 +720,8 @@
       "share_1star": 0.2329,
       "share_5star": 0.3562,
       "short_5star": 11,
-      "reply_rate": 0.3973
+      "reply_rate": 0.3973,
+      "partial": false
     },
     {
       "month": "2018-07",
@@ -679,7 +730,8 @@
       "share_1star": 0.3333,
       "share_5star": 0.4023,
       "short_5star": 22,
-      "reply_rate": 0.2184
+      "reply_rate": 0.2184,
+      "partial": false
     },
     {
       "month": "2018-08",
@@ -688,7 +740,8 @@
       "share_1star": 0.1365,
       "share_5star": 0.5863,
       "short_5star": 81,
-      "reply_rate": 0.4739
+      "reply_rate": 0.4739,
+      "partial": false
     },
     {
       "month": "2018-09",
@@ -697,7 +750,8 @@
       "share_1star": 0.2776,
       "share_5star": 0.4484,
       "short_5star": 70,
-      "reply_rate": 0.3665
+      "reply_rate": 0.3665,
+      "partial": false
     },
     {
       "month": "2018-10",
@@ -706,7 +760,8 @@
       "share_1star": 0.1491,
       "share_5star": 0.5877,
       "short_5star": 137,
-      "reply_rate": 0.2749
+      "reply_rate": 0.2749,
+      "partial": false
     },
     {
       "month": "2018-11",
@@ -715,7 +770,8 @@
       "share_1star": 0.1242,
       "share_5star": 0.6544,
       "short_5star": 128,
-      "reply_rate": 0.245
+      "reply_rate": 0.245,
+      "partial": false
     },
     {
       "month": "2018-12",
@@ -724,7 +780,8 @@
       "share_1star": 0.1692,
       "share_5star": 0.5692,
       "short_5star": 108,
-      "reply_rate": 0.2423
+      "reply_rate": 0.2423,
+      "partial": false
     },
     {
       "month": "2019-01",
@@ -733,7 +790,8 @@
       "share_1star": 0.1869,
       "share_5star": 0.5738,
       "short_5star": 122,
-      "reply_rate": 0.282
+      "reply_rate": 0.282,
+      "partial": false
     },
     {
       "month": "2019-02",
@@ -742,7 +800,8 @@
       "share_1star": 0.1515,
       "share_5star": 0.5976,
       "short_5star": 277,
-      "reply_rate": 0.2155
+      "reply_rate": 0.2155,
+      "partial": false
     },
     {
       "month": "2019-03",
@@ -751,7 +810,8 @@
       "share_1star": 0.1238,
       "share_5star": 0.6056,
       "short_5star": 285,
-      "reply_rate": 0.1287
+      "reply_rate": 0.1287,
+      "partial": false
     },
     {
       "month": "2019-04",
@@ -760,7 +820,8 @@
       "share_1star": 0.1675,
       "share_5star": 0.601,
       "short_5star": 268,
-      "reply_rate": 0.1813
+      "reply_rate": 0.1813,
+      "partial": false
     },
     {
       "month": "2019-05",
@@ -769,7 +830,8 @@
       "share_1star": 0.147,
       "share_5star": 0.6385,
       "short_5star": 270,
-      "reply_rate": 0.1402
+      "reply_rate": 0.1402,
+      "partial": false
     },
     {
       "month": "2019-06",
@@ -778,7 +840,8 @@
       "share_1star": 0.1366,
       "share_5star": 0.6377,
       "short_5star": 223,
-      "reply_rate": 0.1532
+      "reply_rate": 0.1532,
+      "partial": false
     },
     {
       "month": "2019-07",
@@ -787,7 +850,8 @@
       "share_1star": 0.2477,
       "share_5star": 0.5289,
       "short_5star": 208,
-      "reply_rate": 0.2458
+      "reply_rate": 0.2458,
+      "partial": false
     },
     {
       "month": "2019-08",
@@ -796,7 +860,8 @@
       "share_1star": 0.2114,
       "share_5star": 0.5772,
       "short_5star": 208,
-      "reply_rate": 0.2051
+      "reply_rate": 0.2051,
+      "partial": false
     },
     {
       "month": "2019-09",
@@ -805,7 +870,8 @@
       "share_1star": 0.2928,
       "share_5star": 0.4681,
       "short_5star": 174,
-      "reply_rate": 0.1255
+      "reply_rate": 0.1255,
+      "partial": false
     },
     {
       "month": "2019-10",
@@ -814,7 +880,8 @@
       "share_1star": 0.2495,
       "share_5star": 0.5116,
       "short_5star": 172,
-      "reply_rate": 0.6025
+      "reply_rate": 0.6025,
+      "partial": false
     },
     {
       "month": "2019-11",
@@ -823,7 +890,8 @@
       "share_1star": 0.2862,
       "share_5star": 0.4223,
       "short_5star": 180,
-      "reply_rate": 0.2898
+      "reply_rate": 0.2898,
+      "partial": false
     },
     {
       "month": "2019-12",
@@ -832,7 +900,8 @@
       "share_1star": 0.2836,
       "share_5star": 0.4649,
       "short_5star": 127,
-      "reply_rate": 0.6491
+      "reply_rate": 0.6491,
+      "partial": false
     },
     {
       "month": "2020-01",
@@ -841,7 +910,8 @@
       "share_1star": 0.2153,
       "share_5star": 0.5208,
       "short_5star": 102,
-      "reply_rate": 0.8194
+      "reply_rate": 0.8194,
+      "partial": false
     },
     {
       "month": "2020-02",
@@ -850,7 +920,8 @@
       "share_1star": 0.2962,
       "share_5star": 0.4669,
       "short_5star": 83,
-      "reply_rate": 0.993
+      "reply_rate": 0.993,
+      "partial": false
     },
     {
       "month": "2020-03",
@@ -859,7 +930,8 @@
       "share_1star": 0.2143,
       "share_5star": 0.55,
       "short_5star": 54,
-      "reply_rate": 0.9857
+      "reply_rate": 0.9857,
+      "partial": false
     },
     {
       "month": "2020-04",
@@ -868,7 +940,8 @@
       "share_1star": 0.0909,
       "share_5star": 0.5455,
       "short_5star": 5,
-      "reply_rate": 0.7273
+      "reply_rate": 0.7273,
+      "partial": false
     },
     {
       "month": "2020-05",
@@ -877,7 +950,8 @@
       "share_1star": 0.2069,
       "share_5star": 0.5862,
       "short_5star": 12,
-      "reply_rate": 0.7241
+      "reply_rate": 0.7241,
+      "partial": false
     },
     {
       "month": "2020-06",
@@ -886,7 +960,8 @@
       "share_1star": 0.1622,
       "share_5star": 0.4865,
       "short_5star": 13,
-      "reply_rate": 0.9459
+      "reply_rate": 0.9459,
+      "partial": false
     },
     {
       "month": "2020-07",
@@ -895,7 +970,8 @@
       "share_1star": 0.2,
       "share_5star": 0.5111,
       "short_5star": 20,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2020-08",
@@ -904,7 +980,8 @@
       "share_1star": 0.378,
       "share_5star": 0.5,
       "short_5star": 31,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2020-09",
@@ -913,7 +990,8 @@
       "share_1star": 0.275,
       "share_5star": 0.475,
       "short_5star": 27,
-      "reply_rate": 0.0125
+      "reply_rate": 0.0125,
+      "partial": false
     },
     {
       "month": "2020-10",
@@ -922,7 +1000,8 @@
       "share_1star": 0.2045,
       "share_5star": 0.6818,
       "short_5star": 21,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2020-11",
@@ -931,7 +1010,8 @@
       "share_1star": 0.1842,
       "share_5star": 0.6316,
       "short_5star": 19,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2020-12",
@@ -940,7 +1020,8 @@
       "share_1star": 0.2593,
       "share_5star": 0.5926,
       "short_5star": 24,
-      "reply_rate": 0.037
+      "reply_rate": 0.037,
+      "partial": false
     },
     {
       "month": "2021-01",
@@ -949,7 +1030,8 @@
       "share_1star": 0.1912,
       "share_5star": 0.6471,
       "short_5star": 31,
-      "reply_rate": 0.1324
+      "reply_rate": 0.1324,
+      "partial": false
     },
     {
       "month": "2021-02",
@@ -958,7 +1040,8 @@
       "share_1star": 0.2714,
       "share_5star": 0.5714,
       "short_5star": 32,
-      "reply_rate": 0.2571
+      "reply_rate": 0.2571,
+      "partial": false
     },
     {
       "month": "2021-03",
@@ -967,7 +1050,8 @@
       "share_1star": 0.2644,
       "share_5star": 0.5287,
       "short_5star": 31,
-      "reply_rate": 0.6667
+      "reply_rate": 0.6667,
+      "partial": false
     },
     {
       "month": "2021-04",
@@ -976,7 +1060,8 @@
       "share_1star": 0.1667,
       "share_5star": 0.7037,
       "short_5star": 27,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2021-05",
@@ -985,7 +1070,8 @@
       "share_1star": 0.1481,
       "share_5star": 0.5556,
       "short_5star": 10,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2021-06",
@@ -994,7 +1080,8 @@
       "share_1star": 0.2692,
       "share_5star": 0.6538,
       "short_5star": 27,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2021-07",
@@ -1003,7 +1090,8 @@
       "share_1star": 0.1277,
       "share_5star": 0.7447,
       "short_5star": 26,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2021-08",
@@ -1012,7 +1100,8 @@
       "share_1star": 0.2157,
       "share_5star": 0.7059,
       "short_5star": 32,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2021-09",
@@ -1021,7 +1110,8 @@
       "share_1star": 0.2,
       "share_5star": 0.65,
       "short_5star": 22,
-      "reply_rate": 0.6667
+      "reply_rate": 0.6667,
+      "partial": false
     },
     {
       "month": "2021-10",
@@ -1030,7 +1120,8 @@
       "share_1star": 0.1733,
       "share_5star": 0.72,
       "short_5star": 37,
-      "reply_rate": 0.9867
+      "reply_rate": 0.9867,
+      "partial": false
     },
     {
       "month": "2021-11",
@@ -1039,7 +1130,8 @@
       "share_1star": 0.2019,
       "share_5star": 0.5962,
       "short_5star": 40,
-      "reply_rate": 0.9904
+      "reply_rate": 0.9904,
+      "partial": false
     },
     {
       "month": "2021-12",
@@ -1048,7 +1140,8 @@
       "share_1star": 0.1485,
       "share_5star": 0.6337,
       "short_5star": 40,
-      "reply_rate": 0.9901
+      "reply_rate": 0.9901,
+      "partial": false
     },
     {
       "month": "2022-01",
@@ -1057,7 +1150,8 @@
       "share_1star": 0.12,
       "share_5star": 0.64,
       "short_5star": 25,
-      "reply_rate": 0.62
+      "reply_rate": 0.62,
+      "partial": false
     },
     {
       "month": "2022-02",
@@ -1066,7 +1160,8 @@
       "share_1star": 0.1746,
       "share_5star": 0.6667,
       "short_5star": 29,
-      "reply_rate": 0.619
+      "reply_rate": 0.619,
+      "partial": false
     },
     {
       "month": "2022-03",
@@ -1075,7 +1170,8 @@
       "share_1star": 0.2483,
       "share_5star": 0.5931,
       "short_5star": 60,
-      "reply_rate": 0.8759
+      "reply_rate": 0.8759,
+      "partial": false
     },
     {
       "month": "2022-04",
@@ -1084,7 +1180,8 @@
       "share_1star": 0.4448,
       "share_5star": 0.3528,
       "short_5star": 81,
-      "reply_rate": 0.5276
+      "reply_rate": 0.5276,
+      "partial": false
     },
     {
       "month": "2022-05",
@@ -1093,7 +1190,8 @@
       "share_1star": 0.3686,
       "share_5star": 0.4314,
       "short_5star": 76,
-      "reply_rate": 0.7804
+      "reply_rate": 0.7804,
+      "partial": false
     },
     {
       "month": "2022-06",
@@ -1102,7 +1200,8 @@
       "share_1star": 0.3704,
       "share_5star": 0.4974,
       "short_5star": 58,
-      "reply_rate": 0.9524
+      "reply_rate": 0.9524,
+      "partial": false
     },
     {
       "month": "2022-07",
@@ -1111,7 +1210,8 @@
       "share_1star": 0.2371,
       "share_5star": 0.5603,
       "short_5star": 86,
-      "reply_rate": 0.9828
+      "reply_rate": 0.9828,
+      "partial": false
     },
     {
       "month": "2022-08",
@@ -1120,7 +1220,8 @@
       "share_1star": 0.198,
       "share_5star": 0.599,
       "short_5star": 79,
-      "reply_rate": 0.9746
+      "reply_rate": 0.9746,
+      "partial": false
     },
     {
       "month": "2022-09",
@@ -1129,7 +1230,8 @@
       "share_1star": 0.3652,
       "share_5star": 0.4787,
       "short_5star": 94,
-      "reply_rate": 0.9929
+      "reply_rate": 0.9929,
+      "partial": false
     },
     {
       "month": "2022-10",
@@ -1138,7 +1240,8 @@
       "share_1star": 0.3109,
       "share_5star": 0.4974,
       "short_5star": 71,
-      "reply_rate": 0.9482
+      "reply_rate": 0.9482,
+      "partial": false
     },
     {
       "month": "2022-11",
@@ -1147,7 +1250,8 @@
       "share_1star": 0.255,
       "share_5star": 0.585,
       "short_5star": 82,
-      "reply_rate": 0.975
+      "reply_rate": 0.975,
+      "partial": false
     },
     {
       "month": "2022-12",
@@ -1156,7 +1260,8 @@
       "share_1star": 0.236,
       "share_5star": 0.5776,
       "short_5star": 67,
-      "reply_rate": 0.9938
+      "reply_rate": 0.9938,
+      "partial": false
     },
     {
       "month": "2023-01",
@@ -1165,7 +1270,8 @@
       "share_1star": 0.3624,
       "share_5star": 0.4698,
       "short_5star": 53,
-      "reply_rate": 0.9866
+      "reply_rate": 0.9866,
+      "partial": false
     },
     {
       "month": "2023-02",
@@ -1174,7 +1280,8 @@
       "share_1star": 0.2787,
       "share_5star": 0.5164,
       "short_5star": 38,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2023-03",
@@ -1183,7 +1290,8 @@
       "share_1star": 0.3548,
       "share_5star": 0.4785,
       "short_5star": 60,
-      "reply_rate": 0.9839
+      "reply_rate": 0.9839,
+      "partial": false
     },
     {
       "month": "2023-04",
@@ -1192,7 +1300,8 @@
       "share_1star": 0.3092,
       "share_5star": 0.5526,
       "short_5star": 61,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2023-05",
@@ -1201,7 +1310,8 @@
       "share_1star": 0.2599,
       "share_5star": 0.5424,
       "short_5star": 68,
-      "reply_rate": 0.9774
+      "reply_rate": 0.9774,
+      "partial": false
     },
     {
       "month": "2023-06",
@@ -1210,7 +1320,8 @@
       "share_1star": 0.2229,
       "share_5star": 0.5663,
       "short_5star": 64,
-      "reply_rate": 0.9759
+      "reply_rate": 0.9759,
+      "partial": false
     },
     {
       "month": "2023-07",
@@ -1219,7 +1330,8 @@
       "share_1star": 0.3077,
       "share_5star": 0.4872,
       "short_5star": 77,
-      "reply_rate": 0.9615
+      "reply_rate": 0.9615,
+      "partial": false
     },
     {
       "month": "2023-08",
@@ -1228,7 +1340,8 @@
       "share_1star": 0.2163,
       "share_5star": 0.5388,
       "short_5star": 87,
-      "reply_rate": 0.9551
+      "reply_rate": 0.9551,
+      "partial": false
     },
     {
       "month": "2023-09",
@@ -1237,7 +1350,8 @@
       "share_1star": 0.2044,
       "share_5star": 0.5778,
       "short_5star": 97,
-      "reply_rate": 0.9822
+      "reply_rate": 0.9822,
+      "partial": false
     },
     {
       "month": "2023-10",
@@ -1246,7 +1360,8 @@
       "share_1star": 0.2767,
       "share_5star": 0.5535,
       "short_5star": 134,
-      "reply_rate": 0.9654
+      "reply_rate": 0.9654,
+      "partial": false
     },
     {
       "month": "2023-11",
@@ -1255,7 +1370,8 @@
       "share_1star": 0.2247,
       "share_5star": 0.5771,
       "short_5star": 83,
-      "reply_rate": 0.9824
+      "reply_rate": 0.9824,
+      "partial": false
     },
     {
       "month": "2023-12",
@@ -1264,7 +1380,8 @@
       "share_1star": 0.2464,
       "share_5star": 0.5355,
       "short_5star": 71,
-      "reply_rate": 0.9905
+      "reply_rate": 0.9905,
+      "partial": false
     },
     {
       "month": "2024-01",
@@ -1273,7 +1390,8 @@
       "share_1star": 0.2694,
       "share_5star": 0.5388,
       "short_5star": 92,
-      "reply_rate": 0.9714
+      "reply_rate": 0.9714,
+      "partial": false
     },
     {
       "month": "2024-02",
@@ -1282,7 +1400,8 @@
       "share_1star": 0.2967,
       "share_5star": 0.5455,
       "short_5star": 82,
-      "reply_rate": 0.9856
+      "reply_rate": 0.9856,
+      "partial": false
     },
     {
       "month": "2024-03",
@@ -1291,7 +1410,8 @@
       "share_1star": 0.3125,
       "share_5star": 0.5417,
       "short_5star": 75,
-      "reply_rate": 0.9688
+      "reply_rate": 0.9688,
+      "partial": false
     },
     {
       "month": "2024-04",
@@ -1300,7 +1420,8 @@
       "share_1star": 0.3033,
       "share_5star": 0.5498,
       "short_5star": 85,
-      "reply_rate": 0.327
+      "reply_rate": 0.327,
+      "partial": false
     },
     {
       "month": "2024-05",
@@ -1309,7 +1430,8 @@
       "share_1star": 0.2569,
       "share_5star": 0.5734,
       "short_5star": 92,
-      "reply_rate": 1.0
+      "reply_rate": 1.0,
+      "partial": false
     },
     {
       "month": "2024-06",
@@ -1318,7 +1440,8 @@
       "share_1star": 0.277,
       "share_5star": 0.5587,
       "short_5star": 88,
-      "reply_rate": 0.2488
+      "reply_rate": 0.2488,
+      "partial": false
     },
     {
       "month": "2024-07",
@@ -1327,7 +1450,8 @@
       "share_1star": 0.278,
       "share_5star": 0.5254,
       "short_5star": 96,
-      "reply_rate": 0.0237
+      "reply_rate": 0.0237,
+      "partial": false
     },
     {
       "month": "2024-08",
@@ -1336,7 +1460,8 @@
       "share_1star": 0.288,
       "share_5star": 0.5602,
       "short_5star": 73,
-      "reply_rate": 0.0052
+      "reply_rate": 0.0052,
+      "partial": false
     },
     {
       "month": "2024-09",
@@ -1345,7 +1470,8 @@
       "share_1star": 0.2756,
       "share_5star": 0.5689,
       "short_5star": 87,
-      "reply_rate": 0.0222
+      "reply_rate": 0.0222,
+      "partial": false
     },
     {
       "month": "2024-10",
@@ -1354,7 +1480,8 @@
       "share_1star": 0.2594,
       "share_5star": 0.6015,
       "short_5star": 116,
-      "reply_rate": 0.015
+      "reply_rate": 0.015,
+      "partial": false
     },
     {
       "month": "2024-11",
@@ -1363,7 +1490,8 @@
       "share_1star": 0.267,
       "share_5star": 0.5882,
       "short_5star": 88,
-      "reply_rate": 0.0181
+      "reply_rate": 0.0181,
+      "partial": false
     },
     {
       "month": "2024-12",
@@ -1372,7 +1500,8 @@
       "share_1star": 0.2488,
       "share_5star": 0.5885,
       "short_5star": 85,
-      "reply_rate": 0.0096
+      "reply_rate": 0.0096,
+      "partial": false
     },
     {
       "month": "2025-01",
@@ -1381,7 +1510,8 @@
       "share_1star": 0.331,
       "share_5star": 0.5241,
       "short_5star": 100,
-      "reply_rate": 0.0138
+      "reply_rate": 0.0138,
+      "partial": false
     },
     {
       "month": "2025-02",
@@ -1390,7 +1520,8 @@
       "share_1star": 0.3144,
       "share_5star": 0.5328,
       "short_5star": 88,
-      "reply_rate": 0.0568
+      "reply_rate": 0.0568,
+      "partial": false
     },
     {
       "month": "2025-03",
@@ -1399,7 +1530,8 @@
       "share_1star": 0.2434,
       "share_5star": 0.5973,
       "short_5star": 95,
-      "reply_rate": 0.0177
+      "reply_rate": 0.0177,
+      "partial": false
     },
     {
       "month": "2025-04",
@@ -1408,7 +1540,8 @@
       "share_1star": 0.2325,
       "share_5star": 0.6228,
       "short_5star": 109,
-      "reply_rate": 0.0219
+      "reply_rate": 0.0219,
+      "partial": false
     },
     {
       "month": "2025-05",
@@ -1417,7 +1550,8 @@
       "share_1star": 0.2257,
       "share_5star": 0.6148,
       "short_5star": 121,
-      "reply_rate": 0.0078
+      "reply_rate": 0.0078,
+      "partial": false
     },
     {
       "month": "2025-06",
@@ -1426,7 +1560,8 @@
       "share_1star": 0.2924,
       "share_5star": 0.5548,
       "short_5star": 129,
-      "reply_rate": 0.0133
+      "reply_rate": 0.0133,
+      "partial": false
     },
     {
       "month": "2025-07",
@@ -1435,7 +1570,8 @@
       "share_1star": 0.2253,
       "share_5star": 0.5631,
       "short_5star": 122,
-      "reply_rate": 0.0478
+      "reply_rate": 0.0478,
+      "partial": false
     },
     {
       "month": "2025-08",
@@ -1444,7 +1580,8 @@
       "share_1star": 0.2708,
       "share_5star": 0.5792,
       "short_5star": 97,
-      "reply_rate": 0.0333
+      "reply_rate": 0.0333,
+      "partial": false
     },
     {
       "month": "2025-09",
@@ -1453,7 +1590,8 @@
       "share_1star": 0.2976,
       "share_5star": 0.5268,
       "short_5star": 74,
-      "reply_rate": 0.0244
+      "reply_rate": 0.0244,
+      "partial": false
     },
     {
       "month": "2025-10",
@@ -1462,7 +1600,8 @@
       "share_1star": 0.2458,
       "share_5star": 0.6128,
       "short_5star": 129,
-      "reply_rate": 0.0741
+      "reply_rate": 0.0741,
+      "partial": false
     },
     {
       "month": "2025-11",
@@ -1471,7 +1610,8 @@
       "share_1star": 0.2625,
       "share_5star": 0.575,
       "short_5star": 65,
-      "reply_rate": 0.1625
+      "reply_rate": 0.1625,
+      "partial": false
     },
     {
       "month": "2025-12",
@@ -1480,7 +1620,8 @@
       "share_1star": 0.2194,
       "share_5star": 0.6276,
       "short_5star": 96,
-      "reply_rate": 0.0918
+      "reply_rate": 0.0918,
+      "partial": false
     },
     {
       "month": "2026-01",
@@ -1489,7 +1630,8 @@
       "share_1star": 0.2322,
       "share_5star": 0.6066,
       "short_5star": 92,
-      "reply_rate": 0.0427
+      "reply_rate": 0.0427,
+      "partial": false
     },
     {
       "month": "2026-02",
@@ -1498,7 +1640,8 @@
       "share_1star": 0.2754,
       "share_5star": 0.6184,
       "short_5star": 89,
-      "reply_rate": 0.0
+      "reply_rate": 0.0,
+      "partial": false
     },
     {
       "month": "2026-03",
@@ -1507,7 +1650,8 @@
       "share_1star": 0.2081,
       "share_5star": 0.6853,
       "short_5star": 99,
-      "reply_rate": 0.0102
+      "reply_rate": 0.0102,
+      "partial": false
     },
     {
       "month": "2026-04",
@@ -1516,7 +1660,8 @@
       "share_1star": 0.2089,
       "share_5star": 0.6918,
       "short_5star": 155,
-      "reply_rate": 0.0034
+      "reply_rate": 0.0034,
+      "partial": false
     },
     {
       "month": "2026-05",
@@ -1525,7 +1670,8 @@
       "share_1star": 0.2024,
       "share_5star": 0.6842,
       "short_5star": 121,
-      "reply_rate": 0.004
+      "reply_rate": 0.004,
+      "partial": false
     },
     {
       "month": "2026-06",
@@ -1534,7 +1680,8 @@
       "share_1star": 0.3114,
       "share_5star": 0.5824,
       "short_5star": 111,
-      "reply_rate": 0.0073
+      "reply_rate": 0.0073,
+      "partial": false
     },
     {
       "month": "2026-07",
@@ -1543,7 +1690,8 @@
       "share_1star": 0.193,
       "share_5star": 0.6912,
       "short_5star": 135,
-      "reply_rate": 0.0035
+      "reply_rate": 0.0035,
+      "partial": false
     },
     {
       "month": "2026-08",
@@ -1552,7 +1700,8 @@
       "share_1star": 0.2851,
       "share_5star": 0.6116,
       "short_5star": 108,
-      "reply_rate": 0.0041
+      "reply_rate": 0.0041,
+      "partial": false
     },
     {
       "month": "2026-09",
@@ -1561,7 +1710,8 @@
       "share_1star": 0.249,
       "share_5star": 0.6653,
       "short_5star": 121,
-      "reply_rate": 0.0041
+      "reply_rate": 0.0041,
+      "partial": false
     },
     {
       "month": "2026-10",
@@ -1570,7 +1720,8 @@
       "share_1star": 0.2805,
       "share_5star": 0.6463,
       "short_5star": 40,
-      "reply_rate": 0.0122
+      "reply_rate": 0.0122,
+      "partial": true
     }
   ],
   "rolling_28d": [
@@ -7088,29 +7239,29 @@
       "4": 0.0,
       "5": 0.0042
     },
-    "median_latency_hours": 18.9,
-    "median_latency_hours_90d": -24798.4,
-    "share_identical_replies": 0.6303,
+    "median_latency_hours": 21.8,
+    "median_latency_hours_90d": 0.4,
+    "share_identical_replies": 0.6419,
     "top_reply_texts": [
       {
         "text": "Thank you very much for your 5-star review!",
-        "count": 1178
+        "count": 1159
       },
       {
         "text": "Thank you very much for your 5-star review!!!",
-        "count": 1044
+        "count": 1014
       },
       {
         "text": "Thanks a lot for your rating and safe rides :)",
-        "count": 484
+        "count": 474
       },
       {
         "text": "We appreciate the feedback! Please let us know how we can earn your 5 star rating!\nWrite to us at app@moveinsync.com",
-        "count": 141
+        "count": 134
       },
       {
         "text": "It is delightful to hear such positive words and it\u2019s always a pleasure to serve our users.",
-        "count": 135
+        "count": 132
       }
     ]
   },
@@ -7585,6 +7736,14 @@
         "n": 19,
         "share": 0.0247
       },
+      "cab_late_or_missing": {
+        "n": 36,
+        "share": 0.0468
+      },
+      "any_service_issue": {
+        "n": 118,
+        "share": 0.1534
+      },
       "wrong_route": {
         "n": 38,
         "share": 0.0494
@@ -7635,7 +7794,12 @@
           {
             "at": "2023Q4",
             "kind": "rooted-device check",
-            "n": 5
+            "n": 43
+          },
+          {
+            "at": "2024Q3",
+            "kind": "installer check",
+            "n": 1
           },
           {
             "at": "2025Q4",
@@ -7656,9 +7820,9 @@
       },
       "forced_rating": {
         "description": "Forced / repeated trip-rating or review prompts",
-        "n_12m": 23,
-        "n_12m_1_2star": 17,
-        "share_of_1_2star": 0.0221,
+        "n_12m": 20,
+        "n_12m_1_2star": 16,
+        "share_of_1_2star": 0.0208,
         "quotes": [
           {
             "stars": 1,
@@ -7819,7 +7983,7 @@
       "J7.board": 17
     },
     "rating_prompt": {
-      "complaints_forced_or_repeated_12m": 23,
+      "complaints_forced_or_repeated_12m": 20,
       "possible_gating_reviews": [
         {
           "date": "2026-07-16",

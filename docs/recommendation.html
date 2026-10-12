@@ -34,10 +34,10 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <p><em>For MoveInSync Product, Engineering, Support and Transport Operations · Prepared by Abhijit, Forward Deployed Engineer candidate · 13 October 2026 · Public Google Play data through 11 October 2026 · Live monitor: <a href="https://OWNER.github.io/moveinsync-playstore-ratings/">https://OWNER.github.io/moveinsync-playstore-ratings/</a></em></p>
 <h2>The answer</h2>
 <ol>
-<li><strong>The number is not the problem — yet.</strong> The employee app shows <strong>4.6★</strong> in India (4.639 from 114,880 ratings). That is <strong>#2 of 8</strong> employee-commute apps, behind only Safetrax Commuter (4.72), and MoveInSync has more ratings than the other seven combined. It is <strong>0.011 stars from showing 4.7</strong>.</li>
+<li><strong>The number is not the problem — yet.</strong> The employee app shows <strong>4.6★</strong> in India (4.639 from 114,880 ratings). Among the 8 employee-commute apps I benchmarked, that is <strong>#2</strong>, behind only Safetrax Commuter (4.72), and MoveInSync has more ratings than the other seven combined. It is <strong>0.011 stars from showing 4.7</strong>.</li>
 <li><strong>The problem is what people read.</strong> Written reviews over the last 12 months average <strong>3.84★</strong>, and <strong>24% are 1★</strong>. <strong>9 of the first 10 reviews a visitor sees are 1–2★, and 9 of them have no reply.</strong> MoveInSync stopped replying in mid-2024, falling from about 97% of reviews answered to 3%. Safetrax answers 100% and Routematic 92%.</li>
-<li><strong>It is the app, not the cabs.</strong> Of the 1–2★ reviews that name a problem, <strong>73% are about the app itself</strong>. 19% are about the transport service and 1% about employer rules. Late cabs come up in only 2.5%. The four biggest themes are all engineering work: <strong>stability (17%), login (14%), self-booking (11%), interruptions and UI (11%)</strong>.</li>
-<li><strong>It is getting worse right now.</strong> Stability complaints rose from 12–16% of negative reviews in the previous three quarters to <strong>25%</strong> in Q3 2026, concentrated in versions 12.16–12.19. They include a <strong>false "not installed from Play Store" error</strong> that locks riders out until they reinstall.</li>
+<li><strong>It is the app, not the cabs.</strong> Of the 1–2★ reviews that name a problem, <strong>73% are about the app itself</strong>. 19% are about the transport service and 1% about employer rules. Late, unassigned or missed cabs come up in under 5%. The four biggest themes are all engineering work: <strong>stability (17%), login (14%), self-booking (11%), interruptions and UI (11%)</strong>.</li>
+<li><strong>It is getting worse right now.</strong> Stability complaints rose from 12–16% of negative reviews in the previous three quarters to <strong>25%</strong> in Q3 2026 (statistically significant, p ≈ 0.01), concentrated in versions 12.16–12.19. They include a <strong>false "not installed from Play Store" error</strong> that locks riders out until they reinstall.</li>
 <li><strong>Do this week:</strong><ul>
 <li>stop the false lock-out, and gate releases on crash and review signals</li>
 <li>restart replying, starting with the reviews visitors see first</li>
@@ -98,7 +98,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li>New employees and HR teams evaluating vendors read the written ones.</li>
 </ul>
 </li>
-<li><strong>MoveInSync's written reviews are better than the leader's.</strong> Safetrax's written reviews average 2.89★, with 47% 1★, over the same period. Its higher store number rests on silent ratings, and on replying to every review.</li>
+<li><strong>MoveInSync's written reviews are better than the leader's.</strong> Safetrax's written reviews average 2.89★, with 47% 1★, over the same period. Its higher store number must therefore come from silent ratings. It also replies to every review; MoveInSync replies to 3%.</li>
 <li><strong>The rating is per country.</strong> The same app shows 4.6 in India, <strong>4.3 in the US</strong>, 4.5 in the UK and 4.8 in the UAE. A client's head office abroad sees a different number from riders in India. This memo uses India throughout.</li>
 </ul>
 <p>So "lower than it should be" comes down to four measurable gaps:</p>
@@ -226,8 +226,8 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li>app glitch: 17%</li>
 <li>booking fails: 11%</li>
 <li>wrong route: 5%</li>
+<li>late, unassigned or missed cab: 4.7% (late cab alone: 2.5%)</li>
 <li>safety concern: 3%</li>
-<li>late cab: 2.5%</li>
 </ul>
 <h3>Finding 1: a stability regression is live now</h3>
 <table>
@@ -260,9 +260,9 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <ul>
 <li><strong>Where it comes from:</strong> versions 12.16.0, 12.17.0 and 12.19.0 carry it. Stability is 32%, 22% and 31% of their negative reviews.</li>
 <li><strong>The current version is worse than average:</strong> 12.19.0 has 31% 1★ reviews against a 24% baseline. That isn't statistically significant yet, so it's on watch.</li>
-<li><strong>The false lock-out is new and growing:</strong> 9 of the 11 "not installed from Play Store" cases in the last 12 months appeared in Jul–Sep 2026.
+<li><strong>The false lock-out is new and growing:</strong> 9 of the 12 "not installed from Play Store" reviews ever written appeared in Jul–Sep 2026.
     &gt; "showing that it can't open as it is not downloaded from playstore. in last 3 weeks I uninstall an installed it for 10 times due to the same error" (2★, Aug 2026)</li>
-<li><strong>It has happened before:</strong> the same kind of bug hit in late 2023 as a false "rooted device" block. An integrity check that blocks the app whenever it isn't sure keeps locking out legitimate riders.</li>
+<li><strong>It has happened before, at larger scale:</strong> in Q4 2023, 43 reviews reported a false "cannot be opened on a rooted device" block on ordinary phones. Two waves of the same failure suggest a pattern: a device or install check that blocks the app whenever it isn't sure keeps locking out legitimate riders.</li>
 <li><strong>Fixes do show up in reviews.</strong> Login complaints fell from 20% to 8% after a spike in October 2025. That spike would have been caught in its first week by the monitor described in section 4.</li>
 </ul>
 <h3>Finding 2: self-booking, the step that matters most, has lost clarity</h3>
@@ -283,7 +283,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li>a mandatory trip rating that blocks the current trip: <em>"I have to mandatorily give a review of the previous ride before I can access current ride details"</em> (1★, Mar 2026)</li>
 </ul>
 </li>
-<li><strong>Forced rating requests cost stars.</strong> 23 reviews in 12 months complain about forced or repeated rating requests. One rider lowered their store rating from 5 to 3 because of it.</li>
+<li><strong>Forced rating requests cost stars.</strong> 20 reviews in 12 months complain about forced or repeated rating requests. One rider lowered their store rating from 5 to 3 because of it.</li>
 <li>
 <p><strong>A policy risk to check on day 1.</strong> Three reviews point at the in-app rating step:</p>
 <ul>
@@ -298,7 +298,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <ul>
 <li><strong>Replies stopped in June–July 2024.</strong> Before that, 98.6% of 1★ reviews got an answer, although 63% of all replies used the same template text.</li>
 <li><strong>The complaint path itself is a theme.</strong> 10% of negative reviews are about it: the helpdesk is unreachable, complaints get no status, and there's no way to dispute a false no-show or rate a badly routed trip.</li>
-<li><strong>Safety reports sit unanswered in public.</strong> 24 reviews in 12 months describe safety risks: harassment, rash driving, women dropped alone at night, and SOS blocked by pop-ups or forced logouts.</li>
+<li><strong>Safety reports sit unanswered in public.</strong> 24 reviews in 12 months were flagged as possible safety risks, including harassment, rash driving, women dropped alone at night, and SOS blocked by pop-ups or forced logouts. A person still has to confirm each one.</li>
 </ul>
 <h3>What is not the problem</h3>
 <ul>
@@ -485,7 +485,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li><strong>Daily:</strong><ul>
 <li>a scheduled job pulls the listing and any new reviews</li>
 <li>it records the store rating, labels the new reviews and refreshes the dashboard</li>
-<li>India's rating history isn't published anywhere, so this record, which starts on 12 Oct 2026, is the only one</li>
+<li>Google doesn't publish a country's rating history (paid tools sell it), so this free daily record starts on 12 Oct 2026</li>
 </ul>
 </li>
 <li><strong>Weekly:</strong> a digest is posted as a GitHub Issue. It covers:<ul>
@@ -501,7 +501,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li><strong>Cadence:</strong> a 15-minute weekly review using the digest, with the release owner, the support lead and an operations representative. The same monitor tracks every backlog item's success metric.</li>
 <li><strong>Cost:</strong><ul>
 <li><strong>without an API key:</strong> it runs free on keyword rules</li>
-<li><strong>with a key:</strong> Claude Sonnet 5.5 labels new reviews through the Batch API for about $0.06–1.20 a week, and each review is labelled only once</li>
+<li><strong>with a key:</strong> Claude Sonnet 5.5 labels new reviews through the Batch API. Measured on real review text, that is about $0.02 for a typical week (66 reviews), and about $0.70 to relabel a whole year. Each review is labelled only once.</li>
 </ul>
 </li>
 </ul>
@@ -525,7 +525,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <hr />
 <h3>Appendix A: how this was done</h3>
 <ul>
-<li><strong>Data:</strong> public Google Play data, India storefront, English.<ul>
+<li><strong>Data:</strong> public Google Play data. Store ratings and the "most relevant" ordering are from the India storefront. Written reviews are English-language reviews from all countries, because Google returns the same reviews whichever country is requested (tested).<ul>
 <li><strong>Employee app</strong> (com.moveinsync.ets): 24,315 written reviews (Mar 2014 – Oct 2026), the listing's rating and distribution, and the 40 reviews shown first.</li>
 <li><strong>Comparisons:</strong> seven competitor apps and two driver apps.</li>
 <li><strong>History:</strong> archived copies of the listing (Wayback Machine) for the growth in rating count.</li>
@@ -534,7 +534,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li><strong>Labelling:</strong><ul>
 <li><strong>What was labelled:</strong> 1,400 reviews, using a versioned prompt (<code>prompts/classify_v1.md</code>) with 30 journey codes, plus who would fix it, text sentiment and a safety flag.</li>
 <li><strong>Who labelled:</strong> Claude (Opus 5.5, through Claude Code). A person is checking a random sample of 50 labels and every safety flag; the result is reported in the README.</li>
-<li><strong>The free fallback:</strong> keyword rules find the AI's main theme 69% of the time, with precision of 0.62–0.94 depending on the theme. They also act as a second opinion for the review queue.</li>
+<li><strong>The free fallback:</strong> keyword rules agree with the AI's main theme 69% of the time; per theme, 62–94% of what the rules flag matches the AI labels. They also act as a second opinion for the review queue.</li>
 </ul>
 </li>
 <li><strong>Statistics:</strong><ul>
@@ -551,7 +551,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 </ul>
 <h3>Appendix B: assumptions</h3>
 <ul>
-<li><strong>A1:</strong> "Written reviews" means reviews with text, in English, from the India listing. They approximate all ratings but don't equal them.</li>
+<li><strong>A1:</strong> "Written reviews" means English-language reviews with text, from all countries; Google doesn't split reviews by country. Most riders are in India, but the figures aren't India-only. They approximate all ratings but don't equal them.</li>
 <li><strong>A2:</strong> A version's release date is approximated by when it first appears in reviews.</li>
 <li><strong>A3:</strong> The brief's 1.5M daily riders is used only to give a sense of scale.</li>
 <li><strong>A4:</strong> Labels were produced by Claude through Claude Code using the production prompt, not by the production Sonnet runner. Accuracy comes from a person checking a random sample.</li>

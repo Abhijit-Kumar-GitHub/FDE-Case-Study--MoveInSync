@@ -118,6 +118,8 @@ def monthly(df):
         "short_5star": g.apply(lambda x: ((x["score"] == 5) & (x["length"] <= 20)).sum(), include_groups=False),
         "reply_rate": g["replyContent"].apply(lambda s: s.notna().mean()).round(4),
     }).reset_index()
+    end = df["at"].max()
+    out["partial"] = (out["month"] == end.strftime("%Y-%m")) & (end.day < end.days_in_month)
     return out
 
 
@@ -166,6 +168,7 @@ def windows(df):
 def replies(df):
     rep = df[df["replyContent"].notna()].copy()
     rep["latency_h"] = (rep["repliedAt"] - rep["at"]).dt.total_seconds() / 3600
+    rep = rep[rep["latency_h"] >= 0]  # "at" is the last edit time, so edited reviews can look replied-before-written
     end = df["at"].max()
     recent = df[df["at"] >= end - timedelta(days=90)]
     top = rep["replyContent"].str.strip().value_counts().head(5)

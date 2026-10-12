@@ -33,7 +33,7 @@ CLUSTERS = {
     "integrity_false_positive": ("False 'not installed from Play Store' / 'rooted device' lock-outs",
                                  r"not (been )?(installed|downloaded) (from|thru|through|in) (the )?play ?store|install(ed)? from (the )?play ?store|rooted", None),
     "forced_rating": ("Forced / repeated trip-rating or review prompts",
-                      r"rat(e|ing)|review|feedback", "X2.interrupt"),
+                      r"\brat(e|ed|es|ing|ings)\b|\breview|\bfeedback", "X2.interrupt"),
     "policy_prompt": ("Terms / transport-policy acceptance on every open",
                       r"terms|polic|agree|disclaimer|t ?& ?c", "X2.interrupt"),
     "permission_nag": ("Permission nagging (microphone, phone, notifications)",
@@ -125,6 +125,10 @@ def compute():
         return {"n": int(mask.sum()), "share": round(mask.mean(), 4)}
     T["named_failures"] = {
         "late_cab": share(neg["codes"].map(lambda cs: "J7.late" in cs)),
+        # Broader and harder to argue with: late, never came, not assigned, or late/missed drop.
+        "cab_late_or_missing": share(neg["codes"].map(lambda cs: any(c in cs for c in ("J7.late", "J4.alloc", "J8.drop")))),
+        "any_service_issue": share(neg["fams"].map(lambda fs: bool({"J4", "J8"} & set(fs)))
+                                   | neg["codes"].map(lambda cs: "J7.late" in cs or "J7.noshow" in cs)),
         "wrong_route": share(neg["codes"].map(lambda cs: "J4.route" in cs)),
         "booking_fails": share(neg["codes"].map(lambda cs: any(c.startswith("J3.") for c in cs))),
         "app_glitch": share(neg["fams"].map(lambda fs: "X1" in fs)),
@@ -142,9 +146,9 @@ def compute():
         clusters[name] = {"description": desc, "n_12m": len(sub), "n_12m_1_2star": int((sub["score"] <= 2).sum()),
                           "share_of_1_2star": round(int((sub["score"] <= 2).sum()) / n_neg, 4) if n_neg else None,
                           "quotes": _quotes(sub[sub["score"] <= 3])}
-    # Integrity lock-outs across all labelled history (recurring pattern).
+    # Integrity lock-outs across ALL written reviews, not just the labelled sample (recurring pattern).
     pat = re.compile(CLUSTERS["integrity_false_positive"][1], re.I)
-    allint = df[df["content"].fillna("").map(lambda t: bool(pat.search(t)))].copy()
+    allint = rev[rev["content"].fillna("").map(lambda t: bool(pat.search(t)))].copy()
     allint["kind"] = allint["content"].str.contains("rooted", case=False).map({True: "rooted-device check", False: "installer check"})
     clusters["integrity_false_positive"]["history"] = (
         allint.groupby([allint["at"].dt.to_period("Q").astype(str), "kind"]).size().rename("n").reset_index()
@@ -159,7 +163,7 @@ def compute():
     # Review-gating evidence (all labelled history): flagged for a policy check, not a conclusion.
     gate = df[df["content"].fillna("").map(lambda t: bool(GATING.search(t)))]
     rate_prompt = df[df["codes"].map(lambda cs: "X2.interrupt" in cs)
-                     & df["content"].str.contains(r"rat(?:e|ing)|review|feedback", case=False, na=False)]
+                     & df["content"].str.contains(r"\brat(?:e|ed|es|ing|ings)\b|\breview|\bfeedback", case=False, na=False)]
     T["rating_prompt"] = {
         "complaints_forced_or_repeated_12m": int((rate_prompt["at"] >= start).sum()),
         "possible_gating_reviews": [{"date": x["at"].strftime("%Y-%m-%d"), "stars": int(x["score"]),

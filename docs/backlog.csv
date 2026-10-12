@@ -1,5 +1,5 @@
 ﻿Issue key,Summary,Priority,Labels,Component,Horizon,Effort (assumed),Description
-INT-1,Stop false 'not installed from Play Store' lock-outs,Highest,play-ratings this-week,Android engineering,This week,S (2-4 days),"Evidence: 11 reviews in 12 months (9 of them 1-2 stars), 9 of those in Jul-Sep 2026 alone. Riders reinstall every few days; one reinstalled 10 times in 3 weeks. Same failure class as the 2023 'cannot open on a rooted device' wave (false root detection).
+INT-1,Stop false 'not installed from Play Store' lock-outs,Highest,play-ratings this-week,Android engineering,This week,S (2-4 days),"Evidence: 12 reviews have reported a false 'not installed from Play Store' block, 9 of them in Jul-Sep 2026. Riders reinstall every few days; one reinstalled 10 times in 3 weeks. The same failure class hit at larger scale in Q4 2023: 43 reviews reported 'cannot be opened on a rooted device' on ordinary phones.
 
 Likely cause: An installer/integrity check treats legitimate installs as sideloaded after app auto-updates, device restores or app-data clears (installer package name missing or Play Integrity verdict not yet available), and blocks the app instead of degrading.
 
@@ -32,7 +32,7 @@ Acceptance criteria: Owner named; reply SLA tracked in the weekly digest; templa
 Success metric: Reply rate on 1-3 star reviews >= 90% within 48h; top-10 visible reviews all answered; share of rating updates after reply (Play Console).
 
 Check on day 1: Find out who owned replies until June 2024 and why it stopped; get Play Console reply access for Support."
-RAT-1,Remove the forced trip-rating wall and check the rating flow against Google Play policy,High,play-ratings this-week,Product (rider app) + Legal,This week,S (2-3 days),"Evidence: 23 reviews in 12 months complain about forced or repeated rating prompts ('can't see my current ride until I rate the last one', 'no skip option'). One rider cut their store rating from 5 to 3 because of it. One review says the rating step offers only 4-5 stars (16 Jul 2026, v12.15.0); another says it was 'not accepting until I gave 5 star' (Dec 2025); another asks to stop Play Store review prompts after every ride (24 Jul 2026).
+RAT-1,Remove the forced trip-rating wall and check the rating flow against Google Play policy,High,play-ratings this-week,Product (rider app) + Legal,This week,S (2-3 days),"Evidence: 20 reviews in 12 months complain about forced or repeated rating prompts ('can't see my current ride until I rate the last one', 'no skip option'). One rider cut their store rating from 5 to 3 because of it. One review says the rating step offers only 4-5 stars (16 Jul 2026, v12.15.0); another says it was 'not accepting until I gave 5 star' (Dec 2025); another asks to stop Play Store review prompts after every ride (24 Jul 2026).
 
 Likely cause: A mandatory in-app trip rating blocks the trip screen; a pre-prompt may route only happy riders to the Play Store. If so, that is 'review gating', which Google Play policy prohibits and which puts the store rating itself at risk.
 
@@ -43,7 +43,7 @@ Acceptance criteria: Trip screen reachable without rating; no code path decides 
 Success metric: Forced-rating complaints -> 0; no Play policy warnings.
 
 Check on day 1: Walk through the rating flow on a test account; read the code that triggers the Play review request."
-SAFE-1,Route safety reports in reviews to the safety desk within 24 hours,High,play-ratings this-week,Safety desk,This week,S (process),"Evidence: 24 reviews in 12 months describe a safety risk (harassment, rash driving, women dropped alone at night, SOS blocked by pop-ups or forced logouts). Today they sit unanswered on a public page.
+SAFE-1,Route safety reports in reviews to the safety desk within 24 hours,High,play-ratings this-week,Safety desk,This week,S (process),"Evidence: 24 reviews in 12 months were flagged as possible safety risks (harassment, rash driving, women dropped alone at night, SOS blocked by pop-ups or forced logouts). Today they sit unanswered on a public page.
 
 Likely cause: Reviews are not monitored, so safety reports that never reached the in-app SOS/grievance flow are lost.
 
@@ -131,7 +131,7 @@ Acceptance criteria: Every in-app complaint gets a status and an owner; no-show 
 Success metric: Support-related share of negative reviews halved; in-app complaint time-to-close.
 
 Check on day 1: Pull in-app complaint volumes, categories and time-to-close for the last 90 days."
-OPS-1,Send operations-related reviews to the people who can fix them,Medium,play-ratings 90-days,Transport operations,90 days,M (process + weekly report),"Evidence: 19% of specific complaints are about the service, not the app: routing and pooling (9.1% of 1-2 star reviews), late or missed cabs (2.5%), driver behaviour (2.2%), drops (1%). Many name a city or site (Gurugram, Hyderabad, CNX, Tech Mahindra).
+OPS-1,Send operations-related reviews to the people who can fix them,Medium,play-ratings 90-days,Transport operations,90 days,M (process + weekly report),"Evidence: 19% of specific complaints are about the service, not the app: routing and pooling (9.1% of 1-2 star reviews), late, unassigned or missed cabs (4.7%), driver behaviour (2.2%), drops (1%). Many name a city or site (Gurugram, Hyderabad, CNX, Tech Mahindra).
 
 Likely cause: Review feedback never reaches site-level transport teams.
 
@@ -148,7 +148,7 @@ Likely cause: Prompts reportedly fire after every ride, which annoys riders; the
 
 Change: Request the Play In-App Review dialog only after an on-time completed trip with no open issue, at most once every 90 days per rider, never during boarding; no pre-filtering (policy).
 
-Acceptance criteria: Trigger rules implemented server-driven; prompt frequency and post-prompt rating tracked.
+Acceptance criteria: Trigger rules implemented server-driven; prompt frequency and post-prompt rating tracked. Play enforces its own quota on the In-App Review dialog and may not show it, so the app must never depend on it appearing or reveal whether it did.
 
 Success metric: Displayed India rating crosses 4.65 (shows 4.7); new-rating volume and mix tracked by the daily snapshot.
 

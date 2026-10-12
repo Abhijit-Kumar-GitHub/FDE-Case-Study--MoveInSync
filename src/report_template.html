@@ -111,10 +111,10 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
 
 <section>
   <h2>What riders actually write</h2>
-  <p class="lede">The store number is carried by silent ratings (about 4 in 5 new ratings have no text). Written reviews — what people read — tell a harsher story. Monthly, India storefront, English.</p>
+  <p class="lede">The store number is carried by silent ratings (about 4 in 5 new ratings have no text). Written reviews — what people read — tell a harsher story. Monthly; English-language reviews (Google returns the same reviews for every country). The current partial month is left out.</p>
   <div class="grid2">
-    <div class="card"><p class="chart-title">Average stars of written reviews</p><p class="chart-sub">Last 24 months</p><div id="c-mean" class="chart"></div></div>
-    <div class="card"><p class="chart-title">Share of written reviews that are 1★</p><p class="chart-sub">Last 24 months</p><div id="c-one" class="chart"></div></div>
+    <div class="card"><p class="chart-title">Average stars of written reviews</p><p class="chart-sub">Last 24 complete months</p><div id="c-mean" class="chart"></div></div>
+    <div class="card"><p class="chart-title">Share of written reviews that are 1★</p><p class="chart-sub">Last 24 complete months</p><div id="c-one" class="chart"></div></div>
   </div>
   <div class="card" style="margin-top:12px"><p class="chart-title">Share of reviews that got a developer reply</p>
     <p class="chart-sub">Since 2022 — replies stopped in mid-2024; competitors reply to almost every review</p>
@@ -166,7 +166,7 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
   <h2>How this is built</h2>
   <div class="card">
     <p style="margin-top:0">Public Play Store data is pulled daily (<code>google-play-scraper</code>). Each new review is labelled once — journey stage, who would fix it, sentiment of the words, safety — using a versioned prompt (<code>prompts/classify_v1.md</code>). In production that prompt runs on Claude Sonnet 5.5 via the Batch API; this submission's labels were produced by Claude through Claude Code with the identical prompt and audited by a person. Keyword rules run free as a fallback and a second opinion; where they disagree, the review lands in the queue above.</p>
-    <p class="chart-sub" style="margin:10px 0 4px">How well the free keyword rules match the AI labels (per theme)</p>
+    <p class="chart-sub" style="margin:10px 0 4px">How often the free keyword rules agree with the AI labels (per theme; agreement, not ground truth)</p>
     <div class="tablewrap" id="t-rules"></div>
   </div>
 </section>
@@ -249,12 +249,13 @@ function render() {
        shapes: [{type: "line", x0: 4.65, x1: 4.65, y0: -0.5, y1: bench.length - 0.5, line: {color: t.axis, width: 1}}],
        annotations: [{x: 4.65, y: bench.length - 0.5, text: "shows 4.7 from here", showarrow: false, yanchor: "bottom", font: {color: t.muted, size: 11}}]}), cfg);
 
-  const mo = M.monthly.slice(-24);
+  const full = M.monthly.filter((m) => !m.partial);
+  const mo = full.slice(-24);
   lineChart("c-mean", mo.map((m) => m.month), mo.map((m) => m.mean), t,
             {yaxis: {range: [3, 4.5]}, lastLabel: (v) => v.toFixed(2) + "★", hover: "%{x}: %{y:.2f}★<extra></extra>"});
   lineChart("c-one", mo.map((m) => m.month), mo.map((m) => m.share_1star), t,
             {yaxis: {tickformat: ".0%", range: [0, 0.4]}, lastLabel: (v) => fmtPct(v), hover: "%{x}: %{y:.1%}<extra></extra>"});
-  const rp = M.monthly.filter((m) => m.month >= "2022-01");
+  const rp = full.filter((m) => m.month >= "2022-01");
   lineChart("c-reply", rp.map((m) => m.month), rp.map((m) => m.reply_rate), t,
             {yaxis: {tickformat: ".0%", range: [0, 1.05]}, lastLabel: (v) => fmtPct(v, 1), hover: "%{x}: %{y:.1%} replied<extra></extra>"});
 
@@ -290,14 +291,14 @@ table("t-bench", [{h: "App", f: (b) => b.name}, {h: "Rating", num: 1, f: (b) => 
 const others = M.benchmark.filter((b) => b.role === "competitor" && b.score != null);
 const higher = others.filter((b) => b.score > S.displayed_score_exact).length;
 const totalOthers = others.reduce((a, b) => a + (b.ratings || 0), 0);
-$("bench-lede").textContent = `MoveInSync ranks #${higher + 1} of ${others.length + 1} employee-commute apps on rating and has more ratings (${S.ratings.toLocaleString()}) than the other ${others.length} combined (${totalOthers.toLocaleString()}). It is ${S.gap_to_threshold.toFixed(3)} stars from showing ${(S.next_display_threshold + 0.05).toFixed(1)}.`;
+$("bench-lede").textContent = `Among the ${others.length + 1} employee-commute apps benchmarked, MoveInSync ranks #${higher + 1} on rating and has more ratings (${S.ratings.toLocaleString()}) than the other ${others.length} combined (${totalOthers.toLocaleString()}). It is ${S.gap_to_threshold.toFixed(3)} stars from showing ${(S.next_display_threshold + 0.05).toFixed(1)}.`;
 
 table("t-monthly", [{h: "Month", f: (m) => m.month}, {h: "Reviews", num: 1, f: (m) => m.reviews}, {h: "Avg ★", num: 1, f: (m) => m.mean.toFixed(2)},
                     {h: "1★ share", num: 1, f: (m) => fmtPct(m.share_1star, 1)}, {h: "Reply rate", num: 1, f: (m) => fmtPct(m.reply_rate, 1)}], M.monthly.slice(-36).reverse());
 
 if (T.families) {
   const spec = T.attribution_1_2star_specific || {};
-  $("journey-lede").textContent = `Of 1–2★ reviews that name a specific problem, ${fmtPct(spec.app)} are about the app itself, ${fmtPct(spec.ops)} about the transport service and ${fmtPct(spec.policy)} about employer rules. A late cab — the obvious suspect — appears in only ${fmtPct(T.named_failures.late_cab.share, 1)} of them. ${fmtPct(T.share_unclear_1_2star)} are too vague to place ("worst app").`;
+  $("journey-lede").textContent = `Of 1–2★ reviews that name a specific problem, ${fmtPct(spec.app)} are about the app itself, ${fmtPct(spec.ops)} about the transport service and ${fmtPct(spec.policy)} about employer rules. Late, unassigned or missed cabs — the obvious suspects — appear in only ${fmtPct((T.named_failures.cab_late_or_missing || T.named_failures.late_cab).share, 1)} of 1–2★ reviews. ${fmtPct(T.share_unclear_1_2star)} are too vague to place ("worst app").`;
   table("t-journey", [{h: "Stage", f: (r) => r.label}, {h: "Mentions", num: 1, f: (r) => r.mentions}, {h: "Share of 1–2★", num: 1, f: (r) => fmtPct(r.share_mentions, 1)},
                       {h: "App", num: 1, f: (r) => fmtPct(r.attribution.app)}, {h: "Ops", num: 1, f: (r) => fmtPct(r.attribution.ops)}, {h: "Policy", num: 1, f: (r) => fmtPct(r.attribution.policy)}], T.families);
   table("t-trend", [{h: "Quarter", f: (r) => r.quarter}, {h: "n", num: 1, f: (r) => r.n}, {h: "Stability", num: 1, f: (r) => fmtPct(r.X1)}, {h: "Login", num: 1, f: (r) => fmtPct(r.J1)},
@@ -327,7 +328,7 @@ table("t-queue", [{h: "Reason", html: 1, f: (r) => `<span class="pill ${r.reason
 
 if (M.rules_eval) table("t-rules", [{h: "Theme", f: (r) => r.label}, {h: "AI-labelled", num: 1, f: (r) => r.ai_n}, {h: "Precision", num: 1, f: (r) => r.precision ?? "–"}, {h: "Recall", num: 1, f: (r) => r.recall ?? "–"}], M.rules_eval.by_family);
 
-$("footer").textContent = `Generated ${M.generated_at} from public Google Play data. Ratings are storefront-specific (this page uses India); written-review figures cover reviews with text in English. Assumptions are listed in the recommendation.`;
+$("footer").textContent = `Generated ${M.generated_at} from public Google Play data. Ratings are storefront-specific (this page uses India); written-review figures cover English-language reviews with text, from all countries. Assumptions are listed in the recommendation.`;
 $("repolink").href = M.repo_url || "#";
 
 // theme toggle

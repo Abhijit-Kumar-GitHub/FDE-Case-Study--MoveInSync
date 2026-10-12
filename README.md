@@ -13,7 +13,7 @@ pipeline that keeps answering **"How are our Play Store ratings?"** every day wi
 
 ## The short version
 
-- **The headline rating isn't behind the market.** The employee app shows **4.6★** in India (4.639, 114,880 ratings). That's #2 of 8 employee-commute apps, and it's 0.011 stars from showing 4.7.
+- **The headline rating isn't behind the market.** The employee app shows **4.6★** in India (4.639, 114,880 ratings). That's #2 of the 8 employee-commute apps benchmarked, and it's 0.011 stars from showing 4.7.
 - **Written reviews are harsher.** Over the last 12 months they average **3.84★** and **24% are 1★**. 9 of the first 10 reviews a visitor sees are 1–2★ and unanswered. Replies stopped in mid-2024.
 - **The app is to blame, not the cabs.** **73%** of specific complaints are about the app itself. The biggest themes are stability (17%), login (14%), self-booking (11%), and interruptions and UI (11%).
 - **There's a live stability regression.** It spans versions 12.16–12.19 and includes a false "not installed from Play Store" lock-out.
@@ -33,6 +33,12 @@ python -m pytest -q tests
 - **Every day at 07:00 IST** it records the store rating, pulls new reviews, labels them, rebuilds the dashboard and commits the results.
 - **Every Monday** it opens a digest Issue. The Issue is labelled `regression` if a release is flagged.
 - **Pages:** GitHub Pages serves `docs/`.
+
+**One-time setup after forking or creating the repo:**
+1. Settings → Pages → Deploy from a branch → `main` / `/docs`.
+2. Settings → Actions → General → Workflow permissions → **Read and write**, so the job can commit and open Issues.
+3. Optional: add an `ANTHROPIC_API_KEY` secret to label new reviews with Claude Sonnet 5.5 instead of keyword rules.
+4. Actions → Ratings monitor → Run workflow, to run it once by hand.
 
 ## How it works
 
@@ -82,7 +88,7 @@ The cost is predictable before anything is sent: the runner counts the new revie
 
 ### How good the free fallback is
 
-These are the keyword rules scored against the AI labels on all 1,400 reviews. They find the AI's main theme **69%** of the time.
+This is how often the keyword rules agree with the AI labels on all 1,400 reviews — agreement, not accuracy against ground truth. They agree with the AI's main theme **69%** of the time. "Precision" = share of the rules' flags the AI also gave; "recall" = share of the AI's labels the rules also caught.
 
 | Theme | Precision | Recall |
 |---|---|---|
@@ -132,7 +138,7 @@ tests/                    fast checks (rules, validation, API parsing, statistic
 
 All nine assumptions (A1–A9) are listed in the recommendation's Appendix B. The main ones:
 - **Ratings are per country.** India is used throughout; India 4.64, US 4.32. Rating counts are global.
-- **Written reviews are English text reviews.** They approximate all ratings but don't equal them. About 1 in 5 new ratings has text.
+- **Written reviews are English-language reviews from all countries.** Google returns the same reviews whichever country is requested (tested), so these figures aren't India-only. They approximate all ratings but don't equal them; about 1 in 5 new ratings has text.
 - **The displayed distribution is weighted.** Google weights recent ratings, so the "~3,600 extra 5★" figure is indicative.
 - **Release dates are approximate.** A version's date is when it first appears in reviews.
 - **Public data has gaps.** Device, OS and client aren't visible, which is why each backlog item has a day-1 check against Play Console and internal logs.
