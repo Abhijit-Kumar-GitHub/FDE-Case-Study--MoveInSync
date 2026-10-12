@@ -1,0 +1,142 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How I Got Here</title><meta name="description" content="Decisions, checks and corrections behind the recommendation.">
+<style>
+:root { color-scheme: light; --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --accent:#2a78d6; --wash:#e8f1fc; --border:rgba(11,11,11,.10); }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { color-scheme: dark; --page:#0d0d0d; --surface:#1a1a19;
+  --ink:#fff; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --accent:#3987e5; --wash:#16263a; --border:rgba(255,255,255,.10); } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--page); color:var(--ink); font:15.5px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; background: var(--page); }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+h1 + p em { color: var(--ink2); font-style: normal; font-size: 14px; }
+h2 { font-size: 20px; margin: 36px 0 10px; padding-top: 8px; border-top: 1px solid var(--grid); }
+h3 { font-size: 16.5px; margin: 24px 0 6px; }
+a { color: var(--accent); }
+ol, ul { padding-left: 22px; }
+li { margin: 5px 0; }
+blockquote { margin: 10px 0; padding: 8px 14px; border-left: 3px solid var(--accent); background: var(--wash); color: var(--ink2); border-radius: 0 8px 8px 0; }
+blockquote p { margin: 4px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; margin: 10px 0 14px; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--ink2); font-weight: 600; }
+code { font-size: 13px; background: var(--grid); padding: 1px 5px; border-radius: 4px; }
+hr { border: 0; border-top: 1px solid var(--grid); margin: 36px 0; }
+h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px 14px 36px; }
+@media print {
+  body { background: #fff; font-size: 11pt; } main { max-width: none; padding: 0; background:#fff; }
+  h2 { break-after: avoid; } table, blockquote { break-inside: avoid; } a { color: #0b0b0b; }
+  @page { size: A4; margin: 16mm 14mm; }
+}
+</style></head><body><main><p><a href="index.html">← Dashboard</a> · <a href="recommendation.html">Recommendation</a></p><h1>How I got here</h1>
+<p>The decisions behind the recommendation, what I checked, and what I got wrong first and corrected.
+For tools and reproducibility, see the <a href="https://github.com/OWNER/moveinsync-playstore-ratings#readme">README</a>.</p>
+<h2>1. Framing before data</h2>
+<p>Four lines in the brief shaped the plan:</p>
+<ul>
+<li><strong>"The step that matters most: the employee books their own ride."</strong> Self-booking gets its own section, not one theme among many.</li>
+<li><strong>430+ enterprise customers.</strong> It's B2B2C, so employers set rules like cut-offs and booking windows that riders blame on the app. I added "employer policy" as a third owner next to app and operations.</li>
+<li><strong>"Not a one-time ask."</strong> The answer had to be a monitor that keeps answering, not a single report.</li>
+<li><strong>"Lower than they should be."</strong> Compared to what? I checked that before reading any reviews.</li>
+</ul>
+<h2>2. Testing the premise first</h2>
+<ul>
+<li><strong>Benchmark.</strong> I pulled the listing figures for MoveInSync and 7 employee-commute competitors. MoveInSync came out #2 of the 8, with more ratings than the other seven combined. So the useful question became "what does <em>should be</em> mean?" I turned it into four measurable gaps (memo, section 1).</li>
+<li><strong>Ratings differ by country.</strong> Archived copies of the listing (Wayback Machine) showed values that didn't fit together: 4.32 in 2022, 3.33 in 2024, 4.36 in July 2026, against 4.64 live.<ul>
+<li>The archive crawls from the US, and the Play Store shows each country its own rating: India 4.64, US 4.32, UK 4.49, UAE 4.82.</li>
+<li>So I didn't build a rating history from the archive. I only used its rating <em>counts</em>, which are global, to estimate the monthly inflow.</li>
+</ul>
+</li>
+<li><strong>The rounding rule.</strong> 3.49 displays as 3.5 and 4.557 as 4.6, so the Play Store rounds rather than truncates. That gives "0.011 stars from showing 4.7".</li>
+</ul>
+<h2>3. Reading before counting</h2>
+<ul>
+<li><strong>The first taxonomy missed the biggest pattern.</strong> I read a sample of recent negative reviews before fixing the codes. The draft I started from had no place for forced re-login and OTP failures, or for launch interruptions (terms on every open, banners, forced trip ratings), so I split those out.</li>
+<li><strong>Commute jargon.</strong> In this app, "login" and "logout" usually mean the trip to the office and the trip home. "Logout cab was late" is a cab complaint, not a sign-in problem. The keyword rules and a test guard against this.</li>
+</ul>
+<h2>4. Labelling with AI, and keeping it honest</h2>
+<ul>
+<li><strong>A versioned prompt, not a chat.</strong> <code>prompts/classify_v1.md</code> and <code>schema.json</code> are the artifact: the same prompt and codes for this interactive run and for the production API runner.</li>
+<li><strong>What was labelled.</strong> 1,400 reviews in 10 chunks: every 1–3★ review from the last 12 months, the longer positive ones, and a sample from the three years before. A script validated every chunk (IDs, allowed codes, one label per review) before import.</li>
+<li><strong>A second opinion.</strong> Free keyword rules run independently. Reviews where the AI said "unclear", stars that contradict the words, and every safety flag go to a person. I measured how often the rules agree with the AI labels (69% on the main theme) and reported it as agreement, not accuracy.</li>
+<li><strong>A person checks the AI.</strong> I hand-checked a random sample of AI labels and every safety flag (result in the README).</li>
+<li><strong>Cost was measured, not guessed.</strong> A dry run on real review text prices the production path at about $0.02 a week.</li>
+</ul>
+<h2>5. A second pass over every claim</h2>
+<p>Before finalising, I re-tested each headline claim against the raw data and re-read the code that produced it. That pass changed:</p>
+<table>
+<thead>
+<tr>
+<th>What I first had</th>
+<th>What the check showed</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Written reviews described as "India storefront"</td>
+<td>Requesting India and US returns the identical newest 200 reviews; Google doesn't split reviews by country</td>
+<td>Described as English-language reviews from all countries. Store rating and "most relevant" order stay India-specific (tested: they differ).</td>
+</tr>
+<tr>
+<td>23 forced-rating complaints</td>
+<td>The pattern also matched "accu<strong>rate</strong>" and "frust<strong>rating</strong>"</td>
+<td>20, with word boundaries</td>
+</tr>
+<tr>
+<td>"Rooted device" lock-outs: a handful in 2023</td>
+<td>Counted from the labelled sample; the full data has 43 in Q4 2023</td>
+<td>INT-1 now cites both waves (2023 rooted check, 2026 installer check)</td>
+</tr>
+<tr>
+<td>"Late cabs: 2.5% of complaints"</td>
+<td>Too narrow; easy to call cherry-picked</td>
+<td>Late, unassigned or missed cabs: 4.7%, still small</td>
+</tr>
+<tr>
+<td>Safety flags from the keyword rules: 474</td>
+<td>They fired on praise ("super safe") and on "c<strong>rash</strong>es"</td>
+<td>Risk words only, word boundaries, ≤3★ or negative text: 30 items</td>
+</tr>
+<tr>
+<td>Gating-evidence search</td>
+<td>Matched "only 48 hours"</td>
+<td>Tightened; three real reviews remain, framed as a check, not a finding</td>
+</tr>
+<tr>
+<td>Reply latency</td>
+<td>Negative for edited reviews (Google's date is the last edit)</td>
+<td>Excluded those reviews</td>
+</tr>
+<tr>
+<td>Trend charts</td>
+<td>Included half of the current month</td>
+<td>Partial month left out</td>
+</tr>
+<tr>
+<td>"#2 of 8 employee-commute apps", "the only record of the rating"</td>
+<td>Overreach</td>
+<td>"of the 8 benchmarked"; "Google doesn't publish it; this record is free"</td>
+</tr>
+<tr>
+<td>Q3 stability jump</td>
+<td>Needed a test, not an eyeball</td>
+<td>Two-proportion test: z = 2.6, p ≈ 0.01</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Doing, not only recommending</h2>
+<ul>
+<li><strong>REP-1 drafts.</strong> Replies to the 20 reviews visitors see first are already drafted (<code>reply_drafts.md</code>). They're specific, under Google Play's 350-character limit, and use <code>[confirm: …]</code> for anything only MoveInSync can verify.</li>
+<li><strong>A monitor that keeps answering.</strong> It runs daily and posts the weekly answer as a GitHub Issue, so "How are our ratings?" never needs someone to start an analysis.</li>
+</ul>
+<h2>Tools</h2>
+<ul>
+<li><strong>Python:</strong> google-play-scraper, pandas</li>
+<li><strong>Dashboard:</strong> Plotly.js</li>
+<li><strong>Automation and hosting:</strong> GitHub Actions and Pages</li>
+<li><strong>PDF:</strong> headless Microsoft Edge</li>
+<li><strong>Claude Code (Claude Opus 5.5):</strong> planning, writing code, labelling reviews with the versioned prompt, and drafting</li>
+</ul>
+<p>Every number in the memo traces to <code>data/processed/metrics.json</code>, and every quote is verbatim.</p></main></body></html>

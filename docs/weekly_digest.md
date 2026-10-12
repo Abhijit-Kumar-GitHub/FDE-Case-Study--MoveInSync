@@ -8,4 +8,4 @@
 - **Developer replies (last 28 days):** 1% of reviews answered.
 - **Needs a person:** 5 new in the last 28 days (1 safety) · 30 safety items on file.
 
-Dashboard: https://OWNER.github.io/moveinsync-playstore-ratings/ · Queue: docs/needs_review.csv · Method: README.md
+Dashboard: https://OWNER.github.io/moveinsync-playstore-ratings/ · Queue: needs_review.csv · Replies: reply_drafts.html · Method: README

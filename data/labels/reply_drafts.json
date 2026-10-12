@@ -1,0 +1,105 @@
+{
+  "_note": "Drafts for the reviews a Play Store visitor sees first (India, 'most relevant'), keyed by reviewId (visible rank at drafting time kept for reference) (2026-10-12). Text in [confirm: ...] must be checked and filled by Support before posting. Google Play limits replies to 350 characters.",
+  "drafts": {
+    "7e184ad5-066a-4d36-b7a0-73a0a56bf8a3": {
+      "rank_when_drafted": 1,
+      "reply": "Thank you, this is a fair point. Being marked 'No show' when the cab was late or a check-in was missed shouldn't come as a surprise. We've passed your reminder idea to the product team. If a no-show was marked wrongly, write to app@moveinsync.com with the trip date and we'll review it.",
+      "chars": 286
+    },
+    "6663f7b1-7087-45e5-9320-c8a7fbfc6307": {
+      "rank_when_drafted": 2,
+      "reply": "Sorry. You're right that the new shuttle booking made it unclear whether a seat was booked. We're working on a clear confirmation screen and receipt, and on showing only your cab once booked [confirm: timing]. If you missed a trip because of this, write to app@moveinsync.com with the date.",
+      "chars": 290
+    },
+    "6c2c9546-09f9-460d-a61a-0fbe76078cd9": {
+      "rank_when_drafted": 3,
+      "reply": "Thanks for the detail. A stale cab position is worse than none, so we're working on marking delayed locations clearly and on better ETAs [confirm]. Could you send your city and a recent trip date to app@moveinsync.com? It helps us check what that vehicle reported.",
+      "chars": 264
+    },
+    "c158c05c-7985-49cd-bebb-1be703e0ca50": {
+      "rank_when_drafted": 4,
+      "reply": "Sorry this led to missed pickups. Wrong positions and late alerts are problems we're actively working on [confirm: fix/version]. Please send a recent trip date and your city to app@moveinsync.com so we can trace what the vehicle reported and why the alert was late.",
+      "chars": 265
+    },
+    "f10f0786-3322-4758-87ce-8378fbfb041f": {
+      "rank_when_drafted": 5,
+      "reply": "Sorry about the crashes while booking; that's the worst moment for it. Please update to the latest version [confirm: version with the fix]. If it still hangs, email app@moveinsync.com with your phone model and Android version so our engineers can reproduce it.",
+      "chars": 260
+    },
+    "2b9bb15a-46fa-45fb-9820-d0cf81d513ef": {
+      "rank_when_drafted": 6,
+      "reply": "Thank you, and sorry this went unanswered for so long. The app has changed a lot since 2019 [confirm: update-reminder issue fixed]. If tracking or calling the driver still misbehaves for you today, tell us at app@moveinsync.com with your phone model and we'll fix it properly.",
+      "chars": 276
+    },
+    "333fc045-4a90-4951-92ea-06906fd7d135": {
+      "rank_when_drafted": 8,
+      "reply": "Thanks for the practical suggestions. How far ahead you must book is set by your company's transport policy, so we'll pass that point to your transport desk. Accepting the terms on every launch is on us: we're changing it to once per terms update [confirm: timing].",
+      "chars": 265
+    },
+    "782c4844-7afd-417f-b1ce-3c3019dfc8fb": {
+      "rank_when_drafted": 9,
+      "reply": "Thanks for the kind words and the honest update. Changing pickup/drop without touching the shift time, and faster loading, are both being worked on [confirm]. Your phone model and Android version at app@moveinsync.com would help us find the slowness.",
+      "chars": 250
+    },
+    "f652d1ff-03d9-4f8a-9302-03a1d6d873cd": {
+      "rank_when_drafted": 10,
+      "reply": "Sorry this happened, and that it took us so long to reply. A cancelled trip should never get a driver. We're adding status tracking for requests raised in the app [confirm]. If you still see this, write to app@moveinsync.com and we'll look into your account.",
+      "chars": 258
+    },
+    "5123b206-2147-4a6d-9b17-d2a90cd76830": {
+      "rank_when_drafted": 11,
+      "reply": "Thanks, fair feedback. Unclear error messages leave you stuck at the worst time. We're rewriting them to say what went wrong and what to do next [confirm]. If you remember a specific message, send it to app@moveinsync.com and we'll prioritise it.",
+      "chars": 246
+    },
+    "d642e79f-81cf-4aa2-8ea1-973a75a3a17d": {
+      "rank_when_drafted": 12,
+      "reply": "Thank you for the thoughtful suggestion. Pickup instructions for the driver (wait outside, call when close) would help a lot in gated communities. We've passed it to the product team.",
+      "chars": 183
+    },
+    "a1a961c6-792c-4ced-9b26-3ed3b6765d2b": {
+      "rank_when_drafted": 14,
+      "reply": "Sorry for the disruption to you and your team. The app falling back to a web page after login points to a session problem, which we're fixing so you stay signed in [confirm]. If it happens again, email app@moveinsync.com with your company name and phone model.",
+      "chars": 260
+    },
+    "f6f71711-f702-4b57-9d46-3226c560e20a": {
+      "rank_when_drafted": 16,
+      "reply": "Sorry. Having the whole team reinstall to make it work isn't acceptable. Please update to the latest version [confirm: fix]. If it still fails to load, write to app@moveinsync.com with your company name and phone models so we can reproduce it.",
+      "chars": 243
+    },
+    "600c1e40-2523-42c7-990f-3873fec00df8": {
+      "rank_when_drafted": 19,
+      "reply": "Sorry about the cancelled trip. A half-asleep tap shouldn't be able to cancel it: we're adding a confirmation step and clearer booking status [confirm]. If you still need a cab after an accidental cancel, please contact your transport desk.",
+      "chars": 240
+    },
+    "c14aec97-9cf9-4e0b-ac29-e2eaf30b488e": {
+      "rank_when_drafted": 20,
+      "reply": "Thank you. Showing 'Logout' before 'Login' under a date is confusing, especially on night shifts. We've shared this with the design team and are simplifying the bookings view [confirm]. If it caused a no-show, write to app@moveinsync.com with the date.",
+      "chars": 252
+    },
+    "65beaeb0-116e-4e3f-beed-b24ba50834e4": {
+      "rank_when_drafted": 21,
+      "reply": "Sorry you missed the bus. That message means calling is switched off in your company's settings. We'll raise it with your transport desk, and we're looking at in-app messaging so you can still reach the driver [confirm].",
+      "chars": 220
+    },
+    "2383e87a-d144-4037-ab9d-51dc12ae0c65": {
+      "rank_when_drafted": 23,
+      "reply": "Sorry, and sorry your earlier complaints went unanswered. Wrong ETAs and stale locations are being worked on, and so is editing your pickup location in the app [confirm]. Please send your city and site to app@moveinsync.com so we can follow up.",
+      "chars": 244
+    },
+    "94b966f7-3eb5-438e-9c04-930a4ce41b84": {
+      "rank_when_drafted": 26,
+      "reply": "Sorry about the login trouble. The 'Empty response body' error on the OTP screen was [confirm: fixed in version X]. If you still see it after updating, please email app@moveinsync.com with your phone model; you shouldn't need to clear app data each time.",
+      "chars": 254
+    },
+    "4114f6dd-c75a-4ea2-b5e5-8d7a34285909": {
+      "rank_when_drafted": 29,
+      "reply": "Thanks for explaining. A 1 km walk with bags every day is a real burden. Pickup points are set with your company's transport team, so we've passed your request on and asked them to review stops in your area. You can also raise it with your transport desk.",
+      "chars": 255
+    },
+    "ab295e36-efc9-4fce-9ed4-638f509c63ef": {
+      "rank_when_drafted": 32,
+      "reply": "We're sorry. A rude call and changing timings aren't acceptable. Please write to app@moveinsync.com with the date of your call and your site, so we can follow up with the support team and look at why your pickup times keep changing.",
+      "chars": 232
+    }
+  }
+}

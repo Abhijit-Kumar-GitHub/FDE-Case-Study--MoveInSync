@@ -59,7 +59,7 @@ PRAISE = re.compile(r"\b(good|nice|great|excellent|awesome|amazing|super|best|he
 NEGATIVE = re.compile(r"\b(worst|wrost|worse|bad|poor|pathetic|useless|waste|horrible|terrible|irritat|annoy|frustrat|disappoint|rubbish|trash|bekar|bekaar|bakwas|"
                       r"not|never|no|can'?t|cannot|unable|doesn'?t|don'?t|won'?t|fail|issue|problem)\b", FLAGS)
 # Risk words only — "safe" on its own is usually praise ("super safe").
-SAFETY = re.compile(r"unsafe|not safe|no safety|safety (concern|issue|risk)|harass|misbehav|\bsos\b|rash|drunk|over ?-?speed|speeding|"
+SAFETY = re.compile(r"unsafe|not safe|no safety|safety (concern|issue|risk)|harass|misbehav|\bsos\b|\brash(ly)?\b|\bdrunk|over ?-?speed|speeding|"
                     r"escort|threat|abusive|dangerous|(women|female|girl|ladies)\W{0,3}\w*\W{0,3}(safety|security|alone|night)", FLAGS)
 
 APP_FAMILIES = {"J1", "J5", "J6", "X1", "X2", "X3"}

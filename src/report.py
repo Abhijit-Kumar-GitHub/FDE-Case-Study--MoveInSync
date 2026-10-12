@@ -139,7 +139,7 @@ def digest(metrics, df, queue):
         lines.append(f"- **Needs a person:** {len(recent_q)} new in the last 28 days "
                      f"({int(recent_q['reason'].str.contains('safety').sum())} safety) · {open_safety} safety items on file.")
     lines += ["", "Dashboard: https://{owner}.github.io/moveinsync-playstore-ratings/ · "
-              "Queue: docs/needs_review.csv · Method: README.md", ""]
+              "Queue: needs_review.csv · Replies: reply_drafts.html · Method: README", ""]
     return "\n".join(lines)
 
 
@@ -151,6 +151,54 @@ def page(metrics, queue, digest_md):
     html = TEMPLATE.read_text(encoding="utf-8")
     blob = json.dumps(payload, default=str, ensure_ascii=False).replace("</", "<\\/")
     return html.replace("__METRICS_JSON__", blob)
+
+
+REPLY_LIMIT = 350  # Google Play's cap on a developer reply
+
+
+def write_reply_queue(df):
+    """REP-1, operational: unanswered 1-3 star reviews in the order a person should answer them.
+    What visitors see first comes first, then safety, then upvotes, then recency."""
+    import themes_metrics as tm
+    drafts_path = ROOT / "data" / "labels" / "reply_drafts.json"
+    drafts = json.loads(drafts_path.read_text(encoding="utf-8"))["drafts"] if drafts_path.exists() else {}
+    mr_path = RAW / f"{config.PRIMARY_APP}__most_relevant.csv"
+    visible = pd.read_csv(mr_path)[["reviewId", "rank"]] if mr_path.exists() else pd.DataFrame(columns=["reviewId", "rank"])
+    end = df["at"].max()
+    pool = df[(df["score"] <= 3) & df["replyContent"].isna()]
+    pool = pool.merge(visible, on="reviewId", how="left")
+    pool = pool[pool["rank"].notna() | (pool["at"] >= end - timedelta(days=90))].copy()
+    pool["visible"] = pool["rank"].notna()
+    pool = pool.sort_values(["visible", "safety_flag", "rank", "thumbsUpCount", "at"],
+                            ascending=[False, False, True, False, False])
+    rows = []
+    for i, (_, r) in enumerate(pool.iterrows(), start=1):
+        d = drafts.get(r["reviewId"], {})
+        reply = d.get("reply", "")
+        if len(reply) > REPLY_LIMIT:
+            raise ValueError(f"draft for {r['reviewId']} is {len(reply)} chars; Play allows {REPLY_LIMIT}")
+        themes = sorted({tm.FAMILY_LABELS.get(f, f) for f in rules.families(r["stages"]) if f not in ("U", "P")})
+        rows.append({"priority": i, "visible_rank": "" if pd.isna(r["rank"]) else int(r["rank"]),
+                     "safety": bool(r["safety_flag"]), "date": r["at"].strftime("%Y-%m-%d"), "stars": int(r["score"]),
+                     "thumbs": int(r["thumbsUpCount"]), "version": "" if pd.isna(r["reviewCreatedVersion"]) else r["reviewCreatedVersion"],
+                     "themes": "; ".join(themes), "review": " ".join(r["content"].split()),
+                     "draft_reply": reply, "draft_chars": len(reply) if reply else "",
+                     "needs_confirmation": "[confirm" in reply, "reviewId": r["reviewId"]})
+    q = pd.DataFrame(rows)
+    q.to_csv(DOCS / "reply_queue.csv", index=False, encoding="utf-8-sig")
+
+    lines = ["# Reply drafts: the reviews visitors see first", "",
+             "For Support (REP-1). Each draft is specific to the review and within Google Play's 350-character limit. "
+             "Fill every `[confirm: …]` with a checked fact (or delete the clause) before posting. "
+             "Post the reply, then come back to the same review when the fix ships. Riders can update their rating.", "",
+             f"Full prioritised queue (all unanswered 1–3★ reviews): `reply_queue.csv`, {len(q)} reviews.", ""]
+    for _, r in q[q["draft_reply"] != ""].iterrows():
+        lines += [f"## #{r['visible_rank']} on the listing · {'★' * r['stars']}{'☆' * (5 - r['stars'])} · {r['date']} · 👍 {r['thumbs']}", "",
+                  f"> {r['review'][:600]}{'…' if len(r['review']) > 600 else ''}", "",
+                  f"**Draft reply** ({r['draft_chars']} chars{', needs confirmation' if r['needs_confirmation'] else ''}):", "",
+                  r["draft_reply"], ""]
+    (DOCS / "reply_drafts.md").write_text("\n".join(lines), encoding="utf-8")
+    return q
 
 
 def write_backlog():
@@ -175,9 +223,14 @@ def main(owner="OWNER"):
     df = labelled_with_fallback()
     queue = build_queue(df)
     queue.to_csv(DOCS / "needs_review.csv", index=False, encoding="utf-8-sig")
+    replies = write_reply_queue(df)
+    metrics["reply_queue"] = {"open": len(replies), "visible_unanswered": int((replies["visible_rank"] != "").sum()),
+                              "drafted": int((replies["draft_reply"] != "").sum())}
     md = digest(metrics, df, queue).replace("{owner}", owner)
     (DOCS / "weekly_digest.md").write_text(md, encoding="utf-8")
     (DOCS / "index.html").write_text(page(metrics, queue, md), encoding="utf-8")
+    import memo
+    memo.render_docs()
     print(f"queue: {len(queue)} rows · digest + dashboard written to docs/")
     return md
 

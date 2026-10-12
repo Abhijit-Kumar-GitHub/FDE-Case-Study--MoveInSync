@@ -137,7 +137,7 @@ Employer rules, such as cut-offs, booking windows and waitlists, directly cause 
 |---|---|---|---|---|---|
 | This week | INT-1 | Stop false "not installed from Play Store" lock-outs: never block launch on an unsure verdict; add a kill-switch | Android | S | Integrity reviews 9 → 0 next quarter |
 | This week | REL-1 | Staged rollouts that halt automatically on crash, ANR or review regressions | Release owner | M | No regressed version reaches 100% |
-| This week | REP-1 | Reply to every 1–3★ review within 48h, top 20 visible first, with the actual fix | Support | S, ongoing | ≥ 90% replied; top 10 all answered |
+| This week | REP-1 | Reply to every 1–3★ review within 48h, top 20 visible first, with the actual fix (**drafts for those 20 are ready**: reply_drafts.md) | Support | S, ongoing | ≥ 90% replied; top 10 all answered |
 | This week | RAT-1 | Make trip rating skippable; remove any star pre-filter before the Play prompt | Product + Legal | S | Forced-rating complaints → 0 |
 | This week | SAFE-1 | Safety reports in reviews → safety desk, reply and incident within 24h | Safety desk | S | 100% actioned in 24h |
 | 30 days | LOG-1 | Keep riders signed in (silent token refresh, offline trip card, biometric unlock) | Identity + Android | M | Session complaints < 1% |
@@ -150,7 +150,7 @@ Employer rules, such as cut-offs, booking windows and waitlists, directly cause 
 | 90 days | OPS-1 | Weekly digest of service complaints, by city and site, for transport desks | Operations | M | Ops complaints trend down |
 | 90 days | ASK-1 | Play In-App Review only after an on-time trip, at most every 90 days, no filtering | Product | S | Display crosses 4.7 |
 
-Every item has its evidence, likely cause, exact change, acceptance criteria and day-1 check in **backlog.csv**, which imports straight into Jira or Linear.
+Every item has its evidence, likely cause, exact change, acceptance criteria and day-1 check in **backlog.csv**, which imports straight into Jira or Linear. How the analysis was done and checked, including what I corrected along the way, is in **process.md**.
 
 **Why this order:**
 - **This week** stops active damage: a regression shipping now, a public page nobody answers, and a prompt that may break policy. None of it needs new features.

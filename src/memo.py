@@ -91,6 +91,8 @@ def render(owner=None):
     body = markdown.markdown(pymd_compat(md), extensions=["tables", "sane_lists"])
     body = body.replace(f"{dash}", f'<a href="{dash}">{dash}</a>').replace(f"{repo})", f'<a href="{repo}">{repo}</a>)')
     body = body.replace("<strong>backlog.csv</strong>", '<strong><a href="backlog.csv">backlog.csv</a></strong>')
+    body = body.replace("<strong>process.md</strong>", '<strong><a href="process.html">process.md</a></strong>')
+    body = body.replace("reply_drafts.md)", '<a href="reply_drafts.html">reply_drafts.md</a>)')
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Play Store Ratings Recommendation</title>
@@ -99,7 +101,31 @@ def render(owner=None):
     out = DOCS / "recommendation.html"
     out.write_text(html, encoding="utf-8")
     print(f"wrote {out}")
+    render_docs()
     pdf(out)
+
+
+def md_page(md, title, description=""):
+    body = markdown.markdown(pymd_compat(md), extensions=["tables", "sane_lists"])
+    for name in ("recommendation", "process", "reply_drafts", "weekly_digest", "README"):
+        body = body.replace(f'href="{name}.md"', f'href="{name}.html"').replace(f'href="../{name}.md"', f'href="{name}.html"')
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title><meta name="description" content="{description}">
+<style>{CSS}</style></head><body><main><p><a href="index.html">← Dashboard</a> · <a href="recommendation.html">Recommendation</a></p>{body}</main></body></html>"""
+
+
+def render_docs():
+    """Companion pages for GitHub Pages (Markdown is not rendered there with .nojekyll)."""
+    pages = [("process.md", "How I Got Here", "Decisions, checks and corrections behind the recommendation."),
+             ("reply_drafts.md", "Reply Drafts", "Ready-to-post replies to the reviews visitors see first."),
+             ("weekly_digest.md", "Weekly Ratings Digest", "This week's answer to: how are our Play Store ratings?")]
+    for src, title, desc in pages:
+        p = DOCS / src
+        if p.exists():
+            md = p.read_text(encoding="utf-8").replace("(../README.md)", "(https://github.com/" + getattr(config, "GITHUB_OWNER", "OWNER") + "/moveinsync-playstore-ratings#readme)")
+            (DOCS / src.replace(".md", ".html")).write_text(md_page(md, title, desc), encoding="utf-8")
+    (DOCS / ".nojekyll").write_text("", encoding="utf-8")
 
 
 def pdf(html_path):

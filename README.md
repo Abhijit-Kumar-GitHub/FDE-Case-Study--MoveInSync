@@ -10,6 +10,8 @@ pipeline that keeps answering **"How are our Play Store ratings?"** every day wi
 | **Fix-first backlog** (imports into Jira or Linear) | [`docs/backlog.csv`](docs/backlog.csv) |
 | **Needs-review queue** | [`docs/needs_review.csv`](docs/needs_review.csv) |
 | **This week's digest** | [`docs/weekly_digest.md`](docs/weekly_digest.md), also posted weekly as a GitHub Issue |
+| **Replies, ready to post** (REP-1, done on day 0) | [`docs/reply_drafts.md`](docs/reply_drafts.md) · full queue [`docs/reply_queue.csv`](docs/reply_queue.csv) |
+| **How I got here** (decisions, checks, corrections) | [`docs/process.md`](docs/process.md) |
 
 ## The short version
 
@@ -112,6 +114,7 @@ That's good enough to spot trends and send reviews to a person, but not good eno
   - The queue goes to Support.
   - Safety items go to the safety desk within 24 hours.
 - **Any time:** ask Claude Code *"how are our ratings?"* or *"how did 12.19 do?"*. The `ratings-report` skill (`.claude/skills/ratings-report`) answers from this repo's data.
+- **Replies:** Support works down `docs/reply_queue.csv`. The `draft-replies` skill drafts the next batch, specific and within Play's 350-character limit, for a person to check and post.
 - **Correcting a label:** add a row to `data/labels/human_overrides.csv` (`reviewId,field,value,reviewer,note`).
 
 ## Repo layout
@@ -128,7 +131,7 @@ src/analyze.py            store view, trends, versions (Wilson intervals), repli
 src/themes_metrics.py     journey heat map, attribution, clusters, gating evidence, impact model, rules eval
 src/report.py             dashboard, queue, digest, backlog.csv
 src/memo.py               recommendation.md -> HTML/PDF
-.claude/skills/           label-reviews · ratings-report
+.claude/skills/           label-reviews · ratings-report · draft-replies
 data/                     raw reviews, daily snapshots, labels, metrics
 docs/                     GitHub Pages: dashboard, recommendation, backlog, queue, digest
 tests/                    fast checks (rules, validation, API parsing, statistics)
