@@ -108,7 +108,7 @@ def digest(metrics, df, queue):
     delta = ""
     if prev is not None:
         d = s["displayed_score_exact"] - prev["score"]
-        delta = f" ({d:+.3f} since {prev['date']})"
+        delta = f" (unchanged since {prev['date']})" if abs(d) < 0.0005 else f" ({d:+.3f} since {prev['date']})"
     lines += [f"**Store rating (India): {s['displayed_score_exact']:.3f}★ — shows {s['displayed_score']}**{delta} · "
               f"{s['ratings']:,} ratings · {s['gap_to_threshold']:.3f} away from showing {s['next_display_threshold'] + 0.05:.1f}", ""]
     if len(last7):
