@@ -20,7 +20,7 @@ from labels_io import load_labels  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 
 FAMILY_LABELS = {
-    "J1": "Onboarding & login", "J2": "Roster & shift", "J3": "Self-booking",
+    "J1": "Login & home address", "J2": "Roster & shift", "J3": "Self-booking",
     "J4": "Allocation & routing", "J5": "Notifications", "J6": "Live tracking & ETA",
     "J7": "Pickup & boarding", "J8": "Ride & drop", "J9": "Issue reporting & support",
     "X1": "App stability & speed", "X2": "UI & interruptions", "X3": "Workplace features",
@@ -156,7 +156,7 @@ def compute():
     T["clusters"] = clusters
 
     # Sub-issue counts for the biggest families (12 months, 1-2 star).
-    T["login_breakdown"] = {c: code_counts.get(c, 0) for c in ["J1.session", "J1.otp", "J1.other"]}
+    T["login_breakdown"] = {c: code_counts.get(c, 0) for c in ["J1.session", "J1.otp", "J1.address", "J1.other"]}
     T["booking_breakdown"] = {c: code_counts.get(c, 0) for c in ["J3.fail", "J3.window", "J3.steps", "J3.modify", "J3.other"]}
     T["pickup_breakdown"] = {c: code_counts.get(c, 0) for c in ["J7.late", "J7.noshow", "J7.contact", "J7.board"]}
 

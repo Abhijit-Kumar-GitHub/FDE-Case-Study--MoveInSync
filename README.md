@@ -17,7 +17,7 @@ pipeline that keeps answering **"How are our Play Store ratings?"** every day wi
 
 - **The headline rating isn't behind the market.** The employee app shows **4.6★** in India (4.639, 114,880 ratings). That's #2 of the 8 employee-commute apps benchmarked, and it's 0.011 stars from showing 4.7.
 - **Written reviews are harsher.** Over the last 12 months they average **3.84★** and **24% are 1★**. 9 of the first 10 reviews a visitor sees are 1–2★ and unanswered. Replies stopped in mid-2024.
-- **The app is to blame, not the cabs.** **73%** of specific complaints are about the app itself. The biggest themes are stability (17%), login (14%), self-booking (11%), and interruptions and UI (11%).
+- **The app is to blame, not the cabs.** **73%** of specific complaints are about the app itself. The biggest themes are stability (17%), login and home address (15%), interruptions and UI (11%), and self-booking (10%).
 - **There's a live stability regression.** It spans versions 12.16–12.19 and includes a false "not installed from Play Store" lock-out.
 
 ## Run it
@@ -74,7 +74,10 @@ src/report.py ─► docs/index.html · docs/needs_review.csv · docs/weekly_dig
 **How this submission's labels were made:**
 - Claude (Opus 5.5) labelled 1,400 reviews through Claude Code, using the same prompt and schema as the production runner. That covers every 1–3★ review from the last 12 months, the longer positive ones, and 12 a month from the three years before.
 - Every chunk passed `labels_io.py import` validation.
-- **Human audit:** AUDIT_RESULT
+- **Human audit:** a person checked 50 randomly chosen labels and every safety flag (`data/labels/gold_audit.csv`).
+  - **Random labels: 47 of 50 right (94%; 95% interval 84–98%).** Two of the three misses were the same rule: routing complaints had been attributed to operations alone, though MoveInSync's own engine plans the routes.
+  - **Safety flags: 28 of 30 confirmed (93%).** 18 of the 28 describe a specific incident; 10 are general claims ("unsafe for women") without detail. Lost property and "misbehaviour" with no detail were wrongly flagged.
+  - **The audit changed the codebook (v1.1):** routing and pickup-time complaints are now `mixed`, and home-address problems have their own code (`J1.address`). They had been scattered across two others. The new rules were applied to all 1,400 labels as recorded overrides (`data/labels/human_overrides.csv`), so every change is traceable. The headline finding (73% about the app) did not move.
 
 ### Cost of the AI step
 
@@ -90,15 +93,15 @@ The cost is predictable before anything is sent: the runner counts the new revie
 
 ### How good the free fallback is
 
-This is how often the keyword rules agree with the AI labels on all 1,400 reviews — agreement, not accuracy against ground truth. They agree with the AI's main theme **69%** of the time. "Precision" = share of the rules' flags the AI also gave; "recall" = share of the AI's labels the rules also caught.
+This is how often the keyword rules agree with the AI labels on all 1,400 reviews — agreement, not accuracy against ground truth. They agree with the AI's main theme **70%** of the time. "Precision" = share of the rules' flags the AI also gave; "recall" = share of the AI's labels the rules also caught.
 
 | Theme | Precision | Recall |
 |---|---|---|
-| Onboarding & login | 0.94 | 0.70 |
-| Pickup & boarding | 0.85 | 0.67 |
+| Login & home address | 0.88 | 0.74 |
+| Pickup & boarding | 0.86 | 0.68 |
 | Notifications | 0.85 | 0.28 |
-| Self-booking | 0.83 | 0.46 |
-| Issue reporting & support | 0.77 | 0.68 |
+| Self-booking | 0.82 | 0.44 |
+| Issue reporting & support | 0.76 | 0.66 |
 | Allocation & routing | 0.72 | 0.61 |
 | UI & interruptions | 0.70 | 0.61 |
 | App stability & speed | 0.69 | 0.73 |

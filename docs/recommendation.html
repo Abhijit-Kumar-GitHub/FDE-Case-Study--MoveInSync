@@ -36,7 +36,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <ol>
 <li><strong>The number is not the problem — yet.</strong> The employee app shows <strong>4.6★</strong> in India (4.639 from 114,880 ratings). Among the 8 employee-commute apps I benchmarked, that is <strong>#2</strong>, behind only Safetrax Commuter (4.72), and MoveInSync has more ratings than the other seven combined. It is <strong>0.011 stars from showing 4.7</strong>.</li>
 <li><strong>The problem is what people read.</strong> Written reviews over the last 12 months average <strong>3.84★</strong>, and <strong>24% are 1★</strong>. <strong>9 of the first 10 reviews a visitor sees are 1–2★, and 9 of them have no reply.</strong> MoveInSync stopped replying in mid-2024, falling from about 97% of reviews answered to 3%. Safetrax answers 100% and Routematic 92%.</li>
-<li><strong>It is the app, not the cabs.</strong> Of the 1–2★ reviews that name a problem, <strong>73% are about the app itself</strong>. 19% are about the transport service and 1% about employer rules. Late, unassigned or missed cabs come up in under 5%. The four biggest themes are all engineering work: <strong>stability (17%), login (14%), self-booking (11%), interruptions and UI (11%)</strong>.</li>
+<li><strong>It is the app, not the cabs.</strong> Of the 1–2★ reviews that name a problem, <strong>73% are about the app itself</strong>. 11% are purely about the transport service, 14% involve both (mostly routing, which MoveInSync's own engine plans with the operations team), and 1% are about employer rules. Late, unassigned or missed cabs come up in under 5%. The four biggest themes are all engineering work: <strong>stability (17%), login and home address (15%), interruptions and UI (11%), self-booking (10%)</strong>.</li>
 <li><strong>It is getting worse right now.</strong> Stability complaints rose from 12–16% of negative reviews in the previous three quarters to <strong>25%</strong> in Q3 2026 (statistically significant, p ≈ 0.01), concentrated in versions 12.16–12.19. They include a <strong>false "not installed from Play Store" error</strong> that locks riders out until they reinstall.</li>
 <li><strong>Do this week:</strong><ul>
 <li>stop the false lock-out, and gate releases on crash and review signals</li>
@@ -159,14 +159,14 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <td>Crashes; won't open after updates; false "not installed from Play Store"; slow loading</td>
 </tr>
 <tr>
-<td>Onboarding &amp; login</td>
-<td>14%</td>
+<td>Login &amp; home address</td>
+<td>15%</td>
 <td>App</td>
-<td>OTP not arriving (6.4%); logged out again and again (5.9%); "not registered" with no explanation</td>
+<td>OTP not arriving (6.4%); logged out again and again (5.9%); home pin wrong or can't be changed (2.0%); "not registered" with no explanation</td>
 </tr>
 <tr>
 <td>Self-booking</td>
-<td>11%</td>
+<td>10%</td>
 <td>App, sometimes employer rules</td>
 <td>Bookings failing or vanishing; can't edit without cancelling; confusing two-step flow; cut-offs</td>
 </tr>
@@ -184,14 +184,14 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 </tr>
 <tr>
 <td>Pickup &amp; boarding</td>
-<td>9%</td>
+<td>10%</td>
 <td>Mixed</td>
 <td>Can't reach the driver; wrongly marked no-show; cab late; QR or OTP problems</td>
 </tr>
 <tr>
 <td>Allocation &amp; routing</td>
 <td>9%</td>
-<td>Operations</td>
+<td>MoveInSync's routing engine and operations</td>
 <td>Long pooled routes; very early pickups; cab not assigned</td>
 </tr>
 <tr>
@@ -224,7 +224,7 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <p><strong>The five failures the brief names, measured</strong> (share of 1–2★ reviews):</p>
 <ul>
 <li>app glitch: 17%</li>
-<li>booking fails: 11%</li>
+<li>booking fails: 10%</li>
 <li>wrong route: 5%</li>
 <li>late, unassigned or missed cab: 4.7% (late cab alone: 2.5%)</li>
 <li>safety concern: 3%</li>
@@ -249,11 +249,11 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <td><strong>25%</strong></td>
 </tr>
 <tr>
-<td>Onboarding &amp; login</td>
-<td>20%</td>
+<td>Login &amp; home address</td>
+<td>22%</td>
 <td>17%</td>
-<td>14%</td>
-<td>8%</td>
+<td>16%</td>
+<td>9%</td>
 </tr>
 </tbody>
 </table>
@@ -263,10 +263,10 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <li><strong>The false lock-out is new and growing:</strong> 9 of the 12 "not installed from Play Store" reviews ever written appeared in Jul–Sep 2026.
     &gt; "showing that it can't open as it is not downloaded from playstore. in last 3 weeks I uninstall an installed it for 10 times due to the same error" (2★, Aug 2026)</li>
 <li><strong>It has happened before, at larger scale:</strong> in Q4 2023, 43 reviews reported a false "cannot be opened on a rooted device" block on ordinary phones. Two waves of the same failure suggest a pattern: a device or install check that blocks the app whenever it isn't sure keeps locking out legitimate riders.</li>
-<li><strong>Fixes do show up in reviews.</strong> Login complaints fell from 20% to 8% after a spike in October 2025. That spike would have been caught in its first week by the monitor described in section 4.</li>
+<li><strong>Fixes do show up in reviews.</strong> Login complaints fell from 22% to 9% after a spike in October 2025. That spike would have been caught in its first week by the monitor described in section 4.</li>
 </ul>
 <h3>Finding 2: self-booking, the step that matters most, has lost clarity</h3>
-<p>Booking problems are 11% of negative reviews.</p>
+<p>Booking problems are 10% of negative reviews.</p>
 <blockquote>
 <p>"Booking a shuttle is now a 2 step process previously it used to be 1. I got confused and thought I had booked a cab while I hadn't." (1★, Jul 2026, v12.14.1)</p>
 <p>"I booked on a Sunday and automatically the date was of Tuesday instead of Monday." (1★, May 2026)</p>
@@ -298,13 +298,13 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <ul>
 <li><strong>Replies stopped in June–July 2024.</strong> Before that, 98.6% of 1★ reviews got an answer, although 63% of all replies used the same template text.</li>
 <li><strong>The complaint path itself is a theme.</strong> 10% of negative reviews are about it: the helpdesk is unreachable, complaints get no status, and there's no way to dispute a false no-show or rate a badly routed trip.</li>
-<li><strong>Safety reports sit unanswered in public.</strong> 24 reviews in 12 months were flagged as possible safety risks, including harassment, rash driving, women dropped alone at night, and SOS blocked by pop-ups or forced logouts. A person still has to confirm each one.</li>
+<li><strong>Safety reports sit unanswered in public.</strong> 23 reviews in 12 months were flagged as possible safety risks, including harassment, rash driving, women dropped alone at night, and SOS blocked by pop-ups or forced logouts. When a person checked every flag on file, 28 of 30 were genuine safety concerns and 18 described a specific incident.</li>
 </ul>
 <h3>What is not the problem</h3>
 <ul>
 <li><strong>Stars contradicting words:</strong> only 1.6% of reviews, so the stars can be trusted.</li>
 <li><strong>Reviews in other languages:</strong> negligible in volume.</li>
-<li><strong>Operations:</strong> a real problem but a minority, at 19% of specific complaints (routing, late cabs, drivers). These belong with the transport desks (OPS-1), not the app team.</li>
+<li><strong>Operations alone:</strong> a real problem but a minority. 11% of specific complaints are purely about the service (late cabs, drivers, vehicles, helpdesk conduct) and belong with the transport desks (OPS-1). Routing complaints (9%) are shared: MoveInSync's engine plans the routes and the operations team configures them.</li>
 </ul>
 <h2>3. What to do, in order</h2>
 <table>
@@ -378,10 +378,10 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 <tr>
 <td>30 days</td>
 <td>BOOK-1</td>
-<td>Unambiguous booking: confirmation and receipt, no auto date change, edit without cancel</td>
+<td>Unambiguous booking: confirmation and receipt, no auto date change, edit without cancel, riders can fix their own home pin</td>
 <td>Product</td>
 <td>M</td>
-<td>Booking share 11% → &lt; 5%</td>
+<td>Booking share 10% → &lt; 5%</td>
 </tr>
 <tr>
 <td>30 days</td>
@@ -451,24 +451,24 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 </thead>
 <tbody>
 <tr>
+<td>Login &amp; home address</td>
+<td>108</td>
+<td>+0.03 / +0.06 / +0.08</td>
+</tr>
+<tr>
 <td>App stability &amp; speed</td>
 <td>107</td>
 <td>+0.03 / +0.05 / +0.08</td>
 </tr>
 <tr>
-<td>Onboarding &amp; login</td>
-<td>101</td>
-<td>+0.03 / +0.05 / +0.07</td>
-</tr>
-<tr>
-<td>Self-booking</td>
-<td>70</td>
-<td>+0.02 / +0.04 / +0.05</td>
-</tr>
-<tr>
 <td>UI &amp; interruptions</td>
 <td>68</td>
 <td>+0.02 / +0.03 / +0.05</td>
+</tr>
+<tr>
+<td>Self-booking</td>
+<td>63</td>
+<td>+0.02 / +0.03 / +0.04</td>
 </tr>
 <tr>
 <td><strong>All four</strong></td>
@@ -533,8 +533,9 @@ h2:first-of-type + ol { background: var(--surface); border: 1px solid var(--bord
 </li>
 <li><strong>Labelling:</strong><ul>
 <li><strong>What was labelled:</strong> 1,400 reviews, using a versioned prompt (<code>prompts/classify_v1.md</code>) with 30 journey codes, plus who would fix it, text sentiment and a safety flag.</li>
-<li><strong>Who labelled:</strong> Claude (Opus 5.5, through Claude Code). A person is checking a random sample of 50 labels and every safety flag; the result is reported in the README.</li>
-<li><strong>The free fallback:</strong> keyword rules agree with the AI's main theme 69% of the time; per theme, 62–94% of what the rules flag matches the AI labels. They also act as a second opinion for the review queue.</li>
+<li><strong>Who labelled:</strong> Claude (Opus 5.5, through Claude Code). A person checked 50 randomly chosen labels: 47 were right (94%) and 28 of 30 safety flags were confirmed.</li>
+<li><strong>What the audit changed:</strong> it led to codebook v1.1. Routing complaints are now attributed to both MoveInSync's routing engine and operations, and home-address problems have their own code. All 1,400 labels were updated, and every change is recorded in <code>data/labels/human_overrides.csv</code>.</li>
+<li><strong>The free fallback:</strong> keyword rules agree with the AI's main theme 70% of the time; per theme, 62–88% of what the rules flag matches the AI labels. They also act as a second opinion for the review queue.</li>
 </ul>
 </li>
 <li><strong>Statistics:</strong><ul>

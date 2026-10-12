@@ -1,15 +1,16 @@
 {
-  "prompt_version": "v1",
+  "prompt_version": "v1.1",
   "codes": {
     "stages": {
       "J1.otp": "Login OTP/verification code not received, late, or expired",
       "J1.session": "Logged out repeatedly, forced to log in/OTP every time, SSO re-login, falls back to a web login page",
-      "J1.other": "Other onboarding: registration, company access/subscription denied, profile or home address set-up",
+      "J1.address": "Home address & pickup point: saved location wrong or off on the map, can't change it, not synced from the company portal, nodal point selection",
+      "J1.other": "Other onboarding: registration, company access or subscription denied, profile set-up",
       "J2": "Roster & shift: shift schedule, roster not updated, shift times wrong",
       "J3.fail": "Self-booking fails: error, stuck, booking not saved or not going through, booked trip disappears, no trips available to book",
       "J3.window": "Self-booking blocked by rules: booking window closed, cut-off time, must book days ahead, not allowed to cancel late",
       "J3.steps": "Self-booking effort: too many steps, confusing booking flow, unclear whether booking succeeded, must book repeatedly",
-      "J3.modify": "Changing a booking: cancel, reschedule, change pickup address/time for a trip",
+      "J3.modify": "Changing a booking: cancel, reschedule, change trip time (home address problems are J1.address)",
       "J3.other": "Other booking problem not covered above",
       "J4.route": "Routing & pooling: wrong or long route, detours, illogical pickup order, unrelated co-passengers clubbed",
       "J4.time": "Pickup time: too early, long total travel time, pickup time keeps changing",
@@ -86,6 +87,7 @@
                 "enum": [
                   "J1.otp",
                   "J1.session",
+                  "J1.address",
                   "J1.other",
                   "J2",
                   "J3.fail",

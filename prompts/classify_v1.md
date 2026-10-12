@@ -1,4 +1,6 @@
-# Review classification prompt — v1
+# Review classification prompt — v1.1
+
+v1.1 (12 Oct 2026, after the human audit): routing and pickup-time complaints are `mixed`; new code `J1.address`; `U` only when no specific issue; safety needs a concrete risk or an explicit safety claim.
 
 Used verbatim by every runner: the Claude Code skill (`.claude/skills/label-reviews`) and the
 production API runner (`src/classify_api.py`). Codes and their definitions live in
@@ -39,13 +41,15 @@ Exactly one JSON object per input line, one per line, in the same order, nothing
 1. **Read the text, not the stars.** People often give 1★ with praise ("good app") or 5★ with a
    complaint. `se` must reflect the words alone — the pipeline compares it with the stars later.
 2. **Stages describe what went wrong**, not every word mentioned. Use `P` only when there is no
-   problem at all; use `U` when the text is too vague to place ("worst app", "bad").
+   problem at all; use `U` only when the text names no specific issue ("worst app", "bad"). A comparison
+   that names a feature ("eFmFm's QR boarding was better") is labelled with that feature's stage.
    A feature request is labelled with the stage it belongs to, `d` starting "wants …".
 3. **Attribution — who would have to fix it:**
    - `app`: bug, crash, login/OTP, slowness, design, missing feature, tracking accuracy,
      notifications. (Tracking errors are `app` even if the driver's phone may be the cause.)
-   - `ops`: cab late or never came, driver behaviour, vehicle, routing/pooling decisions,
-     helpdesk/transport-team conduct.
+   - `ops`: cab late or never came, driver behaviour, vehicle, helpdesk/transport-team conduct.
+   - Routing, pooling and pickup times come from MoveInSync's routing engine as configured by the
+     operations team and the client, so label them `mixed` unless the review clearly blames only people.
    - `policy`: a rule the **employer** sets — booking cut-offs, how far ahead you must book,
      cancellation windows, eligibility. If the app also failed to explain or show the rule
      correctly, use `mixed`.
@@ -53,7 +57,8 @@ Exactly one JSON object per input line, one per line, in the same order, nothing
    - `none`: no complaint.
 4. **Safety (`sf: true`)**: harassment or inappropriate behaviour, threats, rash or drunk driving,
    unsafe drop location/time (especially at night or for women), women's-safety concerns,
-   SOS not working, unverified driver or vehicle. Rudeness alone is not a safety risk.
+   SOS not working, unverified driver or vehicle. Rudeness, "misbehaviour" with no detail, and lost
+   property are not safety risks on their own.
 5. Non-English and Hinglish reviews: label by meaning ("bakwas app" = useless app).
 6. Never invent details that are not in the text. Keep `d` factual and short.
 

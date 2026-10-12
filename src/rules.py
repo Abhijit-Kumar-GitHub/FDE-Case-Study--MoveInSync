@@ -25,8 +25,9 @@ STAGE_RULES = [
     ("J3.window", r"cut ?-?off|(hours?|hrs?|days?)\s+(before|prior|in advance|advance)|in advance|same day|wait ?-?list|cancellation period|out of (hiring|service) zone"),
     ("J3.fail", r"(unable|can'?t|cannot|not able|couldn'?t)\s+(to\s+)?(book|schedule|roster)|book(ing)?\s+(failed|fails|error|not (going|saved|happening))"
                 r"|book now.{0,20}disabled|bookings?\s+(disappear|vanish|not show|not reflect)|no (schedules?|trips?) (are )?available|book(ing)?.{0,20}(difficult|failed|error|issue|problem)"),
-    ("J3.modify", r"(cancel|edit|modify|reschedule|amend)\w*\s.{0,25}(booking|trip|schedule|ride|roster)|change\s+(my\s+|the\s+)?(address|location|pick ?up|drop|destination)"
-                  r"|(address|location) (change|update)"),
+    ("J1.address", r"change\s+(my\s+|the\s+)?(home\s+)?(address|location|pick ?up (point|location)|nodal)|(address|location|pin)\s+(change|update|not|is wrong|wrong)"
+                   r"|wrong (address|location|pin)|nodal point|pin ?code|(address|location).{0,30}(old|previous|different|not (taken|accepted|updated|synced))"),
+    ("J3.modify", r"(cancel|edit|modify|reschedule|amend)\w*\s.{0,25}(booking|trip|schedule|ride|roster)|change\s+(the\s+)?(drop|destination|timing|time)"),
     ("J3.steps", r"(too many|number of|\d+)\s+(steps|clicks|taps|selections)|2 step|two step|bulk book|date range|am/?pm"),
     ("J4.route", r"rout(e|es|ing)\b|club(bing|bed)?\b|pool(ing)?\b|detour|nodal|longest|sequence"),
     ("J4.time", r"too early|early pick|pick ?up time.{0,25}(early|chang|var|wrong|differ)|\b(\d|two|three)\s*(\.\d)?\s*(hours?|hrs)\b.{0,20}(reach|daily|in (the )?cab|travel)"),
@@ -85,6 +86,8 @@ def classify(text, stars):
         f = family(s)
         if s == "J3.window":
             kinds.add("policy")
+        elif s in ("J4.route", "J4.time"):
+            kinds.update(("app", "ops"))  # routing engine (MoveInSync software) + ops/client configuration
         elif f in APP_FAMILIES or s in {"J3.fail", "J3.steps", "J3.modify", "J3.other", "J7.board", "J7.contact"}:
             kinds.add("app")
         elif f in OPS_FAMILIES or s in {"J7.late", "J7.noshow", "J9"}:

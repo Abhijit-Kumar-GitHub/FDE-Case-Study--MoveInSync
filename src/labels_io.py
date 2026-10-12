@@ -165,6 +165,7 @@ def load_labels():
         for _, o in ov.iterrows():
             mask = labels["reviewId"] == o["reviewId"]
             if mask.any() and o["field"] in labels.columns:
+                labels[o["field"]] = labels[o["field"]].astype(object)
                 labels.loc[mask, o["field"]] = o["value"]
                 labels.loc[mask, "human_corrected"] = True
     return labels

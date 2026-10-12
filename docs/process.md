@@ -29,8 +29,13 @@ Four lines in the brief shaped the plan:
 
 - **A versioned prompt, not a chat.** `prompts/classify_v1.md` and `schema.json` are the artifact: the same prompt and codes for this interactive run and for the production API runner.
 - **What was labelled.** 1,400 reviews in 10 chunks: every 1–3★ review from the last 12 months, the longer positive ones, and a sample from the three years before. A script validated every chunk (IDs, allowed codes, one label per review) before import.
-- **A second opinion.** Free keyword rules run independently. Reviews where the AI said "unclear", stars that contradict the words, and every safety flag go to a person. I measured how often the rules agree with the AI labels (69% on the main theme) and reported it as agreement, not accuracy.
-- **A person checks the AI.** I hand-checked a random sample of AI labels and every safety flag (result in the README).
+- **A second opinion.** Free keyword rules run independently. Reviews where the AI said "unclear", stars that contradict the words, and every safety flag go to a person. I measured how often the rules agree with the AI labels (70% on the main theme) and reported it as agreement, not accuracy.
+- **A person checks the AI.** I hand-checked 50 random labels and all 30 safety flags.
+  - **Labels:** 47 of 50 were right (94%).
+  - **Safety flags:** 28 of 30 were genuine, and 18 of those describe a specific incident.
+  - **Two of the three label misses were one rule:** I had attributed routing complaints to operations alone, but the brief says *the system* plans the route. MoveInSync's own routing engine, configured with the operations team, is behind them.
+  - **The notes also exposed a gap in the codebook:** home-address problems (wrong pin, can't change it, not synced from the company portal) had no code of their own and were split across two others.
+  - **I fixed both as codebook v1.1 and applied them to all 1,400 labels as recorded overrides,** rather than correcting only the rows I happened to check. The core finding (73% of specific complaints are about the app) held.
 - **Cost was measured, not guessed.** A dry run on real review text prices the production path at about $0.02 a week.
 
 ## 5. A second pass over every claim

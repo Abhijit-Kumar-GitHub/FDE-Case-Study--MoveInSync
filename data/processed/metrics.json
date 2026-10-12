@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T23:17:11",
+  "generated_at": "2026-10-12T23:53:51",
   "store": {
     "app_id": "com.moveinsync.ets",
     "displayed_score_exact": 4.6388,
@@ -7375,14 +7375,14 @@
       {
         "family": "U",
         "label": "Unclear / vague",
-        "mentions": 185,
-        "share_mentions": 0.2406,
-        "primary": 184,
-        "share_primary": 0.2393,
+        "mentions": 184,
+        "share_mentions": 0.2393,
+        "primary": 183,
+        "share_primary": 0.238,
         "attribution": {
-          "none": 0.778,
+          "none": 0.783,
           "ops": 0.13,
-          "app": 0.065,
+          "app": 0.06,
           "mixed": 0.027
         }
       },
@@ -7400,27 +7400,14 @@
       },
       {
         "family": "J1",
-        "label": "Onboarding & login",
-        "mentions": 110,
-        "share_mentions": 0.143,
-        "primary": 101,
-        "share_primary": 0.1313,
+        "label": "Login & home address",
+        "mentions": 117,
+        "share_mentions": 0.1521,
+        "primary": 108,
+        "share_primary": 0.1404,
         "attribution": {
-          "app": 0.964,
-          "mixed": 0.036
-        }
-      },
-      {
-        "family": "J3",
-        "label": "Self-booking",
-        "mentions": 81,
-        "share_mentions": 0.1053,
-        "primary": 70,
-        "share_primary": 0.091,
-        "attribution": {
-          "app": 0.79,
-          "mixed": 0.148,
-          "policy": 0.062
+          "app": 0.957,
+          "mixed": 0.043
         }
       },
       {
@@ -7443,22 +7430,35 @@
         "primary": 42,
         "share_primary": 0.0546,
         "attribution": {
-          "ops": 0.566,
+          "ops": 0.461,
           "app": 0.289,
-          "mixed": 0.145
+          "mixed": 0.25
+        }
+      },
+      {
+        "family": "J3",
+        "label": "Self-booking",
+        "mentions": 75,
+        "share_mentions": 0.0975,
+        "primary": 63,
+        "share_primary": 0.0819,
+        "attribution": {
+          "app": 0.787,
+          "mixed": 0.147,
+          "policy": 0.067
         }
       },
       {
         "family": "J7",
         "label": "Pickup & boarding",
-        "mentions": 73,
-        "share_mentions": 0.0949,
-        "primary": 49,
-        "share_primary": 0.0637,
+        "mentions": 74,
+        "share_mentions": 0.0962,
+        "primary": 50,
+        "share_primary": 0.065,
         "attribution": {
-          "app": 0.534,
-          "ops": 0.342,
-          "mixed": 0.096,
+          "app": 0.541,
+          "ops": 0.297,
+          "mixed": 0.135,
           "policy": 0.027
         }
       },
@@ -7470,8 +7470,8 @@
         "primary": 58,
         "share_primary": 0.0754,
         "attribution": {
-          "ops": 0.8,
-          "mixed": 0.2
+          "mixed": 0.8,
+          "ops": 0.2
         }
       },
       {
@@ -7495,8 +7495,8 @@
         "share_primary": 0.026,
         "attribution": {
           "app": 0.857,
-          "ops": 0.086,
-          "mixed": 0.057
+          "mixed": 0.114,
+          "ops": 0.029
         }
       },
       {
@@ -7507,8 +7507,8 @@
         "primary": 11,
         "share_primary": 0.0143,
         "attribution": {
-          "ops": 0.8,
-          "mixed": 0.2
+          "ops": 0.7,
+          "mixed": 0.3
         }
       },
       {
@@ -7538,8 +7538,8 @@
       {
         "code": "U",
         "family": "Unclear / vague",
-        "mentions": 185,
-        "share": 0.2406
+        "mentions": 184,
+        "share": 0.2393
       },
       {
         "code": "X1.crash",
@@ -7561,13 +7561,13 @@
       },
       {
         "code": "J1.otp",
-        "family": "Onboarding & login",
+        "family": "Login & home address",
         "mentions": 49,
         "share": 0.0637
       },
       {
         "code": "J1.session",
-        "family": "Onboarding & login",
+        "family": "Login & home address",
         "mentions": 45,
         "share": 0.0585
       },
@@ -7608,12 +7608,6 @@
         "share": 0.0338
       },
       {
-        "code": "J1.other",
-        "family": "Onboarding & login",
-        "mentions": 26,
-        "share": 0.0338
-      },
-      {
         "code": "J7.contact",
         "family": "Pickup & boarding",
         "mentions": 23,
@@ -7622,12 +7616,6 @@
       {
         "code": "J7.noshow",
         "family": "Pickup & boarding",
-        "mentions": 20,
-        "share": 0.026
-      },
-      {
-        "code": "J3.modify",
-        "family": "Self-booking",
         "mentions": 20,
         "share": 0.026
       },
@@ -7646,8 +7634,14 @@
       {
         "code": "J7.board",
         "family": "Pickup & boarding",
-        "mentions": 17,
-        "share": 0.0221
+        "mentions": 18,
+        "share": 0.0234
+      },
+      {
+        "code": "J1.other",
+        "family": "Login & home address",
+        "mentions": 18,
+        "share": 0.0234
       },
       {
         "code": "J8.driver",
@@ -7660,6 +7654,12 @@
         "family": "Allocation & routing",
         "mentions": 17,
         "share": 0.0221
+      },
+      {
+        "code": "J1.address",
+        "family": "Login & home address",
+        "mentions": 15,
+        "share": 0.0195
       },
       {
         "code": "J3.other",
@@ -7675,6 +7675,12 @@
       },
       {
         "code": "J3.window",
+        "family": "Self-booking",
+        "mentions": 13,
+        "share": 0.0169
+      },
+      {
+        "code": "J3.modify",
         "family": "Self-booking",
         "mentions": 13,
         "share": 0.0169
@@ -7719,18 +7725,18 @@
     "attribution_1_2star": {
       "app": 439,
       "none": 149,
-      "ops": 133,
-      "mixed": 41,
+      "ops": 91,
+      "mixed": 83,
       "policy": 7
     },
     "attribution_1_2star_specific": {
       "app": 0.73,
-      "ops": 0.186,
-      "mixed": 0.063,
+      "mixed": 0.135,
+      "ops": 0.114,
       "policy": 0.012,
       "none": 0.009
     },
-    "share_unclear_1_2star": 0.2393,
+    "share_unclear_1_2star": 0.238,
     "named_failures": {
       "late_cab": {
         "n": 19,
@@ -7749,16 +7755,16 @@
         "share": 0.0494
       },
       "booking_fails": {
-        "n": 81,
-        "share": 0.1053
+        "n": 75,
+        "share": 0.0975
       },
       "app_glitch": {
         "n": 128,
         "share": 0.1664
       },
       "safety_concern": {
-        "n": 21,
-        "share": 0.0273
+        "n": 20,
+        "share": 0.026
       }
     },
     "clusters": {
@@ -7967,20 +7973,21 @@
     "login_breakdown": {
       "J1.session": 45,
       "J1.otp": 49,
-      "J1.other": 26
+      "J1.address": 15,
+      "J1.other": 18
     },
     "booking_breakdown": {
       "J3.fail": 26,
       "J3.window": 13,
       "J3.steps": 13,
-      "J3.modify": 20,
+      "J3.modify": 13,
       "J3.other": 14
     },
     "pickup_breakdown": {
       "J7.late": 19,
       "J7.noshow": 20,
       "J7.contact": 23,
-      "J7.board": 17
+      "J7.board": 18
     },
     "rating_prompt": {
       "complaints_forced_or_repeated_12m": 20,
@@ -8034,16 +8041,16 @@
       ]
     },
     "safety": {
-      "flagged_12m": 24,
-      "flagged_total": 30,
-      "share_of_1_2star_12m": 0.0273
+      "flagged_12m": 23,
+      "flagged_total": 28,
+      "share_of_1_2star_12m": 0.026
     },
     "quarterly_trend": [
       {
         "quarter": "2025Q4",
         "n": 185,
-        "J1": 0.195,
-        "J3": 0.141,
+        "J1": 0.216,
+        "J3": 0.124,
         "J4": 0.059,
         "J6": 0.086,
         "J7": 0.086,
@@ -8066,11 +8073,11 @@
       {
         "quarter": "2026Q2",
         "n": 231,
-        "J1": 0.143,
-        "J3": 0.1,
+        "J1": 0.156,
+        "J3": 0.087,
         "J4": 0.108,
         "J6": 0.082,
-        "J7": 0.1,
+        "J7": 0.104,
         "J9": 0.1,
         "X1": 0.156,
         "X2": 0.104
@@ -8078,8 +8085,8 @@
       {
         "quarter": "2026Q3",
         "n": 230,
-        "J1": 0.083,
-        "J3": 0.087,
+        "J1": 0.087,
+        "J3": 0.083,
         "J4": 0.083,
         "J6": 0.083,
         "J7": 0.078,
@@ -8295,8 +8302,8 @@
         "version": "12.6",
         "n": 86,
         "first_seen": "2025-10-14",
-        "J1": 0.256,
-        "J3": 0.14,
+        "J1": 0.291,
+        "J3": 0.105,
         "J6": 0.058,
         "X1": 0.105,
         "X2": 0.14
@@ -8345,8 +8352,8 @@
         "version": "12.11.2",
         "n": 35,
         "first_seen": "2026-04-14",
-        "J1": 0.114,
-        "J3": 0.171,
+        "J1": 0.143,
+        "J3": 0.143,
         "J6": 0.0,
         "X1": 0.2,
         "X2": 0.2
@@ -8365,8 +8372,8 @@
         "version": "12.13.1",
         "n": 32,
         "first_seen": "2026-06-05",
-        "J1": 0.188,
-        "J3": 0.031,
+        "J1": 0.219,
+        "J3": 0.0,
         "J6": 0.094,
         "X1": 0.062,
         "X2": 0.062
@@ -8385,8 +8392,8 @@
         "version": "12.16.0",
         "n": 28,
         "first_seen": "2026-07-24",
-        "J1": 0.036,
-        "J3": 0.071,
+        "J1": 0.071,
+        "J3": 0.036,
         "J6": 0.179,
         "X1": 0.321,
         "X2": 0.107
@@ -8676,29 +8683,6 @@
           "version": "12.12.3"
         }
       ],
-      "J1.other": [
-        {
-          "stars": 1,
-          "date": "2026-01-08",
-          "thumbs": 6,
-          "text": "This app is the worst. Not able to login via phone/email as the OTP is not received. The most disgusting thing is, it won't give any message whether the user's mobile/email is registered or not. Without this basic information, how can one know that their details are registered.",
-          "version": "12.8.3"
-        },
-        {
-          "stars": 1,
-          "date": "2026-04-15",
-          "thumbs": 2,
-          "text": "Worst user interface. App doesn't even load once you login using your official id. It just says \"Something went wrong\". Tried uninstalling and installing a couple of times but getting the same error message.",
-          "version": "12.11.2"
-        },
-        {
-          "stars": 1,
-          "date": "2026-06-11",
-          "thumbs": 1,
-          "text": "This app doesn't work properly. it always shows 'SESSION EXPIRED. YOU ARE UNAUTHORISED. going back in 2seconds'. No location is suggested in the search.",
-          "version": "12.13.1"
-        }
-      ],
       "J7.contact": [
         {
           "stars": 1,
@@ -8721,12 +8705,44 @@
           "text": "I'm getting calling permission is disabled as per company policy",
           "version": "12.17.0"
         }
+      ],
+      "J7.noshow": [
+        {
+          "stars": 1,
+          "date": "2026-01-06",
+          "thumbs": 2,
+          "text": "so much ridiculous app. After 3 no show cab facility nahi milti... shiiii Ganda app",
+          "version": "12.8.3"
+        },
+        {
+          "stars": 2,
+          "date": "2026-09-17",
+          "thumbs": 0,
+          "text": "you guys keep giving notifications to cancel the ride if not available for the same, but you don't even bother to remind the user regarding the default cancellation of logout trip if login trip is marked \"Noshow\", this is not fair at all",
+          "version": "12.18.1"
+        },
+        {
+          "stars": 2,
+          "date": "2026-09-02",
+          "thumbs": 0,
+          "text": "once we book a bus it should not have to be cancelled or made changes by other than employee. but here booked bus are till about to travel but reflecting no show",
+          "version": "12.17.0"
+        }
       ]
     },
     "impact": {
       "current_written_mean_12m": 3.836,
       "written_reviews_12m": 2848,
       "by_family": [
+        {
+          "family": "J1",
+          "label": "Login & home address",
+          "primary_1_2star": 108,
+          "delta_mean_30": 0.033,
+          "delta_mean_50": 0.055,
+          "delta_mean_70": 0.077,
+          "one_star_share_drop_50": 0.0172
+        },
         {
           "family": "X1",
           "label": "App stability & speed",
@@ -8737,24 +8753,6 @@
           "one_star_share_drop_50": 0.0158
         },
         {
-          "family": "J1",
-          "label": "Onboarding & login",
-          "primary_1_2star": 101,
-          "delta_mean_30": 0.031,
-          "delta_mean_50": 0.051,
-          "delta_mean_70": 0.072,
-          "one_star_share_drop_50": 0.016
-        },
-        {
-          "family": "J3",
-          "label": "Self-booking",
-          "primary_1_2star": 70,
-          "delta_mean_30": 0.021,
-          "delta_mean_50": 0.035,
-          "delta_mean_70": 0.049,
-          "one_star_share_drop_50": 0.0107
-        },
-        {
           "family": "X2",
           "label": "UI & interruptions",
           "primary_1_2star": 68,
@@ -8762,6 +8760,15 @@
           "delta_mean_50": 0.034,
           "delta_mean_70": 0.048,
           "one_star_share_drop_50": 0.0105
+        },
+        {
+          "family": "J3",
+          "label": "Self-booking",
+          "primary_1_2star": 63,
+          "delta_mean_30": 0.019,
+          "delta_mean_50": 0.032,
+          "delta_mean_70": 0.044,
+          "one_star_share_drop_50": 0.0095
         },
         {
           "family": "J4",
@@ -8784,11 +8791,11 @@
         {
           "family": "J7",
           "label": "Pickup & boarding",
-          "primary_1_2star": 49,
+          "primary_1_2star": 50,
           "delta_mean_30": 0.015,
-          "delta_mean_50": 0.024,
-          "delta_mean_70": 0.034,
-          "one_star_share_drop_50": 0.0072
+          "delta_mean_50": 0.025,
+          "delta_mean_70": 0.035,
+          "one_star_share_drop_50": 0.0074
         },
         {
           "family": "J9",
@@ -8833,19 +8840,19 @@
     "by_family": [
       {
         "family": "J1",
-        "label": "Onboarding & login",
-        "ai_n": 165,
-        "rules_n": 123,
-        "precision": 0.94,
-        "recall": 0.7
+        "label": "Login & home address",
+        "ai_n": 180,
+        "rules_n": 151,
+        "precision": 0.88,
+        "recall": 0.74
       },
       {
         "family": "J3",
         "label": "Self-booking",
-        "ai_n": 162,
-        "rules_n": 89,
-        "precision": 0.83,
-        "recall": 0.46
+        "ai_n": 149,
+        "rules_n": 79,
+        "precision": 0.82,
+        "recall": 0.44
       },
       {
         "family": "J4",
@@ -8874,10 +8881,10 @@
       {
         "family": "J7",
         "label": "Pickup & boarding",
-        "ai_n": 144,
+        "ai_n": 145,
         "rules_n": 114,
-        "precision": 0.85,
-        "recall": 0.67
+        "precision": 0.86,
+        "recall": 0.68
       },
       {
         "family": "J8",
@@ -8891,9 +8898,9 @@
         "family": "J9",
         "label": "Issue reporting & support",
         "ai_n": 125,
-        "rules_n": 111,
-        "precision": 0.77,
-        "recall": 0.68
+        "rules_n": 109,
+        "precision": 0.76,
+        "recall": 0.66
       },
       {
         "family": "X1",
@@ -8912,6 +8919,6 @@
         "recall": 0.61
       }
     ],
-    "primary_found": 0.692
+    "primary_found": 0.698
   }
 }

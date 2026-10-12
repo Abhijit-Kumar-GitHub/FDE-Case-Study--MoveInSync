@@ -277,7 +277,7 @@ function render() {
 
   // Quarterly theme shares.
   const q = T.quarterly_trend || [];
-  const series = [["X1", "App stability & speed", t.s1], ["J1", "Onboarding & login", t.s2], ["X2", "UI & interruptions", t.s3], ["J3", "Self-booking", t.s4]];
+  const series = [["X1", "App stability & speed", t.s1], ["J1", "Login & home address", t.s2], ["X2", "UI & interruptions", t.s3], ["J3", "Self-booking", t.s4]];
   Plotly.react("c-trend", series.map(([k, name, color]) => ({
     type: "scatter", mode: "lines+markers", name, x: q.map((r) => r.quarter), y: q.map((r) => r[k]),
     line: {color, width: 2}, marker: {size: 8, color, line: {color: t.surface, width: 2}},

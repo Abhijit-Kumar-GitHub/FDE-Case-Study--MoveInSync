@@ -59,8 +59,15 @@ For tools and reproducibility, see the <a href="https://github.com/OWNER/moveins
 <ul>
 <li><strong>A versioned prompt, not a chat.</strong> <code>prompts/classify_v1.md</code> and <code>schema.json</code> are the artifact: the same prompt and codes for this interactive run and for the production API runner.</li>
 <li><strong>What was labelled.</strong> 1,400 reviews in 10 chunks: every 1–3★ review from the last 12 months, the longer positive ones, and a sample from the three years before. A script validated every chunk (IDs, allowed codes, one label per review) before import.</li>
-<li><strong>A second opinion.</strong> Free keyword rules run independently. Reviews where the AI said "unclear", stars that contradict the words, and every safety flag go to a person. I measured how often the rules agree with the AI labels (69% on the main theme) and reported it as agreement, not accuracy.</li>
-<li><strong>A person checks the AI.</strong> I hand-checked a random sample of AI labels and every safety flag (result in the README).</li>
+<li><strong>A second opinion.</strong> Free keyword rules run independently. Reviews where the AI said "unclear", stars that contradict the words, and every safety flag go to a person. I measured how often the rules agree with the AI labels (70% on the main theme) and reported it as agreement, not accuracy.</li>
+<li><strong>A person checks the AI.</strong> I hand-checked 50 random labels and all 30 safety flags.<ul>
+<li><strong>Labels:</strong> 47 of 50 were right (94%).</li>
+<li><strong>Safety flags:</strong> 28 of 30 were genuine, and 18 of those describe a specific incident.</li>
+<li><strong>Two of the three label misses were one rule:</strong> I had attributed routing complaints to operations alone, but the brief says <em>the system</em> plans the route. MoveInSync's own routing engine, configured with the operations team, is behind them.</li>
+<li><strong>The notes also exposed a gap in the codebook:</strong> home-address problems (wrong pin, can't change it, not synced from the company portal) had no code of their own and were split across two others.</li>
+<li><strong>I fixed both as codebook v1.1 and applied them to all 1,400 labels as recorded overrides,</strong> rather than correcting only the rows I happened to check. The core finding (73% of specific complaints are about the app) held.</li>
+</ul>
+</li>
 <li><strong>Cost was measured, not guessed.</strong> A dry run on real review text prices the production path at about $0.02 a week.</li>
 </ul>
 <h2>5. A second pass over every claim</h2>

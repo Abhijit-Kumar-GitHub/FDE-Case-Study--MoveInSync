@@ -6,7 +6,7 @@
 
 1. **The number is not the problem — yet.** The employee app shows **4.6★** in India (4.639 from 114,880 ratings). Among the 8 employee-commute apps I benchmarked, that is **#2**, behind only Safetrax Commuter (4.72), and MoveInSync has more ratings than the other seven combined. It is **0.011 stars from showing 4.7**.
 2. **The problem is what people read.** Written reviews over the last 12 months average **3.84★**, and **24% are 1★**. **9 of the first 10 reviews a visitor sees are 1–2★, and 9 of them have no reply.** MoveInSync stopped replying in mid-2024, falling from about 97% of reviews answered to 3%. Safetrax answers 100% and Routematic 92%.
-3. **It is the app, not the cabs.** Of the 1–2★ reviews that name a problem, **73% are about the app itself**. 19% are about the transport service and 1% about employer rules. Late, unassigned or missed cabs come up in under 5%. The four biggest themes are all engineering work: **stability (17%), login (14%), self-booking (11%), interruptions and UI (11%)**.
+3. **It is the app, not the cabs.** Of the 1–2★ reviews that name a problem, **73% are about the app itself**. 11% are purely about the transport service, 14% involve both (mostly routing, which MoveInSync's own engine plans with the operations team), and 1% are about employer rules. Late, unassigned or missed cabs come up in under 5%. The four biggest themes are all engineering work: **stability (17%), login and home address (15%), interruptions and UI (11%), self-booking (10%)**.
 4. **It is getting worse right now.** Stability complaints rose from 12–16% of negative reviews in the previous three quarters to **25%** in Q3 2026 (statistically significant, p ≈ 0.01), concentrated in versions 12.16–12.19. They include a **false "not installed from Play Store" error** that locks riders out until they reinstall.
 5. **Do this week:**
    - stop the false lock-out, and gate releases on crash and review signals
@@ -57,12 +57,12 @@ How the labels were made and checked is in Appendix A.
 | Stage of the journey | Share of 1–2★ reviews | Who would fix it | What riders say |
 |---|---|---|---|
 | App stability & speed | 17% | App | Crashes; won't open after updates; false "not installed from Play Store"; slow loading |
-| Onboarding & login | 14% | App | OTP not arriving (6.4%); logged out again and again (5.9%); "not registered" with no explanation |
-| Self-booking | 11% | App, sometimes employer rules | Bookings failing or vanishing; can't edit without cancelling; confusing two-step flow; cut-offs |
+| Login & home address | 15% | App | OTP not arriving (6.4%); logged out again and again (5.9%); home pin wrong or can't be changed (2.0%); "not registered" with no explanation |
+| Self-booking | 10% | App, sometimes employer rules | Bookings failing or vanishing; can't edit without cancelling; confusing two-step flow; cut-offs |
 | UI & interruptions | 11% | App | Redesign harder to use; terms on every open; forced trip ratings; permission nags |
 | Issue reporting & support | 10% | Operations and app | Helpdesk unreachable; complaints with no status; can't rate a bad trip |
-| Pickup & boarding | 9% | Mixed | Can't reach the driver; wrongly marked no-show; cab late; QR or OTP problems |
-| Allocation & routing | 9% | Operations | Long pooled routes; very early pickups; cab not assigned |
+| Pickup & boarding | 10% | Mixed | Can't reach the driver; wrongly marked no-show; cab late; QR or OTP problems |
+| Allocation & routing | 9% | MoveInSync's routing engine and operations | Long pooled routes; very early pickups; cab not assigned |
 | Live tracking & ETA | 9% | App | Stale location; ETA jumping; map zoom resetting |
 | Notifications | 5% | App | Cab details missing or late, or too many alerts |
 | Ride & drop | 3% | Operations | Driver behaviour; late drops |
@@ -72,7 +72,7 @@ Shares overlap, because one review can mention several stages.
 
 **The five failures the brief names, measured** (share of 1–2★ reviews):
 - app glitch: 17%
-- booking fails: 11%
+- booking fails: 10%
 - wrong route: 5%
 - late, unassigned or missed cab: 4.7% (late cab alone: 2.5%)
 - safety concern: 3%
@@ -82,18 +82,18 @@ Shares overlap, because one review can mention several stages.
 | Share of ≤3★ reviews about… | Q4 2025 | Q1 2026 | Q2 2026 | Q3 2026 |
 |---|---|---|---|---|
 | App stability & speed | 16% | 12% | 16% | **25%** |
-| Onboarding & login | 20% | 17% | 14% | 8% |
+| Login & home address | 22% | 17% | 16% | 9% |
 
 - **Where it comes from:** versions 12.16.0, 12.17.0 and 12.19.0 carry it. Stability is 32%, 22% and 31% of their negative reviews.
 - **The current version is worse than average:** 12.19.0 has 31% 1★ reviews against a 24% baseline. That isn't statistically significant yet, so it's on watch.
 - **The false lock-out is new and growing:** 9 of the 12 "not installed from Play Store" reviews ever written appeared in Jul–Sep 2026.
   > "showing that it can't open as it is not downloaded from playstore. in last 3 weeks I uninstall an installed it for 10 times due to the same error" (2★, Aug 2026)
 - **It has happened before, at larger scale:** in Q4 2023, 43 reviews reported a false "cannot be opened on a rooted device" block on ordinary phones. Two waves of the same failure suggest a pattern: a device or install check that blocks the app whenever it isn't sure keeps locking out legitimate riders.
-- **Fixes do show up in reviews.** Login complaints fell from 20% to 8% after a spike in October 2025. That spike would have been caught in its first week by the monitor described in section 4.
+- **Fixes do show up in reviews.** Login complaints fell from 22% to 9% after a spike in October 2025. That spike would have been caught in its first week by the monitor described in section 4.
 
 ### Finding 2: self-booking, the step that matters most, has lost clarity
 
-Booking problems are 11% of negative reviews.
+Booking problems are 10% of negative reviews.
 
 > "Booking a shuttle is now a 2 step process previously it used to be 1. I got confused and thought I had booked a cab while I hadn't." (1★, Jul 2026, v12.14.1)
 >
@@ -123,13 +123,13 @@ Employer rules, such as cut-offs, booking windows and waitlists, directly cause 
 
 - **Replies stopped in June–July 2024.** Before that, 98.6% of 1★ reviews got an answer, although 63% of all replies used the same template text.
 - **The complaint path itself is a theme.** 10% of negative reviews are about it: the helpdesk is unreachable, complaints get no status, and there's no way to dispute a false no-show or rate a badly routed trip.
-- **Safety reports sit unanswered in public.** 24 reviews in 12 months were flagged as possible safety risks, including harassment, rash driving, women dropped alone at night, and SOS blocked by pop-ups or forced logouts. A person still has to confirm each one.
+- **Safety reports sit unanswered in public.** 23 reviews in 12 months were flagged as possible safety risks, including harassment, rash driving, women dropped alone at night, and SOS blocked by pop-ups or forced logouts. When a person checked every flag on file, 28 of 30 were genuine safety concerns and 18 described a specific incident.
 
 ### What is not the problem
 
 - **Stars contradicting words:** only 1.6% of reviews, so the stars can be trusted.
 - **Reviews in other languages:** negligible in volume.
-- **Operations:** a real problem but a minority, at 19% of specific complaints (routing, late cabs, drivers). These belong with the transport desks (OPS-1), not the app team.
+- **Operations alone:** a real problem but a minority. 11% of specific complaints are purely about the service (late cabs, drivers, vehicles, helpdesk conduct) and belong with the transport desks (OPS-1). Routing complaints (9%) are shared: MoveInSync's engine plans the routes and the operations team configures them.
 
 ## 3. What to do, in order
 
@@ -142,7 +142,7 @@ Employer rules, such as cut-offs, booking windows and waitlists, directly cause 
 | This week | SAFE-1 | Safety reports in reviews → safety desk, reply and incident within 24h | Safety desk | S | 100% actioned in 24h |
 | 30 days | LOG-1 | Keep riders signed in (silent token refresh, offline trip card, biometric unlock) | Identity + Android | M | Session complaints < 1% |
 | 30 days | LOG-2 | Reliable OTP with fallback channels; say why login failed | Identity | M | Login complaints −70% |
-| 30 days | BOOK-1 | Unambiguous booking: confirmation and receipt, no auto date change, edit without cancel | Product | M | Booking share 11% → < 5% |
+| 30 days | BOOK-1 | Unambiguous booking: confirmation and receipt, no auto date change, edit without cancel, riders can fix their own home pin | Product | M | Booking share 10% → < 5% |
 | 30 days | BOOK-2 | Show employer rules (cut-offs, windows) at the moment they apply | Product | S | Rule disputes halved |
 | 30 days | INT-2 | Terms once per version, non-blocking banners, permissions on demand, OTP before the seat-belt check | Product | S | Interruption complaints → ~0 |
 | 90 days | TRK-1 | Honest tracking: label stale positions, live-position ETA, keep zoom, bring back co-rider sequence | Android + driver app | L | Tracking share < 5% |
@@ -161,10 +161,10 @@ Every item has its evidence, likely cause, exact change, acceptance criteria and
 
 | Theme fixed | 1–2★ reviews (12 months) | Written-review average gain if 30% / 50% / 70% fixed |
 |---|---|---|
+| Login & home address | 108 | +0.03 / +0.06 / +0.08 |
 | App stability & speed | 107 | +0.03 / +0.05 / +0.08 |
-| Onboarding & login | 101 | +0.03 / +0.05 / +0.07 |
-| Self-booking | 70 | +0.02 / +0.04 / +0.05 |
 | UI & interruptions | 68 | +0.02 / +0.03 / +0.05 |
+| Self-booking | 63 | +0.02 / +0.03 / +0.04 |
 | **All four** | **346** | **+0.10 / +0.17 / +0.24, taking 3.84 to 3.94 / 4.01 / 4.08** |
 
 At the 50% level, the 1★ share drops by about 5 points. The model assumes that riders whose problem is fixed would write 4★ instead (A6).
@@ -220,7 +220,8 @@ The displayed store rating moves more slowly, because it includes about 115,000 
 - **Labelling:**
   - **What was labelled:** 1,400 reviews, using a versioned prompt (`prompts/classify_v1.md`) with 30 journey codes, plus who would fix it, text sentiment and a safety flag.
   - **Who labelled:** Claude (Opus 5.5, through Claude Code). {{AUDIT_SENTENCE}}
-  - **The free fallback:** keyword rules agree with the AI's main theme 69% of the time; per theme, 62–94% of what the rules flag matches the AI labels. They also act as a second opinion for the review queue.
+  - **What the audit changed:** it led to codebook v1.1. Routing complaints are now attributed to both MoveInSync's routing engine and operations, and home-address problems have their own code. All 1,400 labels were updated, and every change is recorded in `data/labels/human_overrides.csv`.
+  - **The free fallback:** keyword rules agree with the AI's main theme 70% of the time; per theme, 62–88% of what the rules flag matches the AI labels. They also act as a second opinion for the review queue.
 - **Statistics:**
   - version comparisons use 95% Wilson intervals and need at least 30 reviews
   - the impact figures come from a simple counterfactual, not a forecast
