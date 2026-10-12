@@ -83,7 +83,7 @@ s.addText("Recommendation for MoveInSync  ·  Abhijit Kumar  ·  13 October 2026
   s.addText(v, { x, y: 3.9, w: 2.8, h: 0.6, fontSize: 30, bold: true, color: C.accent1, margin: 0, isTextBox: true, objectName: `title stat ${i}`, fontFace: THEME.headFontFace });
   s.addText(l, { x, y: 4.5, w: 2.8, h: 0.5, fontSize: 14, color: C.background2, margin: 0, valign: "top", isTextBox: true, objectName: `title stat label ${i}` });
 });
-s.addNotes("MoveInSync asked why its Play Store ratings are lower than they should be, and what to fix first. I pulled every public review of the employee app, 24,315 of them, labelled 1,400 with AI using a versioned prompt, had a person audit the labels at 94% accuracy, and built a monitor that keeps answering the question every week. Here's what I found and what I'd do.");
+s.addNotes("Hi, I'm Abhijit Kumar, and this is my recommendation for MoveInSync's Play Store ratings. The short version: the store number isn't really the problem. What people read is, and it's mostly the app, not the cabs. I'll show the evidence, then exactly what I'd fix first.");
 
 // ---------- 2. the answer ----------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Answer" });
@@ -242,7 +242,7 @@ s.addText([
   { text: "Code, data, method", options: { bold: true, color: C.background1, breakLine: true } },
   { text: "github.com/Abhijit-Kumar-GitHub/FDE-Case-Study--MoveInSync", options: { color: C.background2, hyperlink: { url: "https://github.com/Abhijit-Kumar-GitHub/FDE-Case-Study--MoveInSync" } } },
 ], { x: 6.6, y: 3.0, w: 2.9, h: 1.9, fontSize: 11, paraSpaceAfter: 4, margin: 0, valign: "top", isTextBox: true, objectName: "links" });
-s.addNotes("Finally, 'how are our ratings?' is now answered automatically. Every day a scheduled job records the store rating, labels new reviews and refreshes the dashboard. Every week the answer is posted as a GitHub Issue, with an alert if a release regresses. Safety reports and unclear reviews go to a person. It runs free on keyword rules, or for about two cents a week with Claude Sonnet. The AI labels were 94 percent right in a human audit. Thank you.");
+s.addNotes("Finally, 'how are our ratings?' is now answered automatically. Every day a scheduled job records the store rating, labels new reviews and refreshes the dashboard. Every week the answer is posted as a GitHub Issue, with an alert if a release regresses. Safety reports and unclear reviews go to a person. It runs free on keyword rules, or for about two cents a week with Claude Sonnet. Behind all of this: 24,315 public reviews, 1,400 labelled with AI, and a human audit that found the labels 94 percent right. Everything is in the repository. Thank you.");
 
 (async () => {
   await pres.writeFile({ fileName: OUT });
