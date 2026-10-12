@@ -244,18 +244,14 @@ def compute():
     T["impact"] = {"current_written_mean_12m": round(cur_mean, 3), "written_reviews_12m": n_text,
                    "by_family": sorted(impact, key=lambda r: -r["delta_mean_50"])}
 
-    # How good is the free fallback? Rules vs AI labels on everything labelled.
-    df["r_fams"] = df.apply(lambda x: rules.families(rules.classify(x["content"], x["score"])["stages"]), axis=1)
-    ev = []
-    for f in ["J1", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "X1", "X2"]:
-        ai = df["fams"].map(lambda fs: f in fs)
-        ru = df["r_fams"].map(lambda fs: f in fs)
-        tp = int((ai & ru).sum())
-        ev.append({"family": f, "label": FAMILY_LABELS[f], "ai_n": int(ai.sum()), "rules_n": int(ru.sum()),
-                   "precision": round(tp / ru.sum(), 2) if ru.sum() else None,
-                   "recall": round(tp / ai.sum(), 2) if ai.sum() else None})
-    out["rules_eval"] = {"by_family": ev,
-                         "primary_found": round(df.apply(lambda x: x["primary_fam"] in x["r_fams"], axis=1).mean(), 3)}
+    # How good is the free fallback? Scored on the 30% of labelled reviews the rules were never tuned on.
+    import evaluate_rules
+    _, test = evaluate_rules.splits()
+    ev = evaluate_rules.evaluate(test)
+    for r in ev["by_family"]:
+        r["label"] = FAMILY_LABELS[r["family"]]
+    ev["split"] = f"held-out {int(evaluate_rules.TEST_FRAC * 100)}% (seed {evaluate_rules.SEED}), n={ev['n']}"
+    out["rules_eval"] = ev
     return out
 
 

@@ -168,7 +168,7 @@ footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
   <h2>How this is built</h2>
   <div class="card">
     <p style="margin-top:0">Public Play Store data is pulled daily (<code>google-play-scraper</code>). Each new review is labelled once — journey stage, who would fix it, sentiment of the words, safety — using a versioned prompt (<code>prompts/classify_v1.md</code>). In production that prompt runs on Claude Sonnet 5.5 via the Batch API; this submission's labels were produced by Claude through Claude Code with the identical prompt and audited by a person. Keyword rules run free as a fallback and a second opinion; where they disagree, the review lands in the queue above.</p>
-    <p class="chart-sub" style="margin:10px 0 4px">How often the free keyword rules agree with the AI labels (per theme; agreement, not ground truth)</p>
+    <p class="chart-sub" style="margin:10px 0 4px">How the free keyword rules score against the audited AI labels, on reviews held out from their tuning</p>
     <div class="tablewrap" id="t-rules"></div>
   </div>
 </section>

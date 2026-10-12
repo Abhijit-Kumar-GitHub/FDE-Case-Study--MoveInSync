@@ -6,6 +6,6 @@
 - **Top complaint themes (1–2★, last 28 days):** App stability & speed (21), UI & interruptions (10), Issue reporting & support (9), Live tracking & ETA (6).
 - **Release watch:** 👀 12.19.0: 31% one-star vs 24% baseline, n=105 — watch (not yet significant)
 - **Developer replies (last 28 days):** 1% of reviews answered.
-- **Needs a person:** 5 new in the last 28 days (1 safety) · 28 safety items on file.
+- **Needs a person:** 4 new in the last 28 days (1 safety) · 28 safety items on file.
 
 Dashboard: https://OWNER.github.io/moveinsync-playstore-ratings/ · Queue: needs_review.csv · Replies: reply_drafts.html · Method: README

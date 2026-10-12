@@ -93,22 +93,37 @@ The cost is predictable before anything is sent: the runner counts the new revie
 
 ### How good the free fallback is
 
-This is how often the keyword rules agree with the AI labels on all 1,400 reviews — agreement, not accuracy against ground truth. They agree with the AI's main theme **70%** of the time. "Precision" = share of the rules' flags the AI also gave; "recall" = share of the AI's labels the rules also caught.
+The keyword rules (`src/rules.py`) are built for **precision over recall**:
+- a theme fires only when its words appear together with a complaint
+- a 4–5★ review with no complaint cue counts as praise
+- generic phrases ("app not working") count only when nothing more specific matched
+- anything the rules can't place is left for a person
 
-| Theme | Precision | Recall |
-|---|---|---|
-| Login & home address | 0.88 | 0.74 |
-| Pickup & boarding | 0.86 | 0.68 |
-| Notifications | 0.85 | 0.28 |
-| Self-booking | 0.82 | 0.44 |
-| Issue reporting & support | 0.76 | 0.66 |
-| Allocation & routing | 0.72 | 0.61 |
-| UI & interruptions | 0.70 | 0.61 |
-| App stability & speed | 0.69 | 0.73 |
-| Live tracking & ETA | 0.69 | 0.61 |
-| Ride & drop | 0.62 | 0.44 |
+They were tuned on 70% of the audited labels and are scored on the other **30% (420 reviews), which tuning never saw**. Reproduce with `python src/evaluate_rules.py`.
+- **Precision** = of the reviews the rules flag with a theme, the share the AI labels agree with.
+- **Recall** = of the AI's labels, the share the rules also catch.
 
-That's good enough to spot trends and send reviews to a person, but not good enough to replace the AI step. That's why the design uses both.
+| Theme | Precision | Recall | Before tuning (precision) |
+|---|---|---|---|
+| Allocation & routing | 1.00 | 0.36 | 0.67 |
+| Ride & drop | 1.00 | 0.60 | 0.71 |
+| Login & home address | 0.97 | 0.69 | 0.93 |
+| Issue reporting & support | 0.94 | 0.38 | 0.83 |
+| UI & interruptions | 0.92 | 0.49 | 0.76 |
+| Self-booking | 0.86 | 0.41 | 0.86 |
+| App stability & speed | 0.83 | 0.69 | 0.65 |
+| Live tracking & ETA | 0.76 | 0.70 | 0.59 |
+| Pickup & boarding | 0.76 | 0.55 | 0.76 |
+| Notifications | 0.75 (8 flags) | 0.33 | 0.75 |
+| **All themes** | **0.86** | **0.55** | **0.74** |
+
+**What these numbers mean:**
+- **Precision reaches 0.90 or more for 5 of 10 themes,** and overall it rose from 0.74 to 0.86.
+- **Recall is deliberately modest.** The rules leave 45% of reviews unplaced rather than guess.
+- **Per-theme accuracy isn't reported,** because it comes out at 0.92–0.99 for almost any rule set: most reviews don't mention a given theme.
+- **The ceiling is the reference.** The AI labels the rules are compared with were 94% right in the human audit.
+
+So the rules are good for counting trends cheaply and routing reviews to a person. They don't replace the AI step, which is why the design uses both. Tuning further on this data would start fitting the test set rather than improving the rules.
 
 ## How teams use it
 
@@ -129,7 +144,8 @@ prompts/                  classify_v1.md (the prompt) · schema.json (codes + JS
 src/scrape.py             snapshot + incremental reviews (no usernames stored)
 src/labels_io.py          export chunks · validate + import labels · overrides · audit sample
 src/classify_api.py       production labeller (Sonnet 5.5 Batch API) · --dry-run / --what-if-days
-src/rules.py              keyword rules: free fallback and second opinion
+src/rules.py              keyword rules: free fallback and second opinion (precision-first)
+src/evaluate_rules.py     scores the rules on a held-out split of the audited labels
 src/analyze.py            store view, trends, versions (Wilson intervals), replies, visitor view, benchmark
 src/themes_metrics.py     journey heat map, attribution, clusters, gating evidence, impact model, rules eval
 src/report.py             dashboard, queue, digest, backlog.csv

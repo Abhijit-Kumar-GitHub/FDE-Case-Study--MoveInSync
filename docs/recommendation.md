@@ -221,7 +221,7 @@ The displayed store rating moves more slowly, because it includes about 115,000 
   - **What was labelled:** 1,400 reviews, using a versioned prompt (`prompts/classify_v1.md`) with 30 journey codes, plus who would fix it, text sentiment and a safety flag.
   - **Who labelled:** Claude (Opus 5.5, through Claude Code). {{AUDIT_SENTENCE}}
   - **What the audit changed:** it led to codebook v1.1. Routing complaints are now attributed to both MoveInSync's routing engine and operations, and home-address problems have their own code. All 1,400 labels were updated, and every change is recorded in `data/labels/human_overrides.csv`.
-  - **The free fallback:** keyword rules agree with the AI's main theme 70% of the time; per theme, 62–88% of what the rules flag matches the AI labels. They also act as a second opinion for the review queue.
+  - **The free fallback:** keyword rules are built for precision. On 420 reviews held out from their tuning, 86% of the themes they flag match the AI labels (0.90 or more for 5 of 10 themes). They catch 55% and leave the rest for a person. They also act as a second opinion for the review queue.
 - **Statistics:**
   - version comparisons use 95% Wilson intervals and need at least 30 reviews
   - the impact figures come from a simple counterfactual, not a forecast
