@@ -321,7 +321,7 @@ table("t-versions", [{h: "Version", f: (v) => v.version}, {h: "First seen", f: (
 
 $("visitor-lede").textContent = `Play shows reviews by "most relevant" by default. Right now ${Math.round((vv.share_1_2star_top10 || 0) * 10)} of the first 10 are 1–2★ and ${vv.top10 ? vv.top10.filter((r) => !r.replied).length : "–"} have no reply. Answering these — with a fix, not a template — is the cheapest visible win.`;
 table("t-visitor", [{h: "#", num: 1, f: (r) => r.rank}, {h: "Stars", html: 1, f: (r) => `<span class="stars">${stars(r.score)}</span>`}, {h: "Date", f: (r) => r.date},
-                    {h: "👍", num: 1, f: (r) => r.thumbs}, {h: "Replied", f: (r) => (r.replied ? "yes" : "no")}, {h: "Review", html: 1, f: (r) => `<span class="quote">${esc(r.text.slice(0, 220))}${r.text.length > 220 ? "…" : ""}</span>`}], vv.top10 || []);
+                    {h: "Helpful votes", num: 1, f: (r) => r.thumbs}, {h: "Replied", f: (r) => (r.replied ? "yes" : "no")}, {h: "Review", html: 1, f: (r) => `<span class="quote">${esc(r.text.slice(0, 220))}${r.text.length > 220 ? "…" : ""}</span>`}], vv.top10 || []);
 
 const qc = M.queue_counts || {};
 $("queue-lede").textContent = `Reviews the pipeline hands to a person: safety reports (always, ${qc.safety || 0} on file), stars that contradict the words (${qc.mismatch || 0}), reviews the AI could not place (${(qc.unclear || 0) + (qc["possible miss"] || 0)}), and new reviews the free rules could not place. The full list is in needs_review.csv.`;

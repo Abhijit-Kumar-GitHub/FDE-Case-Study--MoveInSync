@@ -110,16 +110,17 @@ pres.addSection({ title: "Diagnosis" });
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Diagnosis" });
 s.addText("Not behind the market", { placeholder: "title" });
 const bench = M.benchmark.filter((b) => b.score != null).sort((a, b) => a.score - b.score);
-s.addChart(pres.charts.BAR, [{ name: "Rating", labels: bench.map((b) => b.name), values: bench.map((b) => b.score) }], {
+const fmtK = (n) => (n >= 10000 ? Math.round(n / 1000) + "K" : n >= 1000 ? (n / 1000).toFixed(1) + "K" : String(n));
+s.addChart(pres.charts.BAR, [{ name: "Rating", labels: bench.map((b) => `${b.name.replace(/ \((.+)\)/, ", $1")} (${fmtK(b.ratings)})`), values: bench.map((b) => b.score) }], {
   x: 0.4, y: 1.1, w: 5.6, h: 3.95, barDir: "bar", barGapWidthPct: 60,
   chartColors: bench.map((b) => (b.role === "employee" ? HEX.accent1 : HEX.accent5)),
   valAxisMinVal: 0, valAxisMaxVal: 5, valAxisMajorUnit: 1, showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "0.00",
-  showTitle: true, title: "Play Store rating, India storefront", showLegend: false, objectName: "benchmark chart", ...chartText,
+  showTitle: true, title: "Play Store rating, India storefront (number of ratings)", showLegend: false, objectName: "benchmark chart", ...chartText,
 });
 stat(s, 6.4, 1.15, 3.1, "0.011", "stars from showing 4.7 — Play rounds 4.639 down to 4.6", "gap", { labelH: 0.55 });
-stat(s, 6.4, 2.45, 3.1, "114,880", "ratings: more than the other seven apps combined", "volume", { labelH: 0.55 });
+stat(s, 6.4, 2.45, 3.1, "114,880", "ratings: nearly 5× Safetrax's, and more than the other seven combined", "volume", { labelH: 0.55 });
 stat(s, 6.4, 3.75, 3.1, "4.3★", "what the same app shows in the US; ratings are per country", "country", { labelH: 0.55 });
-s.addNotes("Here's the benchmark against seven other employee-commute apps. MoveInSync is second, just behind Safetrax Commuter, and it has more ratings than the other seven combined. The Play Store rounds to one decimal, so 4.639 shows as 4.6. Crossing 4.65 flips the display to 4.7. One trap worth knowing: ratings are per country. The same app shows 4.3 in the US.");
+s.addNotes("Here's the benchmark against seven other employee-commute apps. MoveInSync is second, 0.08 behind Safetrax Commuter, but on nearly five times the ratings: 115 thousand against 24 thousand. Safetrax had just 114 written reviews last year; MoveInSync had 2,848. MoveInSync has more ratings than the other seven combined. The Play Store rounds to one decimal, so 4.639 shows as 4.6. Crossing 4.65 flips the display to 4.7. One trap worth knowing: ratings are per country. The same app shows 4.3 in the US.");
 
 // ---------- 4. what people read ----------
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Diagnosis" });

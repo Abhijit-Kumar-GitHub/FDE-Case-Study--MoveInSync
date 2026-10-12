@@ -181,7 +181,7 @@ def write_reply_queue(df):
         themes = sorted({tm.FAMILY_LABELS.get(f, f) for f in rules.families(r["stages"]) if f not in ("U", "P")})
         rows.append({"priority": i, "visible_rank": "" if pd.isna(r["rank"]) else int(r["rank"]),
                      "safety": bool(r["safety_flag"]), "date": r["at"].strftime("%Y-%m-%d"), "stars": int(r["score"]),
-                     "thumbs": int(r["thumbsUpCount"]), "version": "" if pd.isna(r["reviewCreatedVersion"]) else r["reviewCreatedVersion"],
+                     "helpful_votes": int(r["thumbsUpCount"]), "version": "" if pd.isna(r["reviewCreatedVersion"]) else r["reviewCreatedVersion"],
                      "themes": "; ".join(themes), "review": " ".join(r["content"].split()),
                      "draft_reply": reply, "draft_chars": len(reply) if reply else "",
                      "needs_confirmation": "[confirm" in reply, "reviewId": r["reviewId"]})
@@ -189,12 +189,13 @@ def write_reply_queue(df):
     q.to_csv(DOCS / "reply_queue.csv", index=False, encoding="utf-8-sig")
 
     lines = ["# Reply drafts: the reviews visitors see first", "",
-             "For Support (REP-1). Each draft is specific to the review and within Google Play's 350-character limit. "
+             "For Support (REP-1). Reviews are in the order Play shows them to visitors ('most relevant', which favours reviews with many 'helpful' votes). "
+             "Each draft is specific to the review and within Google Play's 350-character limit. "
              "Fill every `[confirm: …]` with a checked fact (or delete the clause) before posting. "
              "Post the reply, then come back to the same review when the fix ships. Riders can update their rating.", "",
              f"Full prioritised queue (all unanswered 1–3★ reviews): `reply_queue.csv`, {len(q)} reviews.", ""]
     for _, r in q[q["draft_reply"] != ""].iterrows():
-        lines += [f"## #{r['visible_rank']} on the listing · {'★' * r['stars']}{'☆' * (5 - r['stars'])} · {r['date']} · 👍 {r['thumbs']}", "",
+        lines += [f"## #{r['visible_rank']} on the listing · {'★' * r['stars']}{'☆' * (5 - r['stars'])} · {r['date']} · {r['helpful_votes']} found this helpful", "",
                   f"> {r['review'][:600]}{'…' if len(r['review']) > 600 else ''}", "",
                   f"**Draft reply** ({r['draft_chars']} chars{', needs confirmation' if r['needs_confirmation'] else ''}):", "",
                   r["draft_reply"], ""]
