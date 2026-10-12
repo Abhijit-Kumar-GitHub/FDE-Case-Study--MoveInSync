@@ -1,6 +1,6 @@
 # Play Store ratings: what is actually wrong, and what to fix first
 
-*For MoveInSync Product, Engineering, Support and Transport Operations · Prepared by Abhijit, Forward Deployed Engineer candidate · 13 October 2026 · Public Google Play data through 11 October 2026 · Live monitor: {{DASHBOARD_URL}}*
+*For MoveInSync Product, Engineering, Support and Transport Operations · Prepared by Abhijit Kumar, Forward Deployed Engineer candidate · 13 October 2026 · Public Google Play data through 11 October 2026 · Live monitor: {{DASHBOARD_URL}}*
 
 ## The answer
 
