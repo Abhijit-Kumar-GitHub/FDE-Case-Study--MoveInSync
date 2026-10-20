@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-10-19T06:36:17",
+  "generated_at": "2026-10-20T06:22:42",
   "store": {
     "app_id": "com.moveinsync.ets",
-    "displayed_score_exact": 4.6401,
+    "displayed_score_exact": 4.6402,
     "displayed_score": 4.6,
-    "ratings": 115145,
-    "text_reviews": 23665,
+    "ratings": 115154,
+    "text_reviews": 23674,
     "histogram": {
-      "1": 7342,
-      "2": 847,
-      "3": 1209,
-      "4": 7103,
-      "5": 98638
+      "1": 7341,
+      "2": 852,
+      "3": 1195,
+      "4": 7112,
+      "5": 98649
     },
-    "histogram_mean": 4.6402,
+    "histogram_mean": 4.6403,
     "share_1star_lifetime": 0.0638,
     "next_display_threshold": 4.65,
-    "gap_to_threshold": 0.0099,
-    "extra_5star_needed_upper_bound": 3233,
-    "extra_5star_as_share_of_daily_riders": 0.00216,
+    "gap_to_threshold": 0.0098,
+    "extra_5star_needed_upper_bound": 3200,
+    "extra_5star_as_share_of_daily_riders": 0.00213,
     "ratings_per_daily_rider": 0.0768,
     "installs": "1,000,000+",
     "version": "12.19.0",
@@ -32,7 +32,7 @@
       "role": "competitor",
       "score": 4.719,
       "displayed": 4.7,
-      "ratings": 24176,
+      "ratings": 24175,
       "installs": "500,000+",
       "reviews_90d": 33,
       "mean_90d": 3.0,
@@ -45,20 +45,20 @@
       "role": "employee",
       "score": 4.64,
       "displayed": 4.6,
-      "ratings": 115145,
+      "ratings": 115154,
       "installs": "1,000,000+",
-      "reviews_90d": 715,
-      "mean_90d": 3.82,
-      "share_1star_90d": 0.25,
+      "reviews_90d": 713,
+      "mean_90d": 3.81,
+      "share_1star_90d": 0.251,
       "reply_rate_90d": 0.004
     },
     {
       "app_id": "in.iincube.commuter",
       "name": "Safetrax (older app)",
       "role": "competitor",
-      "score": 4.591,
+      "score": 4.607,
       "displayed": 4.6,
-      "ratings": 1116,
+      "ratings": 1124,
       "installs": "10,000+",
       "reviews_90d": 40,
       "mean_90d": 2.1,
@@ -71,7 +71,7 @@
       "role": "competitor",
       "score": 4.343,
       "displayed": 4.3,
-      "ratings": 34988,
+      "ratings": 34992,
       "installs": "1,000,000+",
       "reviews_90d": 245,
       "mean_90d": 3.6,
@@ -142,58 +142,58 @@
   ],
   "windows": {
     "last_30d": {
-      "n": 230,
-      "mean": 3.765,
-      "share_1star": 0.2739,
+      "n": 227,
+      "mean": 3.784,
+      "share_1star": 0.2687,
       "share_1star_ci": [
-        0.2203,
-        0.3349
+        0.2153,
+        0.3299
       ],
-      "share_5star": 0.6435,
+      "share_5star": 0.6476,
       "dist": {
-        "1": 63,
+        "1": 61,
         "2": 5,
         "3": 3,
         "4": 11,
-        "5": 148
+        "5": 147
       }
     },
     "last_90d": {
-      "n": 715,
-      "mean": 3.818,
-      "share_1star": 0.2503,
+      "n": 713,
+      "mean": 3.815,
+      "share_1star": 0.2511,
       "share_1star_ci": [
-        0.22,
-        0.2834
+        0.2206,
+        0.2842
       ],
-      "share_5star": 0.6559,
+      "share_5star": 0.655,
       "dist": {
         "1": 179,
         "2": 22,
         "3": 18,
         "4": 27,
-        "5": 469
+        "5": 467
       }
     },
     "last_365d": {
-      "n": 2837,
+      "n": 2835,
       "mean": 3.834,
-      "share_1star": 0.2407,
+      "share_1star": 0.2409,
       "share_1star_ci": [
-        0.2254,
-        0.2568
+        0.2255,
+        0.257
       ],
-      "share_5star": 0.6415,
+      "share_5star": 0.6416,
       "dist": {
         "1": 683,
         "2": 84,
-        "3": 75,
+        "3": 74,
         "4": 175,
-        "5": 1820
+        "5": 1819
       }
     },
     "all": {
-      "n": 24363,
+      "n": 24364,
       "mean": 3.608,
       "share_1star": 0.2612,
       "share_1star_ci": [
@@ -206,10 +206,10 @@
         "2": 1164,
         "3": 1091,
         "4": 2797,
-        "5": 12948
+        "5": 12949
       }
     },
-    "data_end": "2026-10-17",
+    "data_end": "2026-10-18",
     "data_start": "2014-03-14"
   },
   "monthly": [
@@ -1715,21 +1715,16 @@
     },
     {
       "month": "2026-10",
-      "reviews": 130,
-      "mean": 3.815,
-      "share_1star": 0.2615,
-      "share_5star": 0.6538,
+      "reviews": 131,
+      "mean": 3.824,
+      "share_1star": 0.2595,
+      "share_5star": 0.6565,
       "short_5star": 64,
-      "reply_rate": 0.0077,
+      "reply_rate": 0.0076,
       "partial": true
     }
   ],
   "rolling_28d": [
-    {
-      "date": "2024-10-18",
-      "mean": 3.665,
-      "n": 227
-    },
     {
       "date": "2024-10-19",
       "mean": 3.642,
@@ -5374,6 +5369,11 @@
       "date": "2026-10-17",
       "mean": 3.753,
       "n": 215
+    },
+    {
+      "date": "2026-10-18",
+      "mean": 3.756,
+      "n": 213
     }
   ],
   "versions": {
@@ -7217,14 +7217,14 @@
       },
       {
         "version": "12.19.0",
-        "n": 121,
+        "n": 122,
         "first_seen": "2026-09-21",
-        "last_seen": "2026-10-16",
-        "mean": 3.727,
-        "share_1star": 0.2893,
+        "last_seen": "2026-10-18",
+        "mean": 3.738,
+        "share_1star": 0.2869,
         "share_1star_ci": [
-          0.2159,
-          0.3755
+          0.2141,
+          0.3727
         ]
       }
     ]
@@ -7357,18 +7357,18 @@
   "hindi": {
     "hi_reviews": 3,
     "since": "2016-10-04",
-    "en_reviews_same_period": 24001,
+    "en_reviews_same_period": 24002,
     "hi_share": 0.0001,
     "hi_mean": 4.0
   },
   "themes": {
     "window": {
-      "start": "2025-10-17",
-      "end": "2026-10-17",
-      "written_reviews": 2837,
+      "start": "2025-10-18",
+      "end": "2026-10-18",
+      "written_reviews": 2835,
       "reviews_1_2star": 767,
       "labelled_1_2star": 756,
-      "labelled_total_window": 939,
+      "labelled_total_window": 938,
       "labelled_total": 1400
     },
     "families": [
@@ -8300,13 +8300,13 @@
     "versions_by_theme": [
       {
         "version": "12.6",
-        "n": 77,
-        "first_seen": "2025-10-18",
-        "J1": 0.286,
-        "J3": 0.104,
-        "J6": 0.065,
-        "X1": 0.104,
-        "X2": 0.156
+        "n": 76,
+        "first_seen": "2025-10-19",
+        "J1": 0.289,
+        "J3": 0.105,
+        "J6": 0.066,
+        "X1": 0.105,
+        "X2": 0.158
       },
       {
         "version": "12.7.2",
@@ -8732,7 +8732,7 @@
     },
     "impact": {
       "current_written_mean_12m": 3.834,
-      "written_reviews_12m": 2837,
+      "written_reviews_12m": 2835,
       "by_family": [
         {
           "family": "X1",
@@ -8750,7 +8750,7 @@
           "delta_mean_30": 0.032,
           "delta_mean_50": 0.053,
           "delta_mean_70": 0.075,
-          "one_star_share_drop_50": 0.0167
+          "one_star_share_drop_50": 0.0168
         },
         {
           "family": "X2",
