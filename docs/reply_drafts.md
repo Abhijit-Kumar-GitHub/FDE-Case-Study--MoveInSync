@@ -2,7 +2,7 @@
 
 For Support (REP-1). Reviews are in the order Play shows them to visitors ('most relevant', which favours reviews with many 'helpful' votes). Each draft is specific to the review and within Google Play's 350-character limit. Fill every `[confirm: …]` with a checked fact (or delete the clause) before posting. Post the reply, then come back to the same review when the fix ships. Riders can update their rating.
 
-Full prioritised queue (all unanswered 1–3★ reviews): `reply_queue.csv`, 243 reviews.
+Full prioritised queue (all unanswered 1–3★ reviews): `reply_queue.csv`, 245 reviews.
 
 ## #1 on the listing · ★☆☆☆☆ · 2026-06-29 · 6 found this helpful
 
