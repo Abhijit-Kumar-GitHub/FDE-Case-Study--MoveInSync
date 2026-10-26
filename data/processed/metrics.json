@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-10-25T06:35:04",
+  "generated_at": "2026-10-26T06:45:35",
   "store": {
     "app_id": "com.moveinsync.ets",
-    "displayed_score_exact": 4.6414,
+    "displayed_score_exact": 4.6407,
     "displayed_score": 4.6,
-    "ratings": 115396,
-    "text_reviews": 23700,
+    "ratings": 115411,
+    "text_reviews": 23704,
     "histogram": {
-      "1": 7372,
-      "2": 851,
-      "3": 1183,
-      "4": 6967,
-      "5": 99018
+      "1": 7384,
+      "2": 860,
+      "3": 1182,
+      "4": 6980,
+      "5": 99001
     },
-    "histogram_mean": 4.6414,
-    "share_1star_lifetime": 0.0639,
+    "histogram_mean": 4.6407,
+    "share_1star_lifetime": 0.064,
     "next_display_threshold": 4.65,
-    "gap_to_threshold": 0.0086,
-    "extra_5star_needed_upper_bound": 2821,
-    "extra_5star_as_share_of_daily_riders": 0.00188,
+    "gap_to_threshold": 0.0093,
+    "extra_5star_needed_upper_bound": 3051,
+    "extra_5star_as_share_of_daily_riders": 0.00203,
     "ratings_per_daily_rider": 0.0769,
     "installs": "1,000,000+",
     "version": "12.20.0",
@@ -32,7 +32,7 @@
       "role": "competitor",
       "score": 4.715,
       "displayed": 4.7,
-      "ratings": 24191,
+      "ratings": 24192,
       "installs": "500,000+",
       "reviews_90d": 28,
       "mean_90d": 2.89,
@@ -45,11 +45,11 @@
       "role": "employee",
       "score": 4.641,
       "displayed": 4.6,
-      "ratings": 115396,
+      "ratings": 115411,
       "installs": "1,000,000+",
       "reviews_90d": 708,
-      "mean_90d": 3.8,
-      "share_1star_90d": 0.257,
+      "mean_90d": 3.79,
+      "share_1star_90d": 0.258,
       "reply_rate_90d": 0.004
     },
     {
@@ -142,71 +142,71 @@
   ],
   "windows": {
     "last_30d": {
-      "n": 209,
-      "mean": 3.789,
-      "share_1star": 0.2679,
+      "n": 206,
+      "mean": 3.806,
+      "share_1star": 0.267,
       "share_1star_ci": [
-        0.2125,
-        0.3318
+        0.2112,
+        0.3313
       ],
-      "share_5star": 0.6555,
+      "share_5star": 0.6602,
       "dist": {
-        "1": 56,
-        "2": 5,
+        "1": 55,
+        "2": 4,
         "3": 3,
         "4": 8,
-        "5": 137
+        "5": 136
       }
     },
     "last_90d": {
       "n": 708,
-      "mean": 3.795,
-      "share_1star": 0.2571,
+      "mean": 3.794,
+      "share_1star": 0.2585,
       "share_1star_ci": [
-        0.2262,
-        0.2905
+        0.2276,
+        0.292
       ],
       "share_5star": 0.6511,
       "dist": {
-        "1": 182,
-        "2": 21,
+        "1": 183,
+        "2": 20,
         "3": 18,
         "4": 26,
         "5": 461
       }
     },
     "last_365d": {
-      "n": 2825,
-      "mean": 3.834,
-      "share_1star": 0.2411,
+      "n": 2819,
+      "mean": 3.832,
+      "share_1star": 0.2419,
       "share_1star_ci": [
-        0.2256,
-        0.2572
+        0.2265,
+        0.2581
       ],
       "share_5star": 0.6428,
       "dist": {
-        "1": 681,
+        "1": 682,
         "2": 86,
         "3": 69,
-        "4": 173,
-        "5": 1816
+        "4": 170,
+        "5": 1812
       }
     },
     "all": {
-      "n": 24403,
+      "n": 24405,
       "mean": 3.608,
       "share_1star": 0.2611,
       "share_1star_ci": [
-        0.2556,
+        0.2557,
         0.2667
       ],
       "share_5star": 0.5318,
       "dist": {
-        "1": 6372,
+        "1": 6373,
         "2": 1166,
         "3": 1091,
         "4": 2797,
-        "5": 12977
+        "5": 12978
       }
     },
     "data_end": "2026-10-24",
@@ -1715,12 +1715,12 @@
     },
     {
       "month": "2026-10",
-      "reviews": 170,
-      "mean": 3.847,
-      "share_1star": 0.2529,
-      "share_5star": 0.6706,
+      "reviews": 172,
+      "mean": 3.837,
+      "share_1star": 0.2558,
+      "share_5star": 0.6686,
       "short_5star": 89,
-      "reply_rate": 0.0059,
+      "reply_rate": 0.0058,
       "partial": true
     }
   ],
@@ -5372,8 +5372,8 @@
     },
     {
       "date": "2026-10-24",
-      "mean": 3.832,
-      "n": 196
+      "mean": 3.823,
+      "n": 198
     }
   ],
   "versions": {
@@ -7229,14 +7229,14 @@
       },
       {
         "version": "12.20.0",
-        "n": 59,
+        "n": 61,
         "first_seen": "2026-10-07",
-        "last_seen": "2026-10-23",
-        "mean": 3.729,
-        "share_1star": 0.2712,
+        "last_seen": "2026-10-24",
+        "mean": 3.705,
+        "share_1star": 0.2787,
         "share_1star_ci": [
-          0.1744,
-          0.396
+          0.1819,
+          0.4017
         ]
       }
     ]
@@ -7369,7 +7369,7 @@
   "hindi": {
     "hi_reviews": 3,
     "since": "2016-10-04",
-    "en_reviews_same_period": 24041,
+    "en_reviews_same_period": 24043,
     "hi_share": 0.0001,
     "hi_mean": 4.0
   },
@@ -7377,10 +7377,10 @@
     "window": {
       "start": "2025-10-24",
       "end": "2026-10-24",
-      "written_reviews": 2825,
-      "reviews_1_2star": 767,
+      "written_reviews": 2819,
+      "reviews_1_2star": 768,
       "labelled_1_2star": 745,
-      "labelled_total_window": 918,
+      "labelled_total_window": 916,
       "labelled_total": 1400
     },
     "families": [
@@ -7861,7 +7861,7 @@
       },
       "policy_prompt": {
         "description": "Terms / transport-policy acceptance on every open",
-        "n_12m": 10,
+        "n_12m": 9,
         "n_12m_1_2star": 8,
         "share_of_1_2star": 0.0107,
         "quotes": [
@@ -8030,7 +8030,7 @@
     "mismatch": {
       "low_star_positive_text": 5,
       "high_star_negative_text": 10,
-      "share_of_labelled_window": 0.0163,
+      "share_of_labelled_window": 0.0164,
       "examples_low_pos": [
         "good",
         "good app",
@@ -8729,8 +8729,8 @@
       ]
     },
     "impact": {
-      "current_written_mean_12m": 3.834,
-      "written_reviews_12m": 2825,
+      "current_written_mean_12m": 3.832,
+      "written_reviews_12m": 2819,
       "by_family": [
         {
           "family": "X1",
@@ -8801,8 +8801,8 @@
           "primary_1_2star": 41,
           "delta_mean_30": 0.013,
           "delta_mean_50": 0.021,
-          "delta_mean_70": 0.029,
-          "one_star_share_drop_50": 0.0065
+          "delta_mean_70": 0.03,
+          "one_star_share_drop_50": 0.0066
         },
         {
           "family": "J5",
