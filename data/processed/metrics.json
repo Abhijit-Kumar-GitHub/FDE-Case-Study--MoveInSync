@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-10-31T07:22:39",
+  "generated_at": "2026-11-01T07:54:35",
   "store": {
     "app_id": "com.moveinsync.ets",
-    "displayed_score_exact": 4.6407,
+    "displayed_score_exact": 4.6409,
     "displayed_score": 4.6,
-    "ratings": 115664,
-    "text_reviews": 23741,
+    "ratings": 115703,
+    "text_reviews": 23746,
     "histogram": {
-      "1": 7392,
-      "2": 880,
-      "3": 1211,
-      "4": 6916,
-      "5": 99261
+      "1": 7397,
+      "2": 883,
+      "3": 1205,
+      "4": 6899,
+      "5": 99315
     },
-    "histogram_mean": 4.6408,
+    "histogram_mean": 4.6409,
     "share_1star_lifetime": 0.0639,
     "next_display_threshold": 4.65,
-    "gap_to_threshold": 0.0093,
-    "extra_5star_needed_upper_bound": 3043,
-    "extra_5star_as_share_of_daily_riders": 0.00203,
+    "gap_to_threshold": 0.0091,
+    "extra_5star_needed_upper_bound": 3004,
+    "extra_5star_as_share_of_daily_riders": 0.002,
     "ratings_per_daily_rider": 0.0771,
     "installs": "1,000,000+",
     "version": "12.20.0",
@@ -30,9 +30,9 @@
       "app_id": "in.mtap.iincube.safetrax.commuter",
       "name": "Safetrax Commuter",
       "role": "competitor",
-      "score": 4.714,
+      "score": 4.715,
       "displayed": 4.7,
-      "ratings": 24211,
+      "ratings": 24213,
       "installs": "500,000+",
       "reviews_90d": 28,
       "mean_90d": 2.89,
@@ -45,20 +45,20 @@
       "role": "employee",
       "score": 4.641,
       "displayed": 4.6,
-      "ratings": 115664,
+      "ratings": 115703,
       "installs": "1,000,000+",
-      "reviews_90d": 697,
-      "mean_90d": 3.78,
-      "share_1star_90d": 0.261,
+      "reviews_90d": 696,
+      "mean_90d": 3.79,
+      "share_1star_90d": 0.26,
       "reply_rate_90d": 0.004
     },
     {
       "app_id": "in.iincube.commuter",
       "name": "Safetrax (older app)",
       "role": "competitor",
-      "score": 4.453,
-      "displayed": 4.5,
-      "ratings": 1203,
+      "score": 4.43,
+      "displayed": 4.4,
+      "ratings": 1209,
       "installs": "10,000+",
       "reviews_90d": 39,
       "mean_90d": 2.28,
@@ -69,9 +69,9 @@
       "app_id": "com.routematic.employee",
       "name": "Routematic",
       "role": "competitor",
-      "score": 4.335,
+      "score": 4.332,
       "displayed": 4.3,
-      "ratings": 35134,
+      "ratings": 35138,
       "installs": "1,000,000+",
       "reviews_90d": 234,
       "mean_90d": 3.55,
@@ -97,7 +97,7 @@
       "role": "competitor",
       "score": 3.192,
       "displayed": 3.2,
-      "ratings": 841,
+      "ratings": 842,
       "installs": "100,000+",
       "reviews_90d": 22,
       "mean_90d": 1.95,
@@ -121,9 +121,9 @@
       "app_id": "com.proficio.commute",
       "name": "COMMUTE (Proficio)",
       "role": "competitor",
-      "score": 2.51,
+      "score": 2.53,
       "displayed": 2.5,
-      "ratings": 610,
+      "ratings": 611,
       "installs": "50,000+",
       "reviews_90d": 10,
       "mean_90d": 1.1,
@@ -142,62 +142,62 @@
   ],
   "windows": {
     "last_30d": {
-      "n": 217,
-      "mean": 3.866,
-      "share_1star": 0.2488,
+      "n": 214,
+      "mean": 3.883,
+      "share_1star": 0.243,
       "share_1star_ci": [
-        0.196,
-        0.3104
+        0.1904,
+        0.3047
       ],
-      "share_5star": 0.6774,
+      "share_5star": 0.6776,
       "dist": {
-        "1": 54,
+        "1": 52,
         "2": 5,
         "3": 4,
-        "4": 7,
-        "5": 147
+        "4": 8,
+        "5": 145
       }
     },
     "last_90d": {
-      "n": 697,
-      "mean": 3.785,
-      "share_1star": 0.2611,
+      "n": 696,
+      "mean": 3.792,
+      "share_1star": 0.2601,
       "share_1star_ci": [
-        0.2299,
-        0.295
+        0.2288,
+        0.2939
       ],
-      "share_5star": 0.6499,
+      "share_5star": 0.6509,
       "dist": {
-        "1": 182,
-        "2": 20,
+        "1": 181,
+        "2": 19,
         "3": 17,
-        "4": 25,
+        "4": 26,
         "5": 453
       }
     },
     "last_365d": {
-      "n": 2798,
+      "n": 2787,
       "mean": 3.844,
-      "share_1star": 0.2395,
+      "share_1star": 0.2393,
       "share_1star_ci": [
-        0.224,
-        0.2556
+        0.2239,
+        0.2555
       ],
-      "share_5star": 0.6465,
+      "share_5star": 0.6462,
       "dist": {
-        "1": 670,
-        "2": 83,
+        "1": 667,
+        "2": 82,
         "3": 70,
-        "4": 166,
-        "5": 1809
+        "4": 167,
+        "5": 1801
       }
     },
     "all": {
-      "n": 24444,
+      "n": 24447,
       "mean": 3.609,
       "share_1star": 0.261,
       "share_1star_ci": [
-        0.2556,
+        0.2555,
         0.2666
       ],
       "share_5star": 0.5321,
@@ -205,8 +205,8 @@
         "1": 6381,
         "2": 1167,
         "3": 1092,
-        "4": 2798,
-        "5": 13006
+        "4": 2799,
+        "5": 13008
       }
     },
     "data_end": "2026-10-30",
@@ -1715,11 +1715,11 @@
     },
     {
       "month": "2026-10",
-      "reviews": 211,
-      "mean": 3.872,
-      "share_1star": 0.2464,
-      "share_5star": 0.6777,
-      "short_5star": 104,
+      "reviews": 214,
+      "mean": 3.883,
+      "share_1star": 0.243,
+      "share_5star": 0.6776,
+      "short_5star": 106,
       "reply_rate": 0.0047,
       "partial": true
     }
@@ -5372,8 +5372,8 @@
     },
     {
       "date": "2026-10-30",
-      "mean": 3.881,
-      "n": 201
+      "mean": 3.892,
+      "n": 204
     }
   ],
   "versions": {
@@ -7229,20 +7229,20 @@
       },
       {
         "version": "12.20.0",
-        "n": 89,
+        "n": 91,
         "first_seen": "2026-10-07",
         "last_seen": "2026-10-30",
-        "mean": 3.899,
-        "share_1star": 0.236,
+        "mean": 3.912,
+        "share_1star": 0.2308,
         "share_1star_ci": [
-          0.1598,
-          0.3339
+          0.1562,
+          0.3272
         ]
       }
     ]
   },
   "replies": {
-    "reply_rate_all": 0.401,
+    "reply_rate_all": 0.4009,
     "reply_rate_90d": 0.0043,
     "reply_rate_by_star_90d": {
       "1": 0.0055,
@@ -7369,7 +7369,7 @@
   "hindi": {
     "hi_reviews": 3,
     "since": "2016-10-04",
-    "en_reviews_same_period": 24082,
+    "en_reviews_same_period": 24085,
     "hi_share": 0.0001,
     "hi_mean": 4.0
   },
@@ -7377,23 +7377,23 @@
     "window": {
       "start": "2025-10-30",
       "end": "2026-10-30",
-      "written_reviews": 2798,
-      "reviews_1_2star": 753,
-      "labelled_1_2star": 721,
-      "labelled_total_window": 890,
+      "written_reviews": 2787,
+      "reviews_1_2star": 749,
+      "labelled_1_2star": 717,
+      "labelled_total_window": 886,
       "labelled_total": 1400
     },
     "families": [
       {
         "family": "U",
         "label": "Unclear / vague",
-        "mentions": 178,
+        "mentions": 177,
         "share_mentions": 0.2469,
-        "primary": 177,
+        "primary": 176,
         "share_primary": 0.2455,
         "attribution": {
-          "none": 0.781,
-          "ops": 0.129,
+          "none": 0.78,
+          "ops": 0.13,
           "app": 0.062,
           "mixed": 0.028
         }
@@ -7401,10 +7401,10 @@
       {
         "family": "X1",
         "label": "App stability & speed",
-        "mentions": 121,
-        "share_mentions": 0.1678,
-        "primary": 103,
-        "share_primary": 0.1429,
+        "mentions": 120,
+        "share_mentions": 0.1674,
+        "primary": 102,
+        "share_primary": 0.1423,
         "attribution": {
           "app": 0.983,
           "mixed": 0.017
@@ -7414,33 +7414,21 @@
         "family": "J1",
         "label": "Login & home address",
         "mentions": 96,
-        "share_mentions": 0.1331,
+        "share_mentions": 0.1339,
         "primary": 91,
-        "share_primary": 0.1262,
+        "share_primary": 0.1269,
         "attribution": {
           "app": 0.948,
           "mixed": 0.052
         }
       },
       {
-        "family": "X2",
-        "label": "UI & interruptions",
-        "mentions": 75,
-        "share_mentions": 0.104,
-        "primary": 64,
-        "share_primary": 0.0888,
-        "attribution": {
-          "app": 0.92,
-          "mixed": 0.08
-        }
-      },
-      {
         "family": "J9",
         "label": "Issue reporting & support",
         "mentions": 74,
-        "share_mentions": 0.1026,
+        "share_mentions": 0.1032,
         "primary": 40,
-        "share_primary": 0.0555,
+        "share_primary": 0.0558,
         "attribution": {
           "ops": 0.446,
           "app": 0.297,
@@ -7448,12 +7436,24 @@
         }
       },
       {
+        "family": "X2",
+        "label": "UI & interruptions",
+        "mentions": 74,
+        "share_mentions": 0.1032,
+        "primary": 63,
+        "share_primary": 0.0879,
+        "attribution": {
+          "app": 0.919,
+          "mixed": 0.081
+        }
+      },
+      {
         "family": "J3",
         "label": "Self-booking",
         "mentions": 70,
-        "share_mentions": 0.0971,
+        "share_mentions": 0.0976,
         "primary": 60,
-        "share_primary": 0.0832,
+        "share_primary": 0.0837,
         "attribution": {
           "app": 0.786,
           "mixed": 0.143,
@@ -7464,9 +7464,9 @@
         "family": "J7",
         "label": "Pickup & boarding",
         "mentions": 69,
-        "share_mentions": 0.0957,
+        "share_mentions": 0.0962,
         "primary": 45,
-        "share_primary": 0.0624,
+        "share_primary": 0.0628,
         "attribution": {
           "app": 0.507,
           "ops": 0.319,
@@ -7477,22 +7477,22 @@
       {
         "family": "J4",
         "label": "Allocation & routing",
-        "mentions": 67,
-        "share_mentions": 0.0929,
-        "primary": 56,
-        "share_primary": 0.0777,
+        "mentions": 66,
+        "share_mentions": 0.0921,
+        "primary": 55,
+        "share_primary": 0.0767,
         "attribution": {
-          "mixed": 0.806,
-          "ops": 0.194
+          "mixed": 0.803,
+          "ops": 0.197
         }
       },
       {
         "family": "J6",
         "label": "Live tracking & ETA",
         "mentions": 65,
-        "share_mentions": 0.0902,
+        "share_mentions": 0.0907,
         "primary": 52,
-        "share_primary": 0.0721,
+        "share_primary": 0.0725,
         "attribution": {
           "app": 0.908,
           "mixed": 0.092
@@ -7502,9 +7502,9 @@
         "family": "J5",
         "label": "Notifications",
         "mentions": 34,
-        "share_mentions": 0.0472,
+        "share_mentions": 0.0474,
         "primary": 20,
-        "share_primary": 0.0277,
+        "share_primary": 0.0279,
         "attribution": {
           "app": 0.853,
           "mixed": 0.118,
@@ -7515,9 +7515,9 @@
         "family": "J8",
         "label": "Ride & drop",
         "mentions": 16,
-        "share_mentions": 0.0222,
+        "share_mentions": 0.0223,
         "primary": 8,
-        "share_primary": 0.0111,
+        "share_primary": 0.0112,
         "attribution": {
           "ops": 0.688,
           "mixed": 0.312
@@ -7550,146 +7550,146 @@
       {
         "code": "U",
         "family": "Unclear / vague",
-        "mentions": 178,
+        "mentions": 177,
         "share": 0.2469
       },
       {
         "code": "X1.crash",
         "family": "App stability & speed",
         "mentions": 92,
-        "share": 0.1276
+        "share": 0.1283
       },
       {
         "code": "J9",
         "family": "Issue reporting & support",
         "mentions": 74,
-        "share": 0.1026
+        "share": 0.1032
       },
       {
         "code": "J6",
         "family": "Live tracking & ETA",
         "mentions": 65,
-        "share": 0.0902
+        "share": 0.0907
       },
       {
         "code": "J1.otp",
         "family": "Login & home address",
         "mentions": 44,
-        "share": 0.061
-      },
-      {
-        "code": "X2.design",
-        "family": "UI & interruptions",
-        "mentions": 39,
-        "share": 0.0541
+        "share": 0.0614
       },
       {
         "code": "X2.interrupt",
         "family": "UI & interruptions",
         "mentions": 38,
-        "share": 0.0527
+        "share": 0.053
+      },
+      {
+        "code": "X2.design",
+        "family": "UI & interruptions",
+        "mentions": 38,
+        "share": 0.053
       },
       {
         "code": "J4.route",
         "family": "Allocation & routing",
-        "mentions": 37,
-        "share": 0.0513
+        "mentions": 36,
+        "share": 0.0502
       },
       {
         "code": "X1.slow",
         "family": "App stability & speed",
-        "mentions": 32,
-        "share": 0.0444
+        "mentions": 31,
+        "share": 0.0432
       },
       {
         "code": "J1.session",
         "family": "Login & home address",
         "mentions": 29,
-        "share": 0.0402
+        "share": 0.0404
       },
       {
         "code": "J5.missing",
         "family": "Notifications",
         "mentions": 25,
-        "share": 0.0347
+        "share": 0.0349
       },
       {
         "code": "J3.fail",
         "family": "Self-booking",
         "mentions": 24,
-        "share": 0.0333
+        "share": 0.0335
       },
       {
         "code": "J7.contact",
         "family": "Pickup & boarding",
         "mentions": 20,
-        "share": 0.0277
+        "share": 0.0279
       },
       {
         "code": "J7.late",
         "family": "Pickup & boarding",
         "mentions": 19,
-        "share": 0.0264
+        "share": 0.0265
       },
       {
         "code": "J7.noshow",
         "family": "Pickup & boarding",
         "mentions": 19,
-        "share": 0.0264
+        "share": 0.0265
       },
       {
         "code": "J4.time",
         "family": "Allocation & routing",
         "mentions": 18,
-        "share": 0.025
+        "share": 0.0251
       },
       {
         "code": "J1.other",
         "family": "Login & home address",
         "mentions": 17,
-        "share": 0.0236
+        "share": 0.0237
       },
       {
         "code": "J7.board",
         "family": "Pickup & boarding",
         "mentions": 16,
-        "share": 0.0222
+        "share": 0.0223
       },
       {
         "code": "J4.alloc",
         "family": "Allocation & routing",
         "mentions": 16,
-        "share": 0.0222
+        "share": 0.0223
       },
       {
         "code": "J8.driver",
         "family": "Ride & drop",
         "mentions": 14,
-        "share": 0.0194
+        "share": 0.0195
       },
       {
         "code": "J1.address",
         "family": "Login & home address",
         "mentions": 14,
-        "share": 0.0194
+        "share": 0.0195
       },
       {
         "code": "J3.steps",
         "family": "Self-booking",
         "mentions": 13,
-        "share": 0.018
+        "share": 0.0181
       },
       {
         "code": "J3.window",
         "family": "Self-booking",
         "mentions": 13,
-        "share": 0.018
+        "share": 0.0181
       },
       {
         "code": "J3.modify",
         "family": "Self-booking",
         "mentions": 13,
-        "share": 0.018
+        "share": 0.0181
       },
       {
         "code": "J3.other",
@@ -7701,13 +7701,13 @@
         "code": "J5.noise",
         "family": "Notifications",
         "mentions": 9,
-        "share": 0.0125
+        "share": 0.0126
       },
       {
         "code": "P",
         "family": "Praise",
         "mentions": 4,
-        "share": 0.0055
+        "share": 0.0056
       },
       {
         "code": "J8.drop",
@@ -7729,16 +7729,16 @@
       }
     ],
     "attribution_1_2star": {
-      "app": 406,
-      "none": 143,
+      "app": 404,
+      "none": 142,
       "ops": 85,
-      "mixed": 80,
+      "mixed": 79,
       "policy": 7
     },
     "attribution_1_2star_specific": {
       "app": 0.726,
-      "mixed": 0.14,
-      "ops": 0.114,
+      "mixed": 0.139,
+      "ops": 0.115,
       "policy": 0.013,
       "none": 0.007
     },
@@ -7746,31 +7746,31 @@
     "named_failures": {
       "late_cab": {
         "n": 19,
-        "share": 0.0264
+        "share": 0.0265
       },
       "cab_late_or_missing": {
         "n": 35,
-        "share": 0.0485
+        "share": 0.0488
       },
       "any_service_issue": {
-        "n": 110,
-        "share": 0.1526
+        "n": 109,
+        "share": 0.152
       },
       "wrong_route": {
-        "n": 37,
-        "share": 0.0513
+        "n": 36,
+        "share": 0.0502
       },
       "booking_fails": {
         "n": 70,
-        "share": 0.0971
+        "share": 0.0976
       },
       "app_glitch": {
-        "n": 121,
-        "share": 0.1678
+        "n": 120,
+        "share": 0.1674
       },
       "safety_concern": {
         "n": 18,
-        "share": 0.025
+        "share": 0.0251
       }
     },
     "clusters": {
@@ -7778,7 +7778,7 @@
         "description": "False 'not installed from Play Store' / 'rooted device' lock-outs",
         "n_12m": 11,
         "n_12m_1_2star": 9,
-        "share_of_1_2star": 0.0125,
+        "share_of_1_2star": 0.0126,
         "quotes": [
           {
             "stars": 2,
@@ -7834,7 +7834,7 @@
         "description": "Forced / repeated trip-rating or review prompts",
         "n_12m": 19,
         "n_12m_1_2star": 16,
-        "share_of_1_2star": 0.0222,
+        "share_of_1_2star": 0.0223,
         "quotes": [
           {
             "stars": 1,
@@ -7863,7 +7863,7 @@
         "description": "Terms / transport-policy acceptance on every open",
         "n_12m": 9,
         "n_12m_1_2star": 8,
-        "share_of_1_2star": 0.0111,
+        "share_of_1_2star": 0.0112,
         "quotes": [
           {
             "stars": 1,
@@ -7892,7 +7892,7 @@
         "description": "Permission nagging (microphone, phone, notifications)",
         "n_12m": 5,
         "n_12m_1_2star": 5,
-        "share_of_1_2star": 0.0069,
+        "share_of_1_2star": 0.007,
         "quotes": [
           {
             "stars": 1,
@@ -7943,7 +7943,7 @@
         "description": "Works only on Wi-Fi / mobile data, or no offline cache",
         "n_12m": 8,
         "n_12m_1_2star": 6,
-        "share_of_1_2star": 0.0083,
+        "share_of_1_2star": 0.0084,
         "quotes": [
           {
             "stars": 1,
@@ -8023,7 +8023,7 @@
     "mismatch": {
       "low_star_positive_text": 4,
       "high_star_negative_text": 10,
-      "share_of_labelled_window": 0.0157,
+      "share_of_labelled_window": 0.0158,
       "examples_low_pos": [
         "good",
         "good app",
@@ -8041,7 +8041,7 @@
     "safety": {
       "flagged_12m": 21,
       "flagged_total": 28,
-      "share_of_1_2star_12m": 0.025
+      "share_of_1_2star_12m": 0.0251
     },
     "quarterly_trend": [
       {
@@ -8290,13 +8290,13 @@
     "versions_by_theme": [
       {
         "version": "12.6",
-        "n": 45,
-        "first_seen": "2025-10-30",
-        "J1": 0.2,
-        "J3": 0.133,
-        "J6": 0.111,
-        "X1": 0.111,
-        "X2": 0.089
+        "n": 42,
+        "first_seen": "2025-10-31",
+        "J1": 0.214,
+        "J3": 0.143,
+        "J6": 0.119,
+        "X1": 0.095,
+        "X2": 0.095
       },
       {
         "version": "12.7.2",
@@ -8512,29 +8512,6 @@
           "version": "12.12.3"
         }
       ],
-      "X2.design": [
-        {
-          "stars": 1,
-          "date": "2026-04-16",
-          "thumbs": 2,
-          "text": "The app is by far the worst.. when navigation etc is concerned. the number of selections, drop downs etc that need to be selected.. even before you reach the main page...",
-          "version": "12.11.2"
-        },
-        {
-          "stars": 1,
-          "date": "2026-10-08",
-          "thumbs": 1,
-          "text": "dislike the new update. Bring the old version back. It was simple and minimalist.",
-          "version": "12.19.0"
-        },
-        {
-          "stars": 2,
-          "date": "2026-07-15",
-          "thumbs": 1,
-          "text": "the new update looks confusing including the font color of \"logout\" is red like the font color of \"cancel\" Also the \"book\" tab became smaller",
-          "version": null
-        }
-      ],
       "X2.interrupt": [
         {
           "stars": 1,
@@ -8556,6 +8533,29 @@
           "thumbs": 1,
           "text": "I am forced to rate every trip which is twice a day. There should be an option to skip the step",
           "version": "12.12.2"
+        }
+      ],
+      "X2.design": [
+        {
+          "stars": 1,
+          "date": "2026-04-16",
+          "thumbs": 2,
+          "text": "The app is by far the worst.. when navigation etc is concerned. the number of selections, drop downs etc that need to be selected.. even before you reach the main page...",
+          "version": "12.11.2"
+        },
+        {
+          "stars": 1,
+          "date": "2026-10-08",
+          "thumbs": 1,
+          "text": "dislike the new update. Bring the old version back. It was simple and minimalist.",
+          "version": "12.19.0"
+        },
+        {
+          "stars": 2,
+          "date": "2026-07-15",
+          "thumbs": 1,
+          "text": "the new update looks confusing including the font color of \"logout\" is red like the font color of \"cancel\" Also the \"book\" tab became smaller",
+          "version": null
         }
       ],
       "J4.route": [
@@ -8722,16 +8722,16 @@
     },
     "impact": {
       "current_written_mean_12m": 3.844,
-      "written_reviews_12m": 2798,
+      "written_reviews_12m": 2787,
       "by_family": [
         {
           "family": "X1",
           "label": "App stability & speed",
-          "primary_1_2star": 103,
+          "primary_1_2star": 102,
           "delta_mean_30": 0.031,
           "delta_mean_50": 0.052,
           "delta_mean_70": 0.073,
-          "one_star_share_drop_50": 0.0154
+          "one_star_share_drop_50": 0.0152
         },
         {
           "family": "J1",
@@ -8740,16 +8740,16 @@
           "delta_mean_30": 0.029,
           "delta_mean_50": 0.048,
           "delta_mean_70": 0.067,
-          "one_star_share_drop_50": 0.015
+          "one_star_share_drop_50": 0.0151
         },
         {
           "family": "X2",
           "label": "UI & interruptions",
-          "primary_1_2star": 64,
-          "delta_mean_30": 0.02,
-          "delta_mean_50": 0.033,
-          "delta_mean_70": 0.046,
-          "one_star_share_drop_50": 0.01
+          "primary_1_2star": 63,
+          "delta_mean_30": 0.019,
+          "delta_mean_50": 0.032,
+          "delta_mean_70": 0.045,
+          "one_star_share_drop_50": 0.0099
         },
         {
           "family": "J3",
@@ -8763,11 +8763,11 @@
         {
           "family": "J4",
           "label": "Allocation & routing",
-          "primary_1_2star": 56,
+          "primary_1_2star": 55,
           "delta_mean_30": 0.017,
           "delta_mean_50": 0.029,
-          "delta_mean_70": 0.041,
-          "one_star_share_drop_50": 0.0091
+          "delta_mean_70": 0.04,
+          "one_star_share_drop_50": 0.009
         },
         {
           "family": "J6",
@@ -8794,7 +8794,7 @@
           "delta_mean_30": 0.012,
           "delta_mean_50": 0.021,
           "delta_mean_70": 0.029,
-          "one_star_share_drop_50": 0.0064
+          "one_star_share_drop_50": 0.0065
         },
         {
           "family": "J5",
