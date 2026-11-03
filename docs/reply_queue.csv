@@ -34,9 +34,9 @@
 33,,False,2026-10-01,1,1,12.19.0,Live tracking & ETA,Worst mapping,,,False,66e6cdc7-e911-4b93-82c7-01d7f9420284
 34,,False,2026-08-21,1,1,12.17.0,Allocation & routing; Issue reporting & support,"works well overall, but they don't listen to feedback. for example, pick ups from same apartment complex are scheduled with difference of upto 5 minutes. So, I come to the cab everyday, and wait 5 minutes for next passanger, and then another 5 minutes for the third passanger coming from same building. the third passanger can come upto 5 minutes late. so, I have waiting time of 10-15 minutes everyday just sitting in the cab. They don't care enough to fix it even after raising it 100s of times.",,,False,d90a3c31-8385-4613-b575-85002f768a9b
 35,,False,2026-08-19,1,1,12.17.0,Pickup & boarding,I'm getting calling permission is disabled as per company policy,,,False,c7389c6d-0164-4499-a896-485b66516a22
-36,,False,2026-08-04,3,1,12.16.0,App stability & speed; Live tracking & ETA,"overall a good app, but bring back seeing who all are traveling with you and their sequence number, also the app sometimes refuses to open and displays a message that says the app cannot be opened as it is not installed when it's clearly installed and i have to uninstall and reinstall and this has happened a few times so fix that bug",,,False,3a66e81d-46fa-4b36-85ac-9d504fa0ddfa
-37,,False,2026-08-03,1,1,12.16.1,UI & interruptions,"Hi Team, The MoveInSync app is forcing users to grant microphone access, even though it does not provide any direct in-app calling feature and all calls are routed through the regular phone dialer. Could you please clarify why microphone permission is mandatory? If it is not essential for the core functionality of the app, please stop forcing users to grant this permission and allow the app to function without it. Greater transparency around permission requirements would be appreciated.",,,False,1f01f748-b40a-488d-914b-b3bcc99a2a6a
-38,,False,2026-08-03,2,1,12.16.0,Live tracking & ETA,when we have zoomed in the map to track a vehicle what's the necessity to zoom out and show the ETA,,,False,372c9fae-d5ea-4aa1-a446-4475e4d0da44
+36,,False,2026-11-02,2,0,12.21.0,Live tracking & ETA,poor navigation design,,,False,23cc9fc6-7f00-40e9-9d93-87d8a5fa4e80
+37,,False,2026-11-01,1,0,12.21.0,,wrost app,,,False,21ce6fea-5296-4384-a49f-c7167657b044
+38,,False,2026-11-01,1,0,,,I'm not resistered on this app,,,False,afbe639a-5bb9-4b94-b496-dfbb741c895a
 39,,False,2026-10-31,1,0,,,lavadalo service,,,False,f7e400e6-85e9-4d29-8f8b-b90ec1541509
 40,,False,2026-10-29,1,0,12.18.1,,no phone no. for transport,,,False,efe00f72-836e-4455-8171-ddc57d905490
 41,,False,2026-10-28,1,0,12.20.0,App stability & speed; Login & home address,worst app.. after logging in it asks for authentication.. by the time i open authenticator and come back to move in sync.. the app gets error and have to login from first.. this is happening for more than 10times and still i am. unable to open the app,,,False,9cc57ff9-b914-4cd2-b4c3-6bedb8993771
@@ -235,7 +235,3 @@
 234,,False,2026-08-05,1,0,12.14.1,Pickup & boarding,"worst app, they mark my no show for no reason.",,,False,401d832c-e10c-4b0c-bbdd-c02c718d47d3
 235,,False,2026-08-04,1,0,12.16.0,Pickup & boarding,they dont come on time,,,False,da70ae8d-1bae-4485-a660-7373b3a7a469
 236,,False,2026-08-04,1,0,12.16.1,UI & interruptions,horrible app. ui is horrible and is not user friendly.,,,False,5e41c6b5-feed-46fc-9dcc-9d7425010f0d
-237,,False,2026-08-04,1,0,12.16.0,,worst app,,,False,da5acfbc-5084-4887-9276-88e04a9c8318
-238,,False,2026-08-03,1,0,12.16.1,UI & interruptions,very confusing and retain incorrect preferences,,,False,5ac20968-6bad-4b53-9d1d-a0af6da248ed
-239,,False,2026-08-03,1,0,,App stability & speed,"after every 2 days getting error of ""not installed from play store even though I'm installing from play store"". do we have any other store to install? this is pathetic",,,False,7dd834b0-8906-4e8d-88d8-bee85025334b
-240,,False,2026-08-03,1,0,12.16.1,,complete unreliable,,,False,6cee5191-f6ea-44de-a4e3-a0fdb09e2034
