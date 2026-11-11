@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-11-10T08:43:01",
+  "generated_at": "2026-11-11T08:06:08",
   "store": {
     "app_id": "com.moveinsync.ets",
-    "displayed_score_exact": 4.6431,
+    "displayed_score_exact": 4.644,
     "displayed_score": 4.6,
-    "ratings": 116016,
-    "text_reviews": 23801,
+    "ratings": 116053,
+    "text_reviews": 23805,
     "histogram": {
-      "1": 7415,
-      "2": 852,
-      "3": 1153,
-      "4": 6874,
-      "5": 99718
+      "1": 7395,
+      "2": 850,
+      "3": 1150,
+      "4": 6877,
+      "5": 99775
     },
-    "histogram_mean": 4.6432,
-    "share_1star_lifetime": 0.0639,
+    "histogram_mean": 4.644,
+    "share_1star_lifetime": 0.0637,
     "next_display_threshold": 4.65,
-    "gap_to_threshold": 0.0069,
-    "extra_5star_needed_upper_bound": 2263,
-    "extra_5star_as_share_of_daily_riders": 0.00151,
-    "ratings_per_daily_rider": 0.0773,
+    "gap_to_threshold": 0.006,
+    "extra_5star_needed_upper_bound": 1973,
+    "extra_5star_as_share_of_daily_riders": 0.00132,
+    "ratings_per_daily_rider": 0.0774,
     "installs": "1,000,000+",
     "version": "12.21.0",
     "updated": 1794215038,
@@ -30,9 +30,9 @@
       "app_id": "in.mtap.iincube.safetrax.commuter",
       "name": "Safetrax Commuter",
       "role": "competitor",
-      "score": 4.715,
+      "score": 4.716,
       "displayed": 4.7,
-      "ratings": 24235,
+      "ratings": 24240,
       "installs": "500,000+",
       "reviews_90d": 28,
       "mean_90d": 2.89,
@@ -43,22 +43,22 @@
       "app_id": "com.moveinsync.ets",
       "name": "MoveInSync",
       "role": "employee",
-      "score": 4.643,
+      "score": 4.644,
       "displayed": 4.6,
-      "ratings": 116016,
+      "ratings": 116053,
       "installs": "1,000,000+",
-      "reviews_90d": 674,
-      "mean_90d": 3.82,
-      "share_1star_90d": 0.255,
+      "reviews_90d": 676,
+      "mean_90d": 3.83,
+      "share_1star_90d": 0.256,
       "reply_rate_90d": 0.004
     },
     {
       "app_id": "in.iincube.commuter",
       "name": "Safetrax (older app)",
       "role": "competitor",
-      "score": 4.476,
-      "displayed": 4.5,
-      "ratings": 1269,
+      "score": 4.449,
+      "displayed": 4.4,
+      "ratings": 1280,
       "installs": "50,000+",
       "reviews_90d": 36,
       "mean_90d": 2.17,
@@ -69,9 +69,9 @@
       "app_id": "com.routematic.employee",
       "name": "Routematic",
       "role": "competitor",
-      "score": 4.335,
+      "score": 4.336,
       "displayed": 4.3,
-      "ratings": 35216,
+      "ratings": 35220,
       "installs": "1,000,000+",
       "reviews_90d": 217,
       "mean_90d": 3.55,
@@ -142,58 +142,58 @@
   ],
   "windows": {
     "last_30d": {
-      "n": 196,
-      "mean": 3.898,
-      "share_1star": 0.2347,
+      "n": 200,
+      "mean": 3.9,
+      "share_1star": 0.235,
       "share_1star_ci": [
-        0.1808,
-        0.2988
+        0.1816,
+        0.2984
       ],
-      "share_5star": 0.6735,
+      "share_5star": 0.675,
       "dist": {
-        "1": 46,
+        "1": 47,
         "2": 5,
         "3": 4,
         "4": 9,
-        "5": 132
+        "5": 135
       }
     },
     "last_90d": {
-      "n": 674,
-      "mean": 3.825,
-      "share_1star": 0.2552,
+      "n": 676,
+      "mean": 3.827,
+      "share_1star": 0.2559,
       "share_1star_ci": [
-        0.2237,
-        0.2894
+        0.2245,
+        0.2901
       ],
-      "share_5star": 0.6602,
+      "share_5star": 0.6612,
       "dist": {
-        "1": 172,
-        "2": 18,
+        "1": 173,
+        "2": 17,
         "3": 11,
         "4": 28,
-        "5": 445
+        "5": 447
       }
     },
     "last_365d": {
-      "n": 2778,
+      "n": 2782,
       "mean": 3.844,
       "share_1star": 0.2401,
       "share_1star_ci": [
         0.2246,
         0.2563
       ],
-      "share_5star": 0.6476,
+      "share_5star": 0.6477,
       "dist": {
-        "1": 667,
+        "1": 668,
         "2": 82,
         "3": 68,
         "4": 162,
-        "5": 1799
+        "5": 1802
       }
     },
     "all": {
-      "n": 24508,
+      "n": 24512,
       "mean": 3.609,
       "share_1star": 0.2611,
       "share_1star_ci": [
@@ -202,11 +202,11 @@
       ],
       "share_5star": 0.5323,
       "dist": {
-        "1": 6398,
+        "1": 6399,
         "2": 1169,
         "3": 1093,
         "4": 2803,
-        "5": 13045
+        "5": 13048
       }
     },
     "data_end": "2026-11-09",
@@ -1725,11 +1725,11 @@
     },
     {
       "month": "2026-11",
-      "reviews": 57,
-      "mean": 3.667,
-      "share_1star": 0.2807,
-      "share_5star": 0.5965,
-      "short_5star": 25,
+      "reviews": 61,
+      "mean": 3.689,
+      "share_1star": 0.2787,
+      "share_5star": 0.6066,
+      "short_5star": 28,
       "reply_rate": 0.0,
       "partial": true
     }
@@ -5382,8 +5382,8 @@
     },
     {
       "date": "2026-11-09",
-      "mean": 3.897,
-      "n": 184
+      "mean": 3.899,
+      "n": 188
     }
   ],
   "versions": {
@@ -7251,21 +7251,21 @@
       },
       {
         "version": "12.21.0",
-        "n": 43,
+        "n": 45,
         "first_seen": "2026-10-23",
         "last_seen": "2026-11-09",
-        "mean": 3.884,
-        "share_1star": 0.2093,
+        "mean": 3.844,
+        "share_1star": 0.2222,
         "share_1star_ci": [
-          0.1142,
-          0.3521
+          0.1254,
+          0.3627
         ]
       }
     ]
   },
   "replies": {
-    "reply_rate_all": 0.3999,
-    "reply_rate_90d": 0.0045,
+    "reply_rate_all": 0.3998,
+    "reply_rate_90d": 0.0044,
     "reply_rate_by_star_90d": {
       "1": 0.0058,
       "2": 0.0,
@@ -7301,37 +7301,13 @@
   },
   "visitor_view": {
     "n": 40,
-    "mean_top10": 1.4,
-    "mean_top40": 1.5,
-    "share_1_2star_top10": 0.9,
-    "share_1_2star_top40": 0.85,
+    "mean_top10": 1.2,
+    "mean_top40": 1.8,
+    "share_1_2star_top10": 1.0,
+    "share_1_2star_top40": 0.82,
     "top10": [
       {
         "rank": 1,
-        "score": 1,
-        "date": "2026-07-07",
-        "thumbs": 6,
-        "text": "The recent updates in the UI have made the app very difficult to use. Booking a shuttle is now a 2 step process previously it used to be 1. I got confused and thought I had booked a cab while I hadn't. Was too late in realising that. Such major changes need to be released in a better way rather than just throwing them in the user's face. Another bad thing is even though I am in 1 cab but I can see",
-        "replied": false
-      },
-      {
-        "rank": 2,
-        "score": 1,
-        "date": "2026-07-01",
-        "thumbs": 5,
-        "text": "The GPS tracking system is very slow, and the pickup and drop timings are frequently incorrect. Additionally, the live location of other users is often not visible. Due to these issues, we are unable to determine the correct vehicle location, which is causing inconvenience. Kindly investigate and resolve these issues as soon as possible.",
-        "replied": false
-      },
-      {
-        "rank": 3,
-        "score": 1,
-        "date": "2026-06-11",
-        "thumbs": 10,
-        "text": "The GPS tracking system is often unreliable and sometimes shows the driver at an incorrect location, which can lead to unnecessary delays. In addition, the estimated arrival time displayed by the GPS tracker is frequently inaccurate, and the pickup time is rarely synchronized correctly. This has occasionally resulted in missed cab pickups. Notifications are also often delayed or, at times, not rec",
-        "replied": false
-      },
-      {
-        "rank": 4,
         "score": 1,
         "date": "2019-11-25",
         "thumbs": 69,
@@ -7339,7 +7315,7 @@
         "replied": false
       },
       {
-        "rank": 5,
+        "rank": 2,
         "score": 1,
         "date": "2019-09-15",
         "thumbs": 26,
@@ -7347,15 +7323,7 @@
         "replied": true
       },
       {
-        "rank": 6,
-        "score": 3,
-        "date": "2025-02-20",
-        "thumbs": 6,
-        "text": "It's a great app to stay organised with office travel. However, if I want to change pickup/drop location, it doesn't allow me to do that without changing the shift timing. Update: for an app which has a very limited usecase, it is abysmally slow. Takes around 10-15 seconds to load even if I just have to check the OTP etc.",
-        "replied": false
-      },
-      {
-        "rank": 7,
+        "rank": 3,
         "score": 1,
         "date": "2022-10-11",
         "thumbs": 8,
@@ -7363,15 +7331,7 @@
         "replied": false
       },
       {
-        "rank": 8,
-        "score": 2,
-        "date": "2025-05-25",
-        "thumbs": 5,
-        "text": "As an employee, I appreciate the flexibility and convenience this app offers. The ability to add personalized pickup instructions would be great cause in my community they would not let a cab wait for 15 mins. I can specify exactly how I want my pickup to go down whether it's requesting the driver to arrive a certain number of minutes before my scheduled pickup time, calling me when they're a spec",
-        "replied": false
-      },
-      {
-        "rank": 9,
+        "rank": 4,
         "score": 2,
         "date": "2018-12-20",
         "thumbs": 6,
@@ -7379,19 +7339,59 @@
         "replied": true
       },
       {
+        "rank": 5,
+        "score": 1,
+        "date": "2019-10-15",
+        "thumbs": 11,
+        "text": "The worst cab tracking app ever had !! The tracking is not reliable. We can't plan anything according to this app. If we have a proper pickup point , it will shows the excactly opposite location! . And please give some colorbox for each pick up or drop pints. It's confused and mistook the pick up sometime. And the tracking is not trustworthy!! Very disappointed!",
+        "replied": true
+      },
+      {
+        "rank": 6,
+        "score": 1,
+        "date": "2018-10-29",
+        "thumbs": 70,
+        "text": "The only purpose of this app is to help real time tracking of the cab, which never happens, it always gets stuck at some point and then i have to keep calling my transport department to get the location of cab. Not expected out of such time bounded work we do and need to reach on time to work, this causes a lot of issue with missing the cab. Please fix the bugs!",
+        "replied": true
+      },
+      {
+        "rank": 7,
+        "score": 1,
+        "date": "2022-10-07",
+        "thumbs": 3,
+        "text": "Every time I try to book cab for login and logout, most of the time it shows error only when I do for whole week. And to deal with the issue I have to book one day at a time.... Need to fix this issue. If you are one of the developer who just acknowledge the text and sit on the feedback then it's better to not reply\ud83d\ude07\ud83d\ude4f",
+        "replied": true
+      },
+      {
+        "rank": 8,
+        "score": 2,
+        "date": "2019-05-01",
+        "thumbs": 0,
+        "text": "Looks like the mobile app is in the beta stage. Here is my advice to make it more professional: 1. No way to go back after clicking on user name text box in login screen. 2. No option to edit profile and address data after login. 3. Login and log out button should not be there in the schedule screen. Which is currently not functional. But overall concept would be good for us if you can cover most ",
+        "replied": false
+      },
+      {
+        "rank": 9,
+        "score": 1,
+        "date": "2022-05-25",
+        "thumbs": 5,
+        "text": "Calls me multiple times to hurry up because the driver will wait only 30 more mins (because they were early). Doesn't work many times and I can't provide the OTP. Sends the cab to wrong location even after precisely updating the location pin on the map (sends the cab completely to a different area). No option to cancel the ride (at least there should be an option. Yesterday we went 15 mins only to",
+        "replied": false
+      },
+      {
         "rank": 10,
         "score": 1,
-        "date": "2025-02-12",
-        "thumbs": 10,
-        "text": "It has been a frustrating experience not only to me but all of my team mates since the last update. I log in and first time it logs in to the app correctly. But after some time it shows up like the web page inside the app and not like the regular UI of app. And we cannot do any transactions properly and no tracking etc can be done. Then we have to reinstall the app and login again to make it work.",
-        "replied": false
+        "date": "2023-07-12",
+        "thumbs": 4,
+        "text": "What to rate the app...my app is not working from last 3 to 4 days. I can't roster my cab at all. I uninstalled and installed it again but it's of no use. I think you guys don't have some little sense to respond to email queries. Try to respond to mails and get app fixed. I believe you guys are like useless in working towards betterment. Not able to see how many ppl are there in the cab",
+        "replied": true
       }
     ]
   },
   "hindi": {
     "hi_reviews": 3,
     "since": "2016-10-04",
-    "en_reviews_same_period": 24146,
+    "en_reviews_same_period": 24150,
     "hi_share": 0.0001,
     "hi_mean": 4.0
   },
@@ -7399,8 +7399,8 @@
     "window": {
       "start": "2025-11-09",
       "end": "2026-11-09",
-      "written_reviews": 2778,
-      "reviews_1_2star": 749,
+      "written_reviews": 2782,
+      "reviews_1_2star": 750,
       "labelled_1_2star": 698,
       "labelled_total_window": 858,
       "labelled_total": 1400
@@ -8739,7 +8739,7 @@
     },
     "impact": {
       "current_written_mean_12m": 3.844,
-      "written_reviews_12m": 2778,
+      "written_reviews_12m": 2782,
       "by_family": [
         {
           "family": "X1",
