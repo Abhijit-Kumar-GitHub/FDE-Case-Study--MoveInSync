@@ -351,3 +351,14 @@ date,app_id,score,ratings,reviews,stars_1,stars_2,stars_3,stars_4,stars_5
 2026-11-12,in.smarttransport.emp,3.2075472,847.0,334.0,270,55,87,87,342
 2026-11-12,com.app.newt.employee,2.815126,4866.0,1741.0,2320,224,214,244,1860
 2026-11-12,com.proficio.commute,2.51,612.0,258.0,318,61,18,30,183
+2026-11-13,com.moveinsync.ets,4.644528,116140.0,23814.0,7379,842,1175,6879,99858
+2026-11-13,com.moveinsync.publictransit,,,,0,0,0,0,0
+2026-11-13,com.moveinsync.driver.dco,3.65625,64.0,9.0,18,1,3,5,37
+2026-11-13,com.moveinsync.driver.lite,4.28,718.0,112.0,78,28,28,57,523
+2026-11-13,in.mtap.iincube.safetrax.commuter,4.714994,24250.0,1648.0,931,169,340,1992,20813
+2026-11-13,com.routematic.employee,4.340046,35257.0,7208.0,2677,760,2099,6075,23642
+2026-11-13,in.iincube.commuter,4.5267177,1312.0,73.0,80,30,60,90,1050
+2026-11-13,com.agiledge.myatom,3.53,258.0,111.0,79,7,2,30,136
+2026-11-13,in.smarttransport.emp,3.2075472,848.0,334.0,271,55,87,87,343
+2026-11-13,com.app.newt.employee,2.815126,4866.0,1741.0,2320,224,214,244,1860
+2026-11-13,com.proficio.commute,2.51,612.0,258.0,318,61,18,30,183
