@@ -1,0 +1,225 @@
+{
+  "captured_at": "2026-11-14T13:22:36.588297+05:30",
+  "apps": {
+    "com.moveinsync.ets": {
+      "title": "MoveInSync",
+      "score": 4.6446133,
+      "ratings": 116169,
+      "reviews": 23822,
+      "histogram": [
+        7373,
+        841,
+        1183,
+        6896,
+        99872
+      ],
+      "installs": "1,000,000+",
+      "realInstalls": 3272813,
+      "version": "12.21.0",
+      "updated": 1794215038,
+      "released": "Mar 8, 2014",
+      "recentChanges": null,
+      "developer": "MoveInSync: Enabling Hybrid Workplaces"
+    },
+    "com.moveinsync.publictransit": {
+      "title": "TransitInSync",
+      "score": null,
+      "ratings": null,
+      "reviews": null,
+      "histogram": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "installs": "10+",
+      "realInstalls": 36,
+      "version": "Varies with device",
+      "updated": null,
+      "released": "Sep 27, 2026",
+      "recentChanges": null,
+      "developer": "MoveInSync: Enabling Hybrid Workplaces"
+    },
+    "com.moveinsync.driver.dco": {
+      "title": "MoveInSync - Driver Partner",
+      "score": 3.676923,
+      "ratings": 65,
+      "reviews": 9,
+      "histogram": [
+        18,
+        1,
+        3,
+        5,
+        38
+      ],
+      "installs": "10,000+",
+      "realInstalls": 24047,
+      "version": "Varies with device",
+      "updated": null,
+      "released": "Feb 27, 2025",
+      "recentChanges": null,
+      "developer": "MoveInSync: Enabling Hybrid Workplaces"
+    },
+    "com.moveinsync.driver.lite": {
+      "title": "Moveinsync Partner - Lite",
+      "score": 4.2475247,
+      "ratings": 719,
+      "reviews": 112,
+      "histogram": [
+        85,
+        28,
+        28,
+        56,
+        518
+      ],
+      "installs": "100,000+",
+      "realInstalls": 148562,
+      "version": "Varies with device",
+      "updated": null,
+      "released": "Sep 21, 2019",
+      "recentChanges": null,
+      "developer": "MoveInSync: Enabling Hybrid Workplaces"
+    },
+    "in.mtap.iincube.safetrax.commuter": {
+      "title": "Safetrax Commuter",
+      "score": 4.71464,
+      "ratings": 24256,
+      "reviews": 1648,
+      "histogram": [
+        932,
+        169,
+        340,
+        1995,
+        20814
+      ],
+      "installs": "500,000+",
+      "realInstalls": 540965,
+      "version": "2.1.74",
+      "updated": 1778679167,
+      "released": "Jul 8, 2016",
+      "recentChanges": null,
+      "developer": "MTAP Technologies"
+    },
+    "com.routematic.employee": {
+      "title": "Routematic",
+      "score": 4.3407984,
+      "ratings": 35274,
+      "reviews": 7212,
+      "histogram": [
+        2673,
+        749,
+        2106,
+        6096,
+        23646
+      ],
+      "installs": "1,000,000+",
+      "realInstalls": 1270833,
+      "version": "7.0.9",
+      "updated": 1793795276,
+      "released": "Oct 8, 2015",
+      "recentChanges": null,
+      "developer": "Routematic"
+    },
+    "in.iincube.commuter": {
+      "title": "Safetrax",
+      "score": 4.5434785,
+      "ratings": 1319,
+      "reviews": 73,
+      "histogram": [
+        76,
+        28,
+        57,
+        95,
+        1060
+      ],
+      "installs": "50,000+",
+      "realInstalls": 53237,
+      "version": "0.0.26",
+      "updated": 1793020728,
+      "released": "Aug 6, 2025",
+      "recentChanges": null,
+      "developer": "MTAP Technologies"
+    },
+    "com.agiledge.myatom": {
+      "title": "NeOffice|Commute",
+      "score": 3.5445545,
+      "ratings": 259,
+      "reviews": 111,
+      "histogram": [
+        79,
+        7,
+        2,
+        30,
+        137
+      ],
+      "installs": "10,000+",
+      "realInstalls": 34177,
+      "version": "3.6.18",
+      "updated": 1793966794,
+      "released": "Jan 28, 2020",
+      "recentChanges": null,
+      "developer": "Agiledge Process Solutions Pvt Ltd"
+    },
+    "in.smarttransport.emp": {
+      "title": "SMT Employee",
+      "score": 3.2075472,
+      "ratings": 848,
+      "reviews": 334,
+      "histogram": [
+        271,
+        55,
+        87,
+        87,
+        343
+      ],
+      "installs": "100,000+",
+      "realInstalls": 286793,
+      "version": "5.6.1",
+      "updated": 1788002417,
+      "released": "Jan 20, 2018",
+      "recentChanges": null,
+      "developer": "iCtrlBiz Consulting Pvt Ltd"
+    },
+    "com.app.newt.employee": {
+      "title": "eFmFm - Employee App",
+      "score": 2.815126,
+      "ratings": 4866,
+      "reviews": 1741,
+      "histogram": [
+        2320,
+        224,
+        214,
+        244,
+        1860
+      ],
+      "installs": "100,000+",
+      "realInstalls": 403344,
+      "version": "6.4.32",
+      "updated": 1752689380,
+      "released": "Mar 4, 2016",
+      "recentChanges": null,
+      "developer": "NGFV India Pvt. Ltd."
+    },
+    "com.proficio.commute": {
+      "title": "COMMUTE EMPLOYEE APP",
+      "score": 2.51,
+      "ratings": 612,
+      "reviews": 258,
+      "histogram": [
+        318,
+        61,
+        18,
+        30,
+        183
+      ],
+      "installs": "50,000+",
+      "realInstalls": 73202,
+      "version": "6.5",
+      "updated": 1793024016,
+      "released": "Feb 26, 2018",
+      "recentChanges": null,
+      "developer": "PROFICIO GEOTECHNOLOGIES"
+    }
+  }
+}

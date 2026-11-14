@@ -1,8 +1,8 @@
 # How are our Play Store ratings? — 12 Nov 2026
 
-**Store rating (India): 4.644★ — shows 4.6** (+0.001 since 2026-11-12) · 116,140 ratings · 0.005 away from showing 4.7
+**Store rating (India): 4.645★ — shows 4.6** (unchanged since 2026-11-13) · 116,169 ratings · 0.005 away from showing 4.7
 
-- **Last 7 days:** 35 written reviews, average 3.71★, 29% one-star (prior 4 weeks: 3.82★, 25% one-star).
+- **Last 7 days:** 30 written reviews, average 3.73★, 27% one-star (prior 4 weeks: 3.86★, 24% one-star).
 - **Top complaint themes (1–2★, last 28 days):** App stability & speed (9), Live tracking & ETA (5), Pickup & boarding (4), UI & interruptions (3).
 - **Release watch:** no version is above baseline.
 - **Developer replies (last 28 days):** 0% of reviews answered.
