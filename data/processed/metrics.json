@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-11-17T09:36:32",
+  "generated_at": "2026-11-18T08:56:03",
   "store": {
     "app_id": "com.moveinsync.ets",
-    "displayed_score_exact": 4.6441,
+    "displayed_score_exact": 4.6439,
     "displayed_score": 4.6,
-    "ratings": 116218,
-    "text_reviews": 23828,
+    "ratings": 116248,
+    "text_reviews": 23834,
     "histogram": {
-      "1": 7384,
-      "2": 842,
-      "3": 1185,
-      "4": 6927,
-      "5": 99876
+      "1": 7397,
+      "2": 850,
+      "3": 1172,
+      "4": 6909,
+      "5": 99916
     },
-    "histogram_mean": 4.6441,
-    "share_1star_lifetime": 0.0635,
+    "histogram_mean": 4.6439,
+    "share_1star_lifetime": 0.0636,
     "next_display_threshold": 4.65,
-    "gap_to_threshold": 0.0059,
-    "extra_5star_needed_upper_bound": 1955,
-    "extra_5star_as_share_of_daily_riders": 0.0013,
+    "gap_to_threshold": 0.0061,
+    "extra_5star_needed_upper_bound": 2016,
+    "extra_5star_as_share_of_daily_riders": 0.00134,
     "ratings_per_daily_rider": 0.0775,
     "installs": "1,000,000+",
-    "version": "12.21.0",
+    "version": "12.22.0",
     "updated": 1794215038,
     "recent_changes": null
   },
@@ -30,9 +30,9 @@
       "app_id": "in.mtap.iincube.safetrax.commuter",
       "name": "Safetrax Commuter",
       "role": "competitor",
-      "score": 4.712,
+      "score": 4.715,
       "displayed": 4.7,
-      "ratings": 24266,
+      "ratings": 24274,
       "installs": "500,000+",
       "reviews_90d": 25,
       "mean_90d": 2.84,
@@ -40,25 +40,12 @@
       "reply_rate_90d": 0.96
     },
     {
-      "app_id": "com.moveinsync.ets",
-      "name": "MoveInSync",
-      "role": "employee",
-      "score": 4.644,
-      "displayed": 4.6,
-      "ratings": 116218,
-      "installs": "1,000,000+",
-      "reviews_90d": 657,
-      "mean_90d": 3.85,
-      "share_1star_90d": 0.25,
-      "reply_rate_90d": 0.005
-    },
-    {
       "app_id": "in.iincube.commuter",
       "name": "Safetrax (older app)",
       "role": "competitor",
-      "score": 4.636,
-      "displayed": 4.6,
-      "ratings": 1339,
+      "score": 4.688,
+      "displayed": 4.7,
+      "ratings": 1347,
       "installs": "50,000+",
       "reviews_90d": 25,
       "mean_90d": 2.24,
@@ -66,25 +53,38 @@
       "reply_rate_90d": 0.76
     },
     {
+      "app_id": "com.moveinsync.ets",
+      "name": "MoveInSync",
+      "role": "employee",
+      "score": 4.644,
+      "displayed": 4.6,
+      "ratings": 116248,
+      "installs": "1,000,000+",
+      "reviews_90d": 642,
+      "mean_90d": 3.82,
+      "share_1star_90d": 0.255,
+      "reply_rate_90d": 0.003
+    },
+    {
       "app_id": "com.routematic.employee",
       "name": "Routematic",
       "role": "competitor",
-      "score": 4.342,
+      "score": 4.34,
       "displayed": 4.3,
-      "ratings": 35289,
+      "ratings": 35301,
       "installs": "1,000,000+",
-      "reviews_90d": 214,
-      "mean_90d": 3.66,
-      "share_1star_90d": 0.238,
-      "reply_rate_90d": 0.771
+      "reviews_90d": 206,
+      "mean_90d": 3.7,
+      "share_1star_90d": 0.228,
+      "reply_rate_90d": 0.762
     },
     {
       "app_id": "com.agiledge.myatom",
       "name": "NeOffice Commute",
       "role": "competitor",
-      "score": 3.559,
+      "score": 3.58,
       "displayed": 3.6,
-      "ratings": 260,
+      "ratings": 261,
       "installs": "10,000+",
       "reviews_90d": 4,
       "mean_90d": 1.0,
@@ -95,13 +95,13 @@
       "app_id": "in.smarttransport.emp",
       "name": "SMT Employee",
       "role": "competitor",
-      "score": 3.224,
+      "score": 3.204,
       "displayed": 3.2,
-      "ratings": 849,
+      "ratings": 852,
       "installs": "100,000+",
-      "reviews_90d": 22,
-      "mean_90d": 1.95,
-      "share_1star_90d": 0.636,
+      "reviews_90d": 21,
+      "mean_90d": 1.9,
+      "share_1star_90d": 0.667,
       "reply_rate_90d": 0.0
     },
     {
@@ -142,74 +142,74 @@
   ],
   "windows": {
     "last_30d": {
-      "n": 177,
-      "mean": 3.831,
-      "share_1star": 0.2429,
+      "n": 181,
+      "mean": 3.84,
+      "share_1star": 0.2376,
       "share_1star_ci": [
-        0.1857,
-        0.3111
+        0.1814,
+        0.3046
       ],
-      "share_5star": 0.6554,
+      "share_5star": 0.6575,
       "dist": {
         "1": 43,
-        "2": 7,
+        "2": 8,
         "3": 3,
         "4": 8,
-        "5": 116
+        "5": 119
       }
     },
     "last_90d": {
-      "n": 657,
-      "mean": 3.854,
-      "share_1star": 0.2496,
+      "n": 642,
+      "mean": 3.822,
+      "share_1star": 0.2555,
       "share_1star_ci": [
-        0.218,
-        0.2841
+        0.2232,
+        0.2906
       ],
-      "share_5star": 0.6667,
+      "share_5star": 0.6573,
       "dist": {
         "1": 164,
-        "2": 16,
+        "2": 17,
         "3": 10,
         "4": 29,
-        "5": 438
+        "5": 422
       }
     },
     "last_365d": {
-      "n": 2770,
-      "mean": 3.839,
-      "share_1star": 0.2412,
+      "n": 2776,
+      "mean": 3.84,
+      "share_1star": 0.2406,
       "share_1star_ci": [
-        0.2256,
-        0.2574
+        0.2251,
+        0.2569
       ],
-      "share_5star": 0.6469,
+      "share_5star": 0.6473,
       "dist": {
         "1": 668,
-        "2": 84,
+        "2": 85,
         "3": 66,
         "4": 160,
-        "5": 1792
+        "5": 1797
       }
     },
     "all": {
-      "n": 24538,
+      "n": 24544,
       "mean": 3.609,
-      "share_1star": 0.2611,
+      "share_1star": 0.261,
       "share_1star_ci": [
-        0.2556,
-        0.2666
+        0.2555,
+        0.2665
       ],
-      "share_5star": 0.5323,
+      "share_5star": 0.5324,
       "dist": {
         "1": 6406,
-        "2": 1171,
+        "2": 1172,
         "3": 1094,
         "4": 2805,
-        "5": 13062
+        "5": 13067
       }
     },
-    "data_end": "2026-11-16",
+    "data_end": "2026-11-17",
     "data_start": "2014-03-14"
   },
   "monthly": [
@@ -1725,21 +1725,16 @@
     },
     {
       "month": "2026-11",
-      "reviews": 87,
-      "mean": 3.644,
-      "share_1star": 0.2759,
-      "share_5star": 0.5862,
-      "short_5star": 35,
+      "reviews": 93,
+      "mean": 3.699,
+      "share_1star": 0.2581,
+      "share_5star": 0.6022,
+      "short_5star": 38,
       "reply_rate": 0.0,
       "partial": true
     }
   ],
   "rolling_28d": [
-    {
-      "date": "2024-11-17",
-      "mean": 3.814,
-      "n": 215
-    },
     {
       "date": "2024-11-18",
       "mean": 3.828,
@@ -5382,8 +5377,13 @@
     },
     {
       "date": "2026-11-16",
-      "mean": 3.802,
-      "n": 167
+      "mean": 3.806,
+      "n": 170
+    },
+    {
+      "date": "2026-11-17",
+      "mean": 3.835,
+      "n": 164
     }
   ],
   "versions": {
@@ -7264,17 +7264,17 @@
     ]
   },
   "replies": {
-    "reply_rate_all": 0.3994,
-    "reply_rate_90d": 0.0046,
+    "reply_rate_all": 0.3993,
+    "reply_rate_90d": 0.0031,
     "reply_rate_by_star_90d": {
       "1": 0.0061,
       "2": 0.0,
       "3": 0.0,
       "4": 0.0,
-      "5": 0.0046
+      "5": 0.0024
     },
     "median_latency_hours": 21.8,
-    "median_latency_hours_90d": 0.4,
+    "median_latency_hours_90d": null,
     "share_identical_replies": 0.6419,
     "top_reply_texts": [
       {
@@ -7301,9 +7301,9 @@
   },
   "visitor_view": {
     "n": 40,
-    "mean_top10": 1.3,
+    "mean_top10": 1.4,
     "mean_top40": 1.7,
-    "share_1_2star_top10": 1.0,
+    "share_1_2star_top10": 0.9,
     "share_1_2star_top40": 0.85,
     "top10": [
       {
@@ -7348,14 +7348,6 @@
       },
       {
         "rank": 6,
-        "score": 1,
-        "date": "2022-10-07",
-        "thumbs": 3,
-        "text": "Every time I try to book cab for login and logout, most of the time it shows error only when I do for whole week. And to deal with the issue I have to book one day at a time.... Need to fix this issue. If you are one of the developer who just acknowledge the text and sit on the feedback then it's better to not reply\ud83d\ude07\ud83d\ude4f",
-        "replied": true
-      },
-      {
-        "rank": 7,
         "score": 2,
         "date": "2019-05-01",
         "thumbs": 0,
@@ -7363,15 +7355,7 @@
         "replied": false
       },
       {
-        "rank": 8,
-        "score": 1,
-        "date": "2022-05-25",
-        "thumbs": 5,
-        "text": "Calls me multiple times to hurry up because the driver will wait only 30 more mins (because they were early). Doesn't work many times and I can't provide the OTP. Sends the cab to wrong location even after precisely updating the location pin on the map (sends the cab completely to a different area). No option to cancel the ride (at least there should be an option. Yesterday we went 15 mins only to",
-        "replied": false
-      },
-      {
-        "rank": 9,
+        "rank": 7,
         "score": 1,
         "date": "2019-11-25",
         "thumbs": 3,
@@ -7379,11 +7363,27 @@
         "replied": true
       },
       {
+        "rank": 8,
+        "score": 1,
+        "date": "2019-09-30",
+        "thumbs": 25,
+        "text": "The app does not let me book cab. It shows that there are no slots for that day but when I go to website and try to book the same, it works. Also, live tracking is completely unreliable. It ends up having an argument with the driver since when the cab driver is at my location, app shows that it is still 20-25 mins away.",
+        "replied": false
+      },
+      {
+        "rank": 9,
+        "score": 3,
+        "date": "2019-03-26",
+        "thumbs": 0,
+        "text": "it used send a push notification 30 mins before the scheduled logout, not getting that anymore. As ours is not shift based, we schedule our log out dynamically, and miss or forget the logout time scheduled if we are in middle of some work. Notification was always helpful to wrap up due to 30 mins headsup. Please enable it back!",
+        "replied": false
+      },
+      {
         "rank": 10,
-        "score": 2,
-        "date": "2023-01-10",
-        "thumbs": 1,
-        "text": "Experience is quite good but it doesn't shows cabs correct location. And we unable to contact cab driver. Because there is no option available for showing cab driver number \ud83d\ude14 this point is must to add for the updation. If you are not mentioned driver number so how we could contact them. Only because of this it is hactic and irritating. Making day worst.",
+        "score": 1,
+        "date": "2019-08-26",
+        "thumbs": 17,
+        "text": "The app is simply immature.. For e.g. it's hard to know what my current bookings are in a single view. More, a cancelled billing won't get off your screen. it stays there for eternity with a \"cancelled\"status. picking bulk dates is messy.. back and forward to select ... The UI is unintuitive and with no context help, it's pathetic UX. Updates: Change your mobile device, and find all your bookings ",
         "replied": true
       }
     ]
@@ -7391,16 +7391,16 @@
   "hindi": {
     "hi_reviews": 3,
     "since": "2016-10-04",
-    "en_reviews_same_period": 24176,
+    "en_reviews_same_period": 24182,
     "hi_share": 0.0001,
     "hi_mean": 4.0
   },
   "themes": {
     "window": {
-      "start": "2025-11-16",
-      "end": "2026-11-16",
-      "written_reviews": 2770,
-      "reviews_1_2star": 752,
+      "start": "2025-11-17",
+      "end": "2026-11-17",
+      "written_reviews": 2776,
+      "reviews_1_2star": 753,
       "labelled_1_2star": 691,
       "labelled_total_window": 848,
       "labelled_total": 1400
@@ -8738,8 +8738,8 @@
       ]
     },
     "impact": {
-      "current_written_mean_12m": 3.839,
-      "written_reviews_12m": 2770,
+      "current_written_mean_12m": 3.84,
+      "written_reviews_12m": 2776,
       "by_family": [
         {
           "family": "X1",
@@ -8747,8 +8747,8 @@
           "primary_1_2star": 100,
           "delta_mean_30": 0.031,
           "delta_mean_50": 0.051,
-          "delta_mean_70": 0.072,
-          "one_star_share_drop_50": 0.015
+          "delta_mean_70": 0.071,
+          "one_star_share_drop_50": 0.0149
         },
         {
           "family": "J1",
@@ -8757,7 +8757,7 @@
           "delta_mean_30": 0.027,
           "delta_mean_50": 0.045,
           "delta_mean_70": 0.063,
-          "one_star_share_drop_50": 0.0143
+          "one_star_share_drop_50": 0.0142
         },
         {
           "family": "X2",
@@ -8766,7 +8766,7 @@
           "delta_mean_30": 0.019,
           "delta_mean_50": 0.032,
           "delta_mean_70": 0.044,
-          "one_star_share_drop_50": 0.0096
+          "one_star_share_drop_50": 0.0095
         },
         {
           "family": "J3",
@@ -8802,7 +8802,7 @@
           "delta_mean_30": 0.014,
           "delta_mean_50": 0.023,
           "delta_mean_70": 0.032,
-          "one_star_share_drop_50": 0.0069
+          "one_star_share_drop_50": 0.0068
         },
         {
           "family": "J9",
@@ -8810,7 +8810,7 @@
           "primary_1_2star": 39,
           "delta_mean_30": 0.012,
           "delta_mean_50": 0.02,
-          "delta_mean_70": 0.029,
+          "delta_mean_70": 0.028,
           "one_star_share_drop_50": 0.0063
         },
         {
