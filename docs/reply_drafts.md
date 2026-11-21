@@ -2,12 +2,12 @@
 
 For Support (REP-1). Reviews are in the order Play shows them to visitors ('most relevant', which favours reviews with many 'helpful' votes). Each draft is specific to the review and within Google Play's 350-character limit. Fill every `[confirm: …]` with a checked fact (or delete the clause) before posting. Post the reply, then come back to the same review when the fix ships. Riders can update their rating.
 
-Full prioritised queue (all unanswered 1–3★ reviews): `reply_queue.csv`, 193 reviews.
+Full prioritised queue (all unanswered 1–3★ reviews): `reply_queue.csv`, 186 reviews.
 
-## #1 on the listing · ★☆☆☆☆ · 2019-11-25 · 69 found this helpful
+## #35 on the listing · ★☆☆☆☆ · 2026-06-11 · 9 found this helpful
 
-> Every now and then i receive notifications saying that I have an older version in my mobile and reminds me to update it to the latest version. When I open playstore to upgrade the same, i would already been using the latest one. Further, when i try to track the vehicle, app doesn't work 100% as it seldom updates the location and all of a sudden the cab location changes by miles. Also, 9 out of 10 times it wouldn't connect to the driver and always has issues reaching them through app dialing.
+> The GPS tracking system is often unreliable and sometimes shows the driver at an incorrect location, which can lead to unnecessary delays. In addition, the estimated arrival time displayed by the GPS tracker is frequently inaccurate, and the pickup time is rarely synchronized correctly. This has occasionally resulted in missed cab pickups. Notifications are also often delayed or, at times, not received at all, causing me to miss important updates regarding my ride.
 
-**Draft reply** (276 chars, needs confirmation):
+**Draft reply** (265 chars, needs confirmation):
 
-Thank you, and sorry this went unanswered for so long. The app has changed a lot since 2019 [confirm: update-reminder issue fixed]. If tracking or calling the driver still misbehaves for you today, tell us at app@moveinsync.com with your phone model and we'll fix it properly.
+Sorry this led to missed pickups. Wrong positions and late alerts are problems we're actively working on [confirm: fix/version]. Please send a recent trip date and your city to app@moveinsync.com so we can trace what the vehicle reported and why the alert was late.
