@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-11-22T08:34:27",
+  "generated_at": "2026-11-23T09:32:55",
   "store": {
     "app_id": "com.moveinsync.ets",
-    "displayed_score_exact": 4.6447,
+    "displayed_score_exact": 4.6437,
     "displayed_score": 4.6,
-    "ratings": 116379,
-    "text_reviews": 23852,
+    "ratings": 116391,
+    "text_reviews": 23855,
     "histogram": {
-      "1": 7393,
-      "2": 843,
-      "3": 1166,
-      "4": 6914,
-      "5": 100059
+      "1": 7416,
+      "2": 852,
+      "3": 1164,
+      "4": 6917,
+      "5": 100038
     },
-    "histogram_mean": 4.6447,
-    "share_1star_lifetime": 0.0635,
+    "histogram_mean": 4.6437,
+    "share_1star_lifetime": 0.0637,
     "next_display_threshold": 4.65,
-    "gap_to_threshold": 0.0053,
-    "extra_5star_needed_upper_bound": 1760,
-    "extra_5star_as_share_of_daily_riders": 0.00117,
+    "gap_to_threshold": 0.0063,
+    "extra_5star_needed_upper_bound": 2085,
+    "extra_5star_as_share_of_daily_riders": 0.00139,
     "ratings_per_daily_rider": 0.0776,
     "installs": "1,000,000+",
     "version": "12.22.0",
@@ -43,9 +43,9 @@
       "app_id": "in.iincube.commuter",
       "name": "Safetrax (older app)",
       "role": "competitor",
-      "score": 4.664,
+      "score": 4.679,
       "displayed": 4.7,
-      "ratings": 1392,
+      "ratings": 1397,
       "installs": "50,000+",
       "reviews_90d": 25,
       "mean_90d": 2.24,
@@ -56,11 +56,11 @@
       "app_id": "com.moveinsync.ets",
       "name": "MoveInSync",
       "role": "employee",
-      "score": 4.645,
+      "score": 4.644,
       "displayed": 4.6,
-      "ratings": 116379,
+      "ratings": 116391,
       "installs": "1,000,000+",
-      "reviews_90d": 637,
+      "reviews_90d": 641,
       "mean_90d": 3.85,
       "share_1star_90d": 0.248,
       "reply_rate_90d": 0.003
@@ -71,7 +71,7 @@
       "role": "competitor",
       "score": 4.338,
       "displayed": 4.3,
-      "ratings": 35352,
+      "ratings": 35356,
       "installs": "1,000,000+",
       "reviews_90d": 204,
       "mean_90d": 3.77,
@@ -95,7 +95,7 @@
       "app_id": "in.smarttransport.emp",
       "name": "SMT Employee",
       "role": "competitor",
-      "score": 3.204,
+      "score": 3.224,
       "displayed": 3.2,
       "ratings": 853,
       "installs": "100,000+",
@@ -142,71 +142,71 @@
   ],
   "windows": {
     "last_30d": {
-      "n": 174,
-      "mean": 3.828,
-      "share_1star": 0.2414,
+      "n": 175,
+      "mean": 3.823,
+      "share_1star": 0.2457,
       "share_1star_ci": [
-        0.1838,
-        0.3101
+        0.1878,
+        0.3145
       ],
-      "share_5star": 0.6494,
+      "share_5star": 0.6457,
       "dist": {
-        "1": 42,
-        "2": 7,
+        "1": 43,
+        "2": 6,
         "3": 3,
-        "4": 9,
+        "4": 10,
         "5": 113
       }
     },
     "last_90d": {
-      "n": 637,
+      "n": 641,
       "mean": 3.852,
       "share_1star": 0.248,
       "share_1star_ci": [
-        0.2161,
-        0.283
+        0.2162,
+        0.2829
       ],
-      "share_5star": 0.6656,
+      "share_5star": 0.6646,
       "dist": {
-        "1": 158,
+        "1": 159,
         "2": 17,
         "3": 10,
-        "4": 28,
-        "5": 424
+        "4": 29,
+        "5": 426
       }
     },
     "last_365d": {
-      "n": 2766,
-      "mean": 3.846,
-      "share_1star": 0.2401,
+      "n": 2771,
+      "mean": 3.845,
+      "share_1star": 0.2403,
       "share_1star_ci": [
-        0.2245,
-        0.2563
+        0.2248,
+        0.2566
       ],
-      "share_5star": 0.6497,
+      "share_5star": 0.6492,
       "dist": {
-        "1": 664,
+        "1": 666,
         "2": 82,
         "3": 66,
-        "4": 157,
-        "5": 1797
+        "4": 158,
+        "5": 1799
       }
     },
     "all": {
-      "n": 24566,
+      "n": 24571,
       "mean": 3.61,
-      "share_1star": 0.2609,
+      "share_1star": 0.261,
       "share_1star_ci": [
         0.2555,
         0.2665
       ],
       "share_5star": 0.5326,
       "dist": {
-        "1": 6410,
+        "1": 6412,
         "2": 1172,
         "3": 1094,
-        "4": 2806,
-        "5": 13084
+        "4": 2807,
+        "5": 13086
       }
     },
     "data_end": "2026-11-21",
@@ -1725,11 +1725,11 @@
     },
     {
       "month": "2026-11",
-      "reviews": 115,
-      "mean": 3.8,
-      "share_1star": 0.2435,
-      "share_5star": 0.6348,
-      "short_5star": 49,
+      "reviews": 120,
+      "mean": 3.775,
+      "share_1star": 0.25,
+      "share_5star": 0.625,
+      "short_5star": 50,
       "reply_rate": 0.0,
       "partial": true
     }
@@ -5382,8 +5382,8 @@
     },
     {
       "date": "2026-11-21",
-      "mean": 3.876,
-      "n": 161
+      "mean": 3.855,
+      "n": 166
     }
   ],
   "versions": {
@@ -6819,14 +6819,14 @@
       },
       {
         "version": "12.0",
-        "n": 147,
+        "n": 148,
         "first_seen": "2025-05-03",
-        "last_seen": "2025-09-01",
-        "mean": 3.762,
-        "share_1star": 0.2381,
+        "last_seen": "2026-11-21",
+        "mean": 3.743,
+        "share_1star": 0.2432,
         "share_1star_ci": [
-          0.1765,
-          0.3131
+          0.1812,
+          0.3183
         ]
       },
       {
@@ -7263,27 +7263,27 @@
       },
       {
         "version": "12.22.0",
-        "n": 31,
+        "n": 33,
         "first_seen": "2026-11-08",
-        "last_seen": "2026-11-20",
-        "mean": 4.194,
-        "share_1star": 0.1613,
+        "last_seen": "2026-11-21",
+        "mean": 4.212,
+        "share_1star": 0.1515,
         "share_1star_ci": [
-          0.0709,
-          0.3263
+          0.0665,
+          0.3092
         ]
       }
     ]
   },
   "replies": {
-    "reply_rate_all": 0.399,
+    "reply_rate_all": 0.3989,
     "reply_rate_90d": 0.0031,
     "reply_rate_by_star_90d": {
       "1": 0.0063,
       "2": 0.0,
       "3": 0.0,
       "4": 0.0,
-      "5": 0.0024
+      "5": 0.0023
     },
     "median_latency_hours": 21.8,
     "median_latency_hours_90d": null,
@@ -7403,7 +7403,7 @@
   "hindi": {
     "hi_reviews": 3,
     "since": "2016-10-04",
-    "en_reviews_same_period": 24204,
+    "en_reviews_same_period": 24209,
     "hi_share": 0.0001,
     "hi_mean": 4.0
   },
@@ -7411,8 +7411,8 @@
     "window": {
       "start": "2025-11-21",
       "end": "2026-11-21",
-      "written_reviews": 2766,
-      "reviews_1_2star": 746,
+      "written_reviews": 2771,
+      "reviews_1_2star": 748,
       "labelled_1_2star": 680,
       "labelled_total_window": 836,
       "labelled_total": 1400
@@ -8135,10 +8135,10 @@
     "monthly_release_sensitive": [
       {
         "month": "2024-11",
-        "n": 5,
+        "n": 4,
         "J1.session": 0.0,
         "J1.otp": 0.0,
-        "X1": 0.2,
+        "X1": 0.25,
         "X2.interrupt": 0.0
       },
       {
@@ -8750,17 +8750,17 @@
       ]
     },
     "impact": {
-      "current_written_mean_12m": 3.846,
-      "written_reviews_12m": 2766,
+      "current_written_mean_12m": 3.845,
+      "written_reviews_12m": 2771,
       "by_family": [
         {
           "family": "X1",
           "label": "App stability & speed",
           "primary_1_2star": 97,
           "delta_mean_30": 0.03,
-          "delta_mean_50": 0.05,
+          "delta_mean_50": 0.049,
           "delta_mean_70": 0.069,
-          "one_star_share_drop_50": 0.0145
+          "one_star_share_drop_50": 0.0144
         },
         {
           "family": "J1",
@@ -8768,7 +8768,7 @@
           "primary_1_2star": 86,
           "delta_mean_30": 0.027,
           "delta_mean_50": 0.045,
-          "delta_mean_70": 0.064,
+          "delta_mean_70": 0.063,
           "one_star_share_drop_50": 0.0143
         },
         {
@@ -8796,7 +8796,7 @@
           "delta_mean_30": 0.017,
           "delta_mean_50": 0.028,
           "delta_mean_70": 0.039,
-          "one_star_share_drop_50": 0.0089
+          "one_star_share_drop_50": 0.0088
         },
         {
           "family": "J6",
