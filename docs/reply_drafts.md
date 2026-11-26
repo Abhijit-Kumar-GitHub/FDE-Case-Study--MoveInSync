@@ -4,7 +4,7 @@ For Support (REP-1). Reviews are in the order Play shows them to visitors ('most
 
 Full prioritised queue (all unanswered 1–3★ reviews): `reply_queue.csv`, 183 reviews.
 
-## #33 on the listing · ★☆☆☆☆ · 2026-06-11 · 9 found this helpful
+## #35 on the listing · ★☆☆☆☆ · 2026-06-11 · 9 found this helpful
 
 > The GPS tracking system is often unreliable and sometimes shows the driver at an incorrect location, which can lead to unnecessary delays. In addition, the estimated arrival time displayed by the GPS tracker is frequently inaccurate, and the pickup time is rarely synchronized correctly. This has occasionally resulted in missed cab pickups. Notifications are also often delayed or, at times, not received at all, causing me to miss important updates regarding my ride.
 
