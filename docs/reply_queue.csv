@@ -34,148 +34,150 @@
 33,,False,2026-08-31,1,2,12.18.0,Workplace features,"There should be an option to directly search for seat number instead of using the map. There should be an option to set default floor in app and portal. Multiple times for multiple people, the seat number (booking shows but without desk allocation) gets removed for bookings which is a major bug",,,False,da4ad9ad-acbe-4600-8d32-46883fab9fdd
 34,,False,2026-10-08,1,1,12.19.0,UI & interruptions,dislike the new update. Bring the old version back. It was simple and minimalist.,,,False,5f781610-319a-4412-b308-95a6ec8ee6f6
 35,,False,2026-10-01,1,1,12.19.0,Live tracking & ETA,Worst mapping,,,False,66e6cdc7-e911-4b93-82c7-01d7f9420284
-36,,False,2026-11-25,1,0,12.22.0,,not able to open this app on my phone,,,False,09464548-d79e-4f42-9f82-6e5ddef8a525
-37,,False,2026-11-21,1,0,12.0,,"The app appears to be heavily biased towards drivers. No action is taken against drivers even when passengers raise complaints through the app. Most of the features seem designed to benefit drivers, while passenger concerns and grievances are consistently ignored.",,,False,b19ecb34-258b-478e-b9d0-8ad1c1ea6df0
-38,,False,2026-11-21,1,0,,,"facing issue with app, auto closing after opening",,,False,04d40462-f4c8-49c5-95f4-55cb92127012
-39,,False,2026-11-18,1,0,,Login & home address,not able to login. not getting otp on mobile text or whatsapp or email. how can i use it??,,,False,24e5124e-0a01-4973-bba1-838cb9a99377
-40,,False,2026-11-17,1,0,12.18.1,,very bad 43 days ofter payment pay 16 trips shortage i completed 36 trips but showing 20 trips bill was low total 12800 paid I ask acounts but data was chek 15 take time driver spend pocket money bill was stucked suffer every driver s i evernoth work trip shets but take time very worest,,,False,ccefa0e6-b497-4d49-a74c-aa168bd6200d
-41,,False,2026-11-16,2,0,12.21.0,Notifications,bookings done via app are lost. u realize this very late as there is no notification,,,False,7cbdf1b6-39da-4b7e-8135-5d3340910b95
-42,,False,2026-11-14,1,0,12.22.0,Live tracking & ETA,No way to see ETA,,,False,d5f68fe1-2de3-40b5-bfb7-c58642fc8ed4
-43,,False,2026-11-12,1,0,12.21.0,,subha jldi uthate h or rtt m last drop lgate h,,,False,43305afa-cca0-4ddc-ac2b-58d9ca29b6ae
-44,,False,2026-11-11,1,0,12.21.0,,I don't want to describe,,,False,265aeb05-49c3-4b14-8c34-8bb5afa0730d
-45,,False,2026-11-11,1,0,,App stability & speed,I have keep uninstalling and reinstalling multiple times in past 2 weeks,,,False,7e21a38e-83ea-4fac-acff-44a1a99202f3
-46,,False,2026-11-11,2,0,12.21.0,Pickup & boarding,"Good, but the contact details of drivers aren't reachable which really sucks.",,,False,389ab517-f02e-451c-b3f7-bad26b995808
-47,,False,2026-11-09,1,0,12.19.0,UI & interruptions,every day asking for rating and comments but no resolution on the complaints,,,False,b6b4c673-3c9a-4d32-8dbe-b96ad8dbd507
-48,,False,2026-11-08,1,0,12.22.0,,waste app,,,False,54a63599-0384-47d9-af03-448f98891db6
-49,,False,2026-11-05,1,0,,Pickup & boarding; Workplace features,worst corprate cab service app cab drivers marked you as no show without reaching to location and there help desk use less they only support them self,,,False,36ab6042-df1b-4825-acfe-4d800e37aeeb
-50,,False,2026-11-05,1,0,12.21.0,Live tracking & ETA,no proper tracking,,,False,e5bff41c-cd45-456f-8bc2-70f7d758efb6
-51,,False,2026-11-04,1,0,12.20.0,Ride & drop,they display the address to the driver however the driver would only get the authority to see the pin location. Because few of the drivers are very rude towards the passanger,,,False,617c4cee-9683-4123-a7cf-386ca2a6c4e4
-52,,False,2026-11-04,1,0,12.21.0,,tickets are being closed without my consent or agreement,,,False,260d13a9-0d99-4cdb-af13-3ee4953c0e33
-53,,False,2026-11-04,1,0,12.21.0,,worst service,,,False,ccb91c78-8f21-46f8-abbf-2c2b7c948e11
-54,,False,2026-11-04,1,0,12.21.0,App stability & speed,The app crashes every now and then. Not a great experience for me personally!,,,False,0369aeee-d7e6-4962-adc0-77a334b66f0c
-55,,False,2026-11-03,1,0,12.21.0,,very worst,,,False,c5f64c3c-51ae-43e6-b05b-61c95bace5af
-56,,False,2026-11-03,1,0,,App stability & speed,App does not open. Keeps crashing after the new update.,,,False,7099b2d7-9dcb-45cb-a769-a4836388b431
-57,,False,2026-11-03,1,0,12.21.0,,worst app,,,False,b4ff1a69-fa5d-4ce3-8069-b55bb2dc031a
-58,,False,2026-11-03,1,0,,Live tracking & ETA; Pickup & boarding,"This app is worstly designed for office employees it will just show cab location, cab details and no of persons in cab. Main worst thing if we try to call cab driver the number won't connect. Additionally, the worst thing is we don't whether cab is started or went to office or crossed us or we missed cab. It will just show how far cab is away from us, it won't show whether cab moved a head or not. Short time your company got good customer base don't spoil it.",,,False,af706b88-1f74-4254-ad3b-961aa5f914e5
-59,,False,2026-11-03,1,0,,,the worst vendor people management,,,False,d39d7b4a-e6ae-42be-969d-7f7ec6bdf8bd
-60,,False,2026-11-03,3,0,,,previously co passenger details are shown in the app currently the details are not available in the app it creates confusion and delay or extends our travel time due to unavailability of the details,,,False,98a52c2d-ab4f-4727-82a0-28a68275210e
-61,,False,2026-11-02,2,0,12.21.0,Live tracking & ETA,poor navigation design,,,False,23cc9fc6-7f00-40e9-9d93-87d8a5fa4e80
-62,,False,2026-11-01,1,0,12.21.0,,wrost app,,,False,21ce6fea-5296-4384-a49f-c7167657b044
-63,,False,2026-11-01,1,0,,,I'm not resistered on this app,,,False,afbe639a-5bb9-4b94-b496-dfbb741c895a
-64,,False,2026-10-31,1,0,,,lavadalo service,,,False,f7e400e6-85e9-4d29-8f8b-b90ec1541509
-65,,False,2026-10-29,1,0,12.18.1,,no phone no. for transport,,,False,efe00f72-836e-4455-8171-ddc57d905490
-66,,False,2026-10-28,1,0,,Login & home address,OTP not received.,,,False,6f676cae-5eda-4612-aefd-ca28f3507214
-67,,False,2026-10-28,3,0,12.20.0,Workplace features,"previous days booking do not disappear, it comes as first item. We end up using previous days parking slot.. previous days parking details should disappear once that day is over",,,False,a506eaa7-5b6b-4865-97b7-c9327c46ee9b
-68,,False,2026-10-27,2,0,12.21.0,,App features won't work correctly.,,,False,45f59d17-61e7-4887-96c0-93f51e86ce50
-69,,False,2026-10-26,1,0,12.20.0,App stability & speed,crashes frequently gets reloaded in middle on marking the cabs,,,False,c5279d19-41ad-458e-a9e8-12e736162e4e
-70,,False,2026-10-26,1,0,12.17.0,,"worst app ever,no way to connect with any support or transport team",,,False,c919311e-e27f-4357-a9f0-7e748b44e654
-71,,False,2026-10-26,1,0,12.21.0,,update hone ke bad open nahi hote,,,False,e67c643a-e883-4a06-bc2d-773f3d207980
-72,,False,2026-10-24,1,0,12.20.0,App stability & speed; Live tracking & ETA,The app is too slow and is very slow to show the correct location and also the map face is really not good .. worst app to use,,,False,8603b38c-ead5-4531-9dc4-32005c9d345f
-73,,False,2026-10-24,1,0,,Issue reporting & support,unable too log in and even customer care not helpful,,,False,95946292-65c7-430d-b676-38fbddbd1046
-74,,False,2026-10-23,1,0,12.20.0,,"The transportation service has become one of the most poorly managed employee facilities. The team responsible for route mapping appears to lack even the basic understanding required to allocate employees to the correct routes. Employees residing in the West Zone are being unnecessarily clubbed with East Zone routes, resulting in inefficient transportation planning and unnecessary inconvenience for employees.",,,False,0cb3c4cb-c7ef-4e97-8ae5-a76e758ed3ea
-75,,False,2026-10-23,1,0,12.20.0,,Worst service,,,False,24c64783-f8b4-492f-91e2-25a9dd100c49
-76,,False,2026-10-22,2,0,12.20.0,Self-booking,not able to book schedule showing I don't have any shifts..it's very hard to book cab in app,,,False,fb5d7503-0d59-4fd6-849f-e159629d1ebd
-77,,False,2026-10-22,1,0,12.20.0,UI & interruptions,completely unintuitive,,,False,17707228-d616-4ae2-bc2c-3a50a24aad2f
-78,,False,2026-10-21,1,0,12.20.0,,poor service no proper management no schedule adherence no interactive from management lot of negligence.....and many more negatives,,,False,8f196fb6-c1b4-4a2d-b96e-965a8177f3df
-79,,False,2026-10-20,1,0,12.20.0,,"waste app, pathetic service, no two way communication available, Drivers do not take the responsibility to reach the passenger, they stand at one random place which is no way related to the passenger location. They don't have the knowledge of reading google maps. Pathetic Response from Admin team as they keep phone switched off. This is really ridiculous and keep the blame on passenger. Hopeless Service. They do not deserve even that one star.",,,False,17d8c9b9-0bd1-434e-ab06-29559cb45d5d
-80,,False,2026-10-20,1,0,12.20.0,,"worst service ever in cab services and amit is way to much uncooperative person ,",,,False,f9556b52-cb5b-4c5b-a4ff-48268933c426
-81,,False,2026-10-20,1,0,12.20.0,,lawde ka app aur lawde ki company,,,False,748751fd-b861-4c5a-b525-2472321a5930
-82,,False,2026-10-19,1,0,12.20.0,App stability & speed,can you please look after the bug because I am unable to open this application,,,False,7490bd42-d3c1-4930-bc67-acead5f7ab5b
-83,,False,2026-10-19,2,0,12.20.0,Self-booking,Unable to Schedule Manual Pickup and drop,,,False,4401a7b0-eeaa-49df-90b1-27834d95b539
-84,,False,2026-10-16,1,0,12.19.0,,worst app,,,False,2d34d17f-e87d-41b6-b035-d062b6843501
-85,,False,2026-10-16,1,0,12.20.0,,Genpact cabs can make u travel through the entire city With charging. Sequences are like wow.,,,False,6d759825-2dec-409b-b559-bf0eb8f02f7d
-86,,False,2026-10-15,3,0,12.20.0,,app needs to allow option to change office sites,,,False,98e23f68-0bc5-4f66-a488-bfbade071ffa
-87,,False,2026-10-15,1,0,12.20.0,,WORST WORST WORST SERVICE,,,False,7a38f29a-9c71-42bd-b607-332450fd253c
-88,,False,2026-10-14,1,0,,Ride & drop,worst drivers,,,False,7c2e8168-8faa-4d75-aba6-b41a962896fc
-89,,False,2026-10-14,3,0,12.20.0,,too many a times asks for confirmation after once form filled then too 😂,,,False,96da1c30-55db-4a2e-9cf4-3eef9606f693
-90,,False,2026-10-14,1,0,12.17.0,Issue reporting & support,third class customer care and service.,,,False,f6bb3692-c171-4d0b-accd-f25977fb555a
-91,,False,2026-10-13,1,0,12.20.0,Login & home address,not getting OTP or Mail OTP every useless App your developer or useless hire better person who knows how to build proper app,,,False,d6d55ca7-00c4-485c-90e1-18d3cd0c248c
-92,,False,2026-10-13,1,0,12.20.0,,does not work properly,,,False,88e588e3-3047-41d5-a478-81d6d3a5b8ce
-93,,False,2026-10-12,1,0,12.20.0,App stability & speed,"it says some bug in app, not able to open it",,,False,a1062e2d-fd3d-4fda-b3be-b8e52ef6f5fe
-94,,False,2026-10-12,1,0,12.20.0,App stability & speed,rubbish app. keeps crashing everyday.,,,False,64b51d1b-0bbd-489d-b43d-ce1d8cdf89db
-95,,False,2026-10-12,1,0,12.20.0,,Pathetic services. Cabbies do not communicate nor intimate while reaching to location or moving the cab.,,,False,4a9794ec-dd49-4e48-bef6-8c61efa7f651
-96,,False,2026-10-09,1,0,12.19.0,,worst app,,,False,40363b38-fa55-4571-af0f-ff6fb0463015
-97,,False,2026-10-09,1,0,,App stability & speed,"whenever i update this app, i am not able to open the app again, I need to uninstall and reinstall again. facing this issue since 3 months",,,False,60798e45-939e-4a99-8f5b-17383a891db6
-98,,False,2026-10-08,1,0,12.19.0,,its update made it worse,,,False,6b0ec80a-f39e-4548-85a7-cefd18c99c83
-99,,False,2026-10-08,1,0,12.19.0,Self-booking,your new update is a threat to person with medical condition. it just books you without informing if he's on waitlist or not. so annoying,,,False,387a67a5-1843-45ee-b837-91d7eb1fccce
-100,,False,2026-10-08,1,0,12.20.0,Issue reporting & support,"This application and also your transport management which very bad, they are not ready to help to employees. They all are only thinking about our benefits. That's it.",,,False,225d87f1-5d2f-4d23-ac26-ecda35211579
-101,,False,2026-10-08,1,0,12.19.0,UI & interruptions,very confusing the new features.,,,False,3a411c1e-a2cd-4d87-83d6-e89e9f76460d
-102,,False,2026-10-07,1,0,12.19.0,,bhot bekar hai,,,False,5a892b9d-a4d4-4ead-b699-c98f71a94d57
-103,,False,2026-10-07,1,0,12.19.0,Live tracking & ETA,the update is worse. it wont let you track the location of the van under an hour,,,False,61a4a85f-902d-4e2c-beff-9ff5850a16b7
-104,,False,2026-10-06,1,0,12.19.0,Login & home address,Pathetic . it logs out every time.,,,False,72e74b90-1da1-49cc-87c0-6bc42af65ba3
-105,,False,2026-10-06,1,0,,Login & home address,app is not sending otp,,,False,f603466c-c648-4802-94e4-44f2c9916d32
-106,,False,2026-10-05,1,0,12.19.0,App stability & speed; Self-booking,app stuck all the time unable to schedule pathetic,,,False,823b9c8b-afde-47e7-abad-fb60f14ea562
-107,,False,2026-10-04,1,0,,Login & home address,I try to login to this app but it's not sending any otp to login without login how we can use this app 😤😤😤 technical team please check once about this issue,,,False,e0d68839-6e59-4dd7-8f00-052cda79a063
-108,,False,2026-10-04,1,0,12.19.0,,good,,,False,527ddedf-47fb-452b-95f9-c968896d1aaf
-109,,False,2026-10-03,3,0,,App stability & speed,"a few days ago this app was working fine on my phone, but for the last 3 days it's not working at all. The app doesn't start on my phone, whenever I am opening it, it closes itself. I tried clearing data, reinstalled it, but no change. It's not opening at all.",,,False,133d2b88-b2d2-4fd4-9594-1ac26caf819e
-110,,False,2026-10-03,1,0,12.19.0,App stability & speed,Unable to open the app on my phone. closes as soon as I try to open,,,False,e735e280-9992-470e-b8df-d9b4a0e1e214
-111,,False,2026-10-02,1,0,12.19.0,Issue reporting & support; Ride & drop,Drivers are rude no professonalism and transport help team doesn't help at all,,,False,98db1b19-26e2-4e6d-937b-7319944a6fc0
-112,,False,2026-09-30,1,0,12.11.2,App stability & speed; Pickup & boarding; UI & interruptions,"This app is going from bad to horrible. The seat buckle verification is absolutely horrendous and the OTP keeps disappearing behind the seat belt check. To top it all, ads are being introduced. Why is there not some cache wherein a user has their ride details stored? instead it needs a network call every time you open the app which is annoying when you're underground without much internet",,,False,e12ed49a-d376-4cf2-9cfd-45cae0162feb
-113,,False,2026-09-30,1,0,12.19.0,,worst experience,,,False,210e4ab0-822c-4248-9e16-297d736f8fe0
-114,,False,2026-09-29,1,0,12.19.0,Issue reporting & support,"worst app, no feedback option for routing and journey.",,,False,85146e08-4f64-4ea2-9541-7a3d22af578e
-115,,False,2026-09-29,1,0,12.19.0,App stability & speed,"app stopped working in oneplus 12 android, please look into it.",,,False,852dfa4f-b414-4559-ae8d-5cc955fe97db
-116,,False,2026-09-29,1,0,12.19.0,App stability & speed,application not working with pixel 8 android version 17... installed and uninstalled...still not working...open and close automatically,,,False,7781ccc3-e390-49cb-b574-fb3213c2e74a
-117,,False,2026-09-28,1,0,12.19.0,App stability & speed,the application is not working properly show app error please fix it,,,False,3abb674f-e2b3-41d7-8439-772cfb23cd27
-118,,False,2026-09-28,1,0,,App stability & speed,This aap keeps on crashing due to some bug and there is No Update Available Yet... What will Working Professionals do who avail cab services???,,,False,0def625f-f0c8-4d3a-859d-4891c82c80ab
-119,,False,2026-09-27,1,0,12.19.0,App stability & speed,app crashed did not open in my mobile plx fixed it vivo v25 Pro,,,False,9936bf10-67dd-4e3e-aeb3-2bc420fb487a
-120,,False,2026-09-26,1,0,12.19.0,,worst transport ever had,,,False,85082941-1df5-4350-91cf-983886fbb10a
-121,,False,2026-09-25,1,0,12.19.0,App stability & speed; Issue reporting & support,You can't even write in built in feedback text box. full of bugs.,,,False,e64560af-5a09-4910-86bf-fdc689ab6bc1
-122,,False,2026-09-24,1,0,12.19.0,App stability & speed,not working and opening,,,False,a0ca92c8-e8ae-448b-81e6-5e4102107c94
-123,,False,2026-09-24,1,0,12.19.0,App stability & speed,everytime I download it won't open again after 1-2 days and I have to download it again,,,False,ef2acf20-b61f-4d2a-ba57-23d5206d418b
-124,,False,2026-09-23,1,0,12.19.0,Allocation & routing,as per mine experience ut should get zero review as they were not assigning cabs on time,,,False,88fa8703-20ab-4e8f-ab4d-07f59f254952
-125,,False,2026-09-23,1,0,12.18.1,App stability & speed,Slow after the update,,,False,8b0735a9-bd5e-453a-b1c8-81f741153ef2
-126,,False,2026-09-23,1,0,12.18.1,,pathetic application,,,False,eb176d64-81d0-447f-884f-fa7e1fa5e860
-127,,False,2026-09-23,1,0,12.18.1,,good app,,,False,7a707363-5c87-4607-a969-c1145075c724
-128,,False,2026-09-23,1,0,12.19.0,,absolutely rubbishhhhhh and disgusting application,,,False,7e2ab2b0-6370-4a94-81f6-36182d8a9ccc
-129,,False,2026-09-22,1,0,12.19.0,App stability & speed,not open,,,False,80fb6601-efa8-460c-903d-2835315a4322
-130,,False,2026-09-22,1,0,12.18.1,,worst app,,,False,9aa5b917-0428-41c6-a7af-9be2e4cde043
-131,,False,2026-09-21,1,0,12.18.1,,Worst app and Worst experience,,,False,e2aa92a6-7a35-4f92-8d57-edfdf74799b8
-132,,False,2026-09-21,1,0,,,disaponintmetnt,,,False,abf9ce53-a36d-4897-9fad-031610d57d88
-133,,False,2026-09-21,1,0,12.18.1,,bad,,,False,cb59dae2-185b-491b-b075-4042f4908825
-134,,False,2026-09-21,1,0,12.18.1,Pickup & boarding,Taytay-Five Neo 615pm sched is always late! Always more than an hour late!,,,False,05721a7c-55c6-4988-aad4-294192414118
-135,,False,2026-09-21,2,0,11.0.2,App stability & speed,"there is an issue with the app. While opening the app, it shows the app is not installed from the play store whereas I never used other places to install.",,,False,785327ff-5759-41b8-ba5f-c6eabed81c01
-136,,False,2026-09-20,2,0,12.18.1,UI & interruptions,it ask too much permission when I open the app on regular basis,,,False,c988bdd4-9208-485e-b843-ec01a15a0e6e
-137,,False,2026-09-19,1,0,12.18.1,UI & interruptions,why the hell no option of skip rating.if I don't want rate.,,,False,c4c982a7-763c-4e2b-889a-17109a961dc7
-138,,False,2026-09-18,1,0,12.18.1,UI & interruptions,Forcing users to compulsorily turn on notifications,,,False,bb8bc95d-2aca-4ea1-8ec2-a6f74f5de33f
-139,,False,2026-09-18,1,0,12.18.1,App stability & speed,it bugs all the time,,,False,11da949e-d57d-4f25-b876-cf9a96bed7ac
-140,,False,2026-09-18,1,0,12.18.1,App stability & speed,"first if the all the app itself is garbage , would crash after every 20days. Then the service , I dont know why companies even go with these retarded service , no ethics and no responsibility at all. Companies should absolutely avoid",,,False,145e34ef-5530-438b-bb8b-9dff2aed6e90
-141,,False,2026-09-17,1,0,12.18.1,,bekaar,,,False,fe44d5ef-c3aa-44f7-9762-7173c2ad97e6
-142,,False,2026-09-17,1,0,12.18.1,,bekar,,,False,dc194232-5824-46a2-ae7e-055e657105ed
-143,,False,2026-09-17,1,0,12.18.1,,not good app,,,False,29869433-ee7b-46d7-bd21-b374b7dd8406
-144,,False,2026-09-16,1,0,,Issue reporting & support,not avle to connect with helpdesk,,,False,1d7aa4a5-419d-42f4-8be5-d9096c09746d
-145,,False,2026-09-16,1,0,,Live tracking & ETA; Notifications,"Sometimes, the map gets stuck, which can cause delays. Please add an important feature where the timer starts at least 5 minutes before the driver arrives at my pickup location.",,,False,0fddfa5e-4c05-4aee-9412-1a44d52a9f1c
-146,,False,2026-09-15,1,0,12.18.0,Allocation & routing; Issue reporting & support,"When trying to reach helpdesk, the line disconnects. Cab ETA keeps changing and the worst part is routing & pickup timings, spending over 2 hours to reach office with in Gurugram",,,False,1239e342-ffd6-4a27-b815-54f7f3711b06
-147,,False,2026-09-15,3,0,12.18.1,Login & home address,it took time for generating OTP,,,False,3db67aeb-2d7f-4b6a-ab28-bd4ebd0e3199
-148,,False,2026-09-15,2,0,,App stability & speed; UI & interruptions,Worst app. Very very slow. Show Address is navigating 4 times to the same screen.,,,False,90549e2d-6239-4ea2-b6d9-8377168c8e3f
-149,,False,2026-09-15,1,0,12.18.1,,waste,,,False,907f3c80-e25a-4702-8fdd-33e0e538f88b
-150,,False,2026-09-14,1,0,,Allocation & routing,"filthy app, stupid pickup location for login time. The handlers of this app lack common sense. The best thing to do is to get a motorcycle or any private transport. public transport is a kind of slavery & top much dependency on stupid peoples",,,False,82341476-c4db-46e0-86f1-670fe93b74ca
-151,,False,2026-09-14,1,0,12.18.1,Live tracking & ETA,damned!! worst app. Can't do live tracking or live boarding activities. suddenly it shows up at your location. You guys loved surprises huh??!!! Ridiculous,,,False,7a6441a0-2383-4dd7-83f7-8d54c4af8111
-152,,False,2026-09-11,1,0,11.5.21,Issue reporting & support; Login & home address,I'm not able to login as it was automatically logged out and no otp received with registered mobile number and no one is helping me,,,False,c9c2d1f3-da5a-457f-b3cd-479afddacd8a
-153,,False,2026-09-11,1,0,12.18.1,,worst allstate cab management services!!! Very unprofessional... not recommended at all.,,,False,e6077207-c5c0-4521-8a4e-ee00d18263aa
-154,,False,2026-09-11,1,0,12.18.1,,it has good features,,,False,3090c84f-7a5e-4041-b578-2090f3a70536
-155,,False,2026-09-10,1,0,12.18.0,Ride & drop; Self-booking,waste app. driver will come to pickup point and wait for 1 hour but won't give a short call. this app will only accept 12 hour prior booking and 4 hour before return booking. rapido. uber and ola are better than this app,,,False,ac05786a-a047-40b3-8174-d8434282ad60
-156,,False,2026-09-09,3,0,12.18.0,Pickup & boarding,Can we get a chat+location option in this as it is difficult to co-ordinate with each other when there is a new pickup,,,False,0fd3b9d4-e346-452f-950b-46f7292733ed
-157,,False,2026-09-09,1,0,12.18.1,Login & home address,Unable to login in the App. Both Mobile Otp and Email OTP options are not working,,,False,d6cbf0b5-c7e3-4474-8a61-6a65d98ba8cf
-158,,False,2026-09-09,3,0,12.17.0,App stability & speed,app keeps showing no network even though the network is stable and all other apps working fine,,,False,2b0213c8-2dfe-4116-aecc-a27929059916
-159,,False,2026-09-09,1,0,12.18.0,,Such a worst App and worst moveinsync team,,,False,0bd62eff-171a-49ee-b384-3e468d20094e
-160,,False,2026-09-08,1,0,12.18.0,Pickup & boarding,can't even wait for 10min,,,False,efd234c0-5557-4143-b7e4-f850b2da668e
-161,,False,2026-09-08,1,0,12.18.0,Live tracking & ETA,"The Cab Tracker is useless, and it doesn't even update on time.",,,False,2211ba73-2abc-4b42-8664-6f77105ff11b
-162,,False,2026-09-07,1,0,12.17.0,Allocation & routing,worst routing location,,,False,0e4dbe76-d1d1-49f2-8f4b-e608c076e7c1
-163,,False,2026-09-07,1,0,12.16.1,UI & interruptions,"does give option to rate the trip, irrespective it's complete, no show or give any feedback",,,False,edf9c82f-f269-4a7a-a3b4-a6342ea5afc3
-164,,False,2026-09-05,3,0,12.17.0,Self-booking,bookings on Saturday not showing but there are logout trips that i just recently found out.,,,False,39af8053-adf1-4976-a101-6e6458bf659c
-165,,False,2026-09-04,1,0,12.17.0,Login & home address,"doesn't send OTP, email, txt, WhatsApp no otps.",,,False,d0013885-22ce-4c15-b188-eb1b58d912d3
-166,,False,2026-09-04,1,0,12.17.0,Issue reporting & support; Notifications,worst app. no feedback link. message comes wrongly before the vehicle arrives or reaches destination,,,False,2767a152-7aaa-4a0e-904c-1d620a20052f
-167,,False,2026-09-03,1,0,12.18.0,Issue reporting & support,no option to contact help desk,,,False,a2233738-7d08-4cfc-9f30-3756b03c91c6
-168,,False,2026-09-03,1,0,12.18.0,,The worst service as well as the worst app.,,,False,225443f9-4d69-4543-bb85-6c04f9f9a28a
-169,,False,2026-09-02,1,0,12.17.0,Login & home address,I couldn't able to access not even getting otp,,,False,19c6de5d-efbf-4f17-b143-fd1f3c48ac48
-170,,False,2026-09-02,2,0,12.17.0,Pickup & boarding,once we book a bus it should not have to be cancelled or made changes by other than employee. but here booked bus are till about to travel but reflecting no show,,,False,0f947251-87c6-4244-92b9-0df3218ca71e
-171,,False,2026-09-02,1,0,12.17.0,Login & home address,app is not working at all. it's not verifying my no neither my email.,,,False,73674f3d-0411-4948-b335-e3c379e3ba59
-172,,False,2026-09-02,1,0,12.17.0,Login & home address,OTP not received on mobile number and also not received on WhatsApp also,,,False,90c5e4ac-a4cd-41a0-b791-0afd21073740
-173,,False,2026-09-01,1,0,12.17.0,App stability & speed,"third class app, not working on mobile data anymore from last few days. works only on wifi. do you expect people carry wifi.",,,False,c8818d4d-e060-4f33-8025-07cd16bded1c
-174,,False,2026-09-01,1,0,12.18.0,Issue reporting & support; Self-booking,unable to book cabs and even the support team is not helping fix the issue ...,,,False,5b8a7608-5d55-47f7-a262-6872ef125240
-175,,False,2026-09-01,1,0,12.18.0,,worst apl ever,,,False,d385448a-e035-4a20-a220-aad62186e061
-176,,False,2026-08-31,1,0,12.17.0,App stability & speed,just keeps giving a blank screen everytime i try to open it,,,False,2b1d5a87-3cdf-44c9-9e75-54abae6ae991
-177,,False,2026-08-31,1,0,,UI & interruptions,Need to simplify the UI. There is alot of simplification needed,,,False,46d3b709-e3eb-4be3-a5af-50868cfc215a
-178,,False,2026-08-30,1,0,12.18.0,App stability & speed,"loads info very slow, to do the booking.",,,False,f01b63b7-917d-477d-9b44-cbae0f383bae
-179,,False,2026-08-29,1,0,,Issue reporting & support; Login & home address; Self-booking,Always help desk number is not reachable and for updating the mobile number is also not available 😕 😔 and for adhoc cab booking also not available via movei n syn app,,,False,8018129f-9ca4-4d16-8b16-575d62c5f6b2
-180,,False,2026-08-29,1,0,12.18.0,,super bad service with bad transport management. Company should release these transport vendors.,,,False,2964c65f-3c5f-4e55-9816-0db634fae32d
+36,,False,2026-11-27,2,0,12.23.0,,different drivers every time makes a troublesome if your Google coordinates are even a little dicey,,,False,c8c6b51a-2261-4108-9a53-5846660b889c
+37,,False,2026-11-26,1,0,12.20.0,UI & interruptions,the agreement appears each time when we the application starts.,,,False,16efc720-0c16-4984-a9ef-46924db7d48f
+38,,False,2026-11-25,1,0,12.22.0,,not able to open this app on my phone,,,False,09464548-d79e-4f42-9f82-6e5ddef8a525
+39,,False,2026-11-21,1,0,12.0,,"The app appears to be heavily biased towards drivers. No action is taken against drivers even when passengers raise complaints through the app. Most of the features seem designed to benefit drivers, while passenger concerns and grievances are consistently ignored.",,,False,b19ecb34-258b-478e-b9d0-8ad1c1ea6df0
+40,,False,2026-11-21,1,0,,,"facing issue with app, auto closing after opening",,,False,04d40462-f4c8-49c5-95f4-55cb92127012
+41,,False,2026-11-18,1,0,,Login & home address,not able to login. not getting otp on mobile text or whatsapp or email. how can i use it??,,,False,24e5124e-0a01-4973-bba1-838cb9a99377
+42,,False,2026-11-17,1,0,12.18.1,,very bad 43 days ofter payment pay 16 trips shortage i completed 36 trips but showing 20 trips bill was low total 12800 paid I ask acounts but data was chek 15 take time driver spend pocket money bill was stucked suffer every driver s i evernoth work trip shets but take time very worest,,,False,ccefa0e6-b497-4d49-a74c-aa168bd6200d
+43,,False,2026-11-16,2,0,12.21.0,Notifications,bookings done via app are lost. u realize this very late as there is no notification,,,False,7cbdf1b6-39da-4b7e-8135-5d3340910b95
+44,,False,2026-11-14,1,0,12.22.0,Live tracking & ETA,No way to see ETA,,,False,d5f68fe1-2de3-40b5-bfb7-c58642fc8ed4
+45,,False,2026-11-12,1,0,12.21.0,,subha jldi uthate h or rtt m last drop lgate h,,,False,43305afa-cca0-4ddc-ac2b-58d9ca29b6ae
+46,,False,2026-11-11,1,0,12.21.0,,I don't want to describe,,,False,265aeb05-49c3-4b14-8c34-8bb5afa0730d
+47,,False,2026-11-11,1,0,,App stability & speed,I have keep uninstalling and reinstalling multiple times in past 2 weeks,,,False,7e21a38e-83ea-4fac-acff-44a1a99202f3
+48,,False,2026-11-11,2,0,12.21.0,Pickup & boarding,"Good, but the contact details of drivers aren't reachable which really sucks.",,,False,389ab517-f02e-451c-b3f7-bad26b995808
+49,,False,2026-11-09,1,0,12.19.0,UI & interruptions,every day asking for rating and comments but no resolution on the complaints,,,False,b6b4c673-3c9a-4d32-8dbe-b96ad8dbd507
+50,,False,2026-11-08,1,0,12.22.0,,waste app,,,False,54a63599-0384-47d9-af03-448f98891db6
+51,,False,2026-11-05,1,0,,Pickup & boarding; Workplace features,worst corprate cab service app cab drivers marked you as no show without reaching to location and there help desk use less they only support them self,,,False,36ab6042-df1b-4825-acfe-4d800e37aeeb
+52,,False,2026-11-05,1,0,12.21.0,Live tracking & ETA,no proper tracking,,,False,e5bff41c-cd45-456f-8bc2-70f7d758efb6
+53,,False,2026-11-04,1,0,12.20.0,Ride & drop,they display the address to the driver however the driver would only get the authority to see the pin location. Because few of the drivers are very rude towards the passanger,,,False,617c4cee-9683-4123-a7cf-386ca2a6c4e4
+54,,False,2026-11-04,1,0,12.21.0,,tickets are being closed without my consent or agreement,,,False,260d13a9-0d99-4cdb-af13-3ee4953c0e33
+55,,False,2026-11-04,1,0,12.21.0,,worst service,,,False,ccb91c78-8f21-46f8-abbf-2c2b7c948e11
+56,,False,2026-11-04,1,0,12.21.0,App stability & speed,The app crashes every now and then. Not a great experience for me personally!,,,False,0369aeee-d7e6-4962-adc0-77a334b66f0c
+57,,False,2026-11-03,1,0,12.21.0,,very worst,,,False,c5f64c3c-51ae-43e6-b05b-61c95bace5af
+58,,False,2026-11-03,1,0,,App stability & speed,App does not open. Keeps crashing after the new update.,,,False,7099b2d7-9dcb-45cb-a769-a4836388b431
+59,,False,2026-11-03,1,0,12.21.0,,worst app,,,False,b4ff1a69-fa5d-4ce3-8069-b55bb2dc031a
+60,,False,2026-11-03,1,0,,Live tracking & ETA; Pickup & boarding,"This app is worstly designed for office employees it will just show cab location, cab details and no of persons in cab. Main worst thing if we try to call cab driver the number won't connect. Additionally, the worst thing is we don't whether cab is started or went to office or crossed us or we missed cab. It will just show how far cab is away from us, it won't show whether cab moved a head or not. Short time your company got good customer base don't spoil it.",,,False,af706b88-1f74-4254-ad3b-961aa5f914e5
+61,,False,2026-11-03,1,0,,,the worst vendor people management,,,False,d39d7b4a-e6ae-42be-969d-7f7ec6bdf8bd
+62,,False,2026-11-03,3,0,,,previously co passenger details are shown in the app currently the details are not available in the app it creates confusion and delay or extends our travel time due to unavailability of the details,,,False,98a52c2d-ab4f-4727-82a0-28a68275210e
+63,,False,2026-11-02,2,0,12.21.0,Live tracking & ETA,poor navigation design,,,False,23cc9fc6-7f00-40e9-9d93-87d8a5fa4e80
+64,,False,2026-11-01,1,0,12.21.0,,wrost app,,,False,21ce6fea-5296-4384-a49f-c7167657b044
+65,,False,2026-11-01,1,0,,,I'm not resistered on this app,,,False,afbe639a-5bb9-4b94-b496-dfbb741c895a
+66,,False,2026-10-31,1,0,,,lavadalo service,,,False,f7e400e6-85e9-4d29-8f8b-b90ec1541509
+67,,False,2026-10-29,1,0,12.18.1,,no phone no. for transport,,,False,efe00f72-836e-4455-8171-ddc57d905490
+68,,False,2026-10-28,1,0,,Login & home address,OTP not received.,,,False,6f676cae-5eda-4612-aefd-ca28f3507214
+69,,False,2026-10-28,3,0,12.20.0,Workplace features,"previous days booking do not disappear, it comes as first item. We end up using previous days parking slot.. previous days parking details should disappear once that day is over",,,False,a506eaa7-5b6b-4865-97b7-c9327c46ee9b
+70,,False,2026-10-27,2,0,12.21.0,,App features won't work correctly.,,,False,45f59d17-61e7-4887-96c0-93f51e86ce50
+71,,False,2026-10-26,1,0,12.20.0,App stability & speed,crashes frequently gets reloaded in middle on marking the cabs,,,False,c5279d19-41ad-458e-a9e8-12e736162e4e
+72,,False,2026-10-26,1,0,12.17.0,,"worst app ever,no way to connect with any support or transport team",,,False,c919311e-e27f-4357-a9f0-7e748b44e654
+73,,False,2026-10-26,1,0,12.21.0,,update hone ke bad open nahi hote,,,False,e67c643a-e883-4a06-bc2d-773f3d207980
+74,,False,2026-10-24,1,0,12.20.0,App stability & speed; Live tracking & ETA,The app is too slow and is very slow to show the correct location and also the map face is really not good .. worst app to use,,,False,8603b38c-ead5-4531-9dc4-32005c9d345f
+75,,False,2026-10-24,1,0,,Issue reporting & support,unable too log in and even customer care not helpful,,,False,95946292-65c7-430d-b676-38fbddbd1046
+76,,False,2026-10-23,1,0,12.20.0,,"The transportation service has become one of the most poorly managed employee facilities. The team responsible for route mapping appears to lack even the basic understanding required to allocate employees to the correct routes. Employees residing in the West Zone are being unnecessarily clubbed with East Zone routes, resulting in inefficient transportation planning and unnecessary inconvenience for employees.",,,False,0cb3c4cb-c7ef-4e97-8ae5-a76e758ed3ea
+77,,False,2026-10-23,1,0,12.20.0,,Worst service,,,False,24c64783-f8b4-492f-91e2-25a9dd100c49
+78,,False,2026-10-22,2,0,12.20.0,Self-booking,not able to book schedule showing I don't have any shifts..it's very hard to book cab in app,,,False,fb5d7503-0d59-4fd6-849f-e159629d1ebd
+79,,False,2026-10-22,1,0,12.20.0,UI & interruptions,completely unintuitive,,,False,17707228-d616-4ae2-bc2c-3a50a24aad2f
+80,,False,2026-10-21,1,0,12.20.0,,poor service no proper management no schedule adherence no interactive from management lot of negligence.....and many more negatives,,,False,8f196fb6-c1b4-4a2d-b96e-965a8177f3df
+81,,False,2026-10-20,1,0,12.20.0,,"waste app, pathetic service, no two way communication available, Drivers do not take the responsibility to reach the passenger, they stand at one random place which is no way related to the passenger location. They don't have the knowledge of reading google maps. Pathetic Response from Admin team as they keep phone switched off. This is really ridiculous and keep the blame on passenger. Hopeless Service. They do not deserve even that one star.",,,False,17d8c9b9-0bd1-434e-ab06-29559cb45d5d
+82,,False,2026-10-20,1,0,12.20.0,,"worst service ever in cab services and amit is way to much uncooperative person ,",,,False,f9556b52-cb5b-4c5b-a4ff-48268933c426
+83,,False,2026-10-20,1,0,12.20.0,,lawde ka app aur lawde ki company,,,False,748751fd-b861-4c5a-b525-2472321a5930
+84,,False,2026-10-19,1,0,12.20.0,App stability & speed,can you please look after the bug because I am unable to open this application,,,False,7490bd42-d3c1-4930-bc67-acead5f7ab5b
+85,,False,2026-10-19,2,0,12.20.0,Self-booking,Unable to Schedule Manual Pickup and drop,,,False,4401a7b0-eeaa-49df-90b1-27834d95b539
+86,,False,2026-10-16,1,0,12.19.0,,worst app,,,False,2d34d17f-e87d-41b6-b035-d062b6843501
+87,,False,2026-10-16,1,0,12.20.0,,Genpact cabs can make u travel through the entire city With charging. Sequences are like wow.,,,False,6d759825-2dec-409b-b559-bf0eb8f02f7d
+88,,False,2026-10-15,3,0,12.20.0,,app needs to allow option to change office sites,,,False,98e23f68-0bc5-4f66-a488-bfbade071ffa
+89,,False,2026-10-15,1,0,12.20.0,,WORST WORST WORST SERVICE,,,False,7a38f29a-9c71-42bd-b607-332450fd253c
+90,,False,2026-10-14,1,0,,Ride & drop,worst drivers,,,False,7c2e8168-8faa-4d75-aba6-b41a962896fc
+91,,False,2026-10-14,3,0,12.20.0,,too many a times asks for confirmation after once form filled then too 😂,,,False,96da1c30-55db-4a2e-9cf4-3eef9606f693
+92,,False,2026-10-14,1,0,12.17.0,Issue reporting & support,third class customer care and service.,,,False,f6bb3692-c171-4d0b-accd-f25977fb555a
+93,,False,2026-10-13,1,0,12.20.0,Login & home address,not getting OTP or Mail OTP every useless App your developer or useless hire better person who knows how to build proper app,,,False,d6d55ca7-00c4-485c-90e1-18d3cd0c248c
+94,,False,2026-10-13,1,0,12.20.0,,does not work properly,,,False,88e588e3-3047-41d5-a478-81d6d3a5b8ce
+95,,False,2026-10-12,1,0,12.20.0,App stability & speed,"it says some bug in app, not able to open it",,,False,a1062e2d-fd3d-4fda-b3be-b8e52ef6f5fe
+96,,False,2026-10-12,1,0,12.20.0,App stability & speed,rubbish app. keeps crashing everyday.,,,False,64b51d1b-0bbd-489d-b43d-ce1d8cdf89db
+97,,False,2026-10-12,1,0,12.20.0,,Pathetic services. Cabbies do not communicate nor intimate while reaching to location or moving the cab.,,,False,4a9794ec-dd49-4e48-bef6-8c61efa7f651
+98,,False,2026-10-09,1,0,12.19.0,,worst app,,,False,40363b38-fa55-4571-af0f-ff6fb0463015
+99,,False,2026-10-09,1,0,,App stability & speed,"whenever i update this app, i am not able to open the app again, I need to uninstall and reinstall again. facing this issue since 3 months",,,False,60798e45-939e-4a99-8f5b-17383a891db6
+100,,False,2026-10-08,1,0,12.19.0,,its update made it worse,,,False,6b0ec80a-f39e-4548-85a7-cefd18c99c83
+101,,False,2026-10-08,1,0,12.19.0,Self-booking,your new update is a threat to person with medical condition. it just books you without informing if he's on waitlist or not. so annoying,,,False,387a67a5-1843-45ee-b837-91d7eb1fccce
+102,,False,2026-10-08,1,0,12.20.0,Issue reporting & support,"This application and also your transport management which very bad, they are not ready to help to employees. They all are only thinking about our benefits. That's it.",,,False,225d87f1-5d2f-4d23-ac26-ecda35211579
+103,,False,2026-10-08,1,0,12.19.0,UI & interruptions,very confusing the new features.,,,False,3a411c1e-a2cd-4d87-83d6-e89e9f76460d
+104,,False,2026-10-07,1,0,12.19.0,,bhot bekar hai,,,False,5a892b9d-a4d4-4ead-b699-c98f71a94d57
+105,,False,2026-10-07,1,0,12.19.0,Live tracking & ETA,the update is worse. it wont let you track the location of the van under an hour,,,False,61a4a85f-902d-4e2c-beff-9ff5850a16b7
+106,,False,2026-10-06,1,0,12.19.0,Login & home address,Pathetic . it logs out every time.,,,False,72e74b90-1da1-49cc-87c0-6bc42af65ba3
+107,,False,2026-10-06,1,0,,Login & home address,app is not sending otp,,,False,f603466c-c648-4802-94e4-44f2c9916d32
+108,,False,2026-10-05,1,0,12.19.0,App stability & speed; Self-booking,app stuck all the time unable to schedule pathetic,,,False,823b9c8b-afde-47e7-abad-fb60f14ea562
+109,,False,2026-10-04,1,0,,Login & home address,I try to login to this app but it's not sending any otp to login without login how we can use this app 😤😤😤 technical team please check once about this issue,,,False,e0d68839-6e59-4dd7-8f00-052cda79a063
+110,,False,2026-10-04,1,0,12.19.0,,good,,,False,527ddedf-47fb-452b-95f9-c968896d1aaf
+111,,False,2026-10-03,3,0,,App stability & speed,"a few days ago this app was working fine on my phone, but for the last 3 days it's not working at all. The app doesn't start on my phone, whenever I am opening it, it closes itself. I tried clearing data, reinstalled it, but no change. It's not opening at all.",,,False,133d2b88-b2d2-4fd4-9594-1ac26caf819e
+112,,False,2026-10-03,1,0,12.19.0,App stability & speed,Unable to open the app on my phone. closes as soon as I try to open,,,False,e735e280-9992-470e-b8df-d9b4a0e1e214
+113,,False,2026-10-02,1,0,12.19.0,Issue reporting & support; Ride & drop,Drivers are rude no professonalism and transport help team doesn't help at all,,,False,98db1b19-26e2-4e6d-937b-7319944a6fc0
+114,,False,2026-09-30,1,0,12.11.2,App stability & speed; Pickup & boarding; UI & interruptions,"This app is going from bad to horrible. The seat buckle verification is absolutely horrendous and the OTP keeps disappearing behind the seat belt check. To top it all, ads are being introduced. Why is there not some cache wherein a user has their ride details stored? instead it needs a network call every time you open the app which is annoying when you're underground without much internet",,,False,e12ed49a-d376-4cf2-9cfd-45cae0162feb
+115,,False,2026-09-30,1,0,12.19.0,,worst experience,,,False,210e4ab0-822c-4248-9e16-297d736f8fe0
+116,,False,2026-09-29,1,0,12.19.0,Issue reporting & support,"worst app, no feedback option for routing and journey.",,,False,85146e08-4f64-4ea2-9541-7a3d22af578e
+117,,False,2026-09-29,1,0,12.19.0,App stability & speed,"app stopped working in oneplus 12 android, please look into it.",,,False,852dfa4f-b414-4559-ae8d-5cc955fe97db
+118,,False,2026-09-29,1,0,12.19.0,App stability & speed,application not working with pixel 8 android version 17... installed and uninstalled...still not working...open and close automatically,,,False,7781ccc3-e390-49cb-b574-fb3213c2e74a
+119,,False,2026-09-28,1,0,12.19.0,App stability & speed,the application is not working properly show app error please fix it,,,False,3abb674f-e2b3-41d7-8439-772cfb23cd27
+120,,False,2026-09-28,1,0,,App stability & speed,This aap keeps on crashing due to some bug and there is No Update Available Yet... What will Working Professionals do who avail cab services???,,,False,0def625f-f0c8-4d3a-859d-4891c82c80ab
+121,,False,2026-09-27,1,0,12.19.0,App stability & speed,app crashed did not open in my mobile plx fixed it vivo v25 Pro,,,False,9936bf10-67dd-4e3e-aeb3-2bc420fb487a
+122,,False,2026-09-26,1,0,12.19.0,,worst transport ever had,,,False,85082941-1df5-4350-91cf-983886fbb10a
+123,,False,2026-09-25,1,0,12.19.0,App stability & speed; Issue reporting & support,You can't even write in built in feedback text box. full of bugs.,,,False,e64560af-5a09-4910-86bf-fdc689ab6bc1
+124,,False,2026-09-24,1,0,12.19.0,App stability & speed,not working and opening,,,False,a0ca92c8-e8ae-448b-81e6-5e4102107c94
+125,,False,2026-09-24,1,0,12.19.0,App stability & speed,everytime I download it won't open again after 1-2 days and I have to download it again,,,False,ef2acf20-b61f-4d2a-ba57-23d5206d418b
+126,,False,2026-09-23,1,0,12.19.0,Allocation & routing,as per mine experience ut should get zero review as they were not assigning cabs on time,,,False,88fa8703-20ab-4e8f-ab4d-07f59f254952
+127,,False,2026-09-23,1,0,12.18.1,App stability & speed,Slow after the update,,,False,8b0735a9-bd5e-453a-b1c8-81f741153ef2
+128,,False,2026-09-23,1,0,12.18.1,,pathetic application,,,False,eb176d64-81d0-447f-884f-fa7e1fa5e860
+129,,False,2026-09-23,1,0,12.18.1,,good app,,,False,7a707363-5c87-4607-a969-c1145075c724
+130,,False,2026-09-23,1,0,12.19.0,,absolutely rubbishhhhhh and disgusting application,,,False,7e2ab2b0-6370-4a94-81f6-36182d8a9ccc
+131,,False,2026-09-22,1,0,12.19.0,App stability & speed,not open,,,False,80fb6601-efa8-460c-903d-2835315a4322
+132,,False,2026-09-22,1,0,12.18.1,,worst app,,,False,9aa5b917-0428-41c6-a7af-9be2e4cde043
+133,,False,2026-09-21,1,0,12.18.1,,Worst app and Worst experience,,,False,e2aa92a6-7a35-4f92-8d57-edfdf74799b8
+134,,False,2026-09-21,1,0,,,disaponintmetnt,,,False,abf9ce53-a36d-4897-9fad-031610d57d88
+135,,False,2026-09-21,1,0,12.18.1,,bad,,,False,cb59dae2-185b-491b-b075-4042f4908825
+136,,False,2026-09-21,1,0,12.18.1,Pickup & boarding,Taytay-Five Neo 615pm sched is always late! Always more than an hour late!,,,False,05721a7c-55c6-4988-aad4-294192414118
+137,,False,2026-09-21,2,0,11.0.2,App stability & speed,"there is an issue with the app. While opening the app, it shows the app is not installed from the play store whereas I never used other places to install.",,,False,785327ff-5759-41b8-ba5f-c6eabed81c01
+138,,False,2026-09-20,2,0,12.18.1,UI & interruptions,it ask too much permission when I open the app on regular basis,,,False,c988bdd4-9208-485e-b843-ec01a15a0e6e
+139,,False,2026-09-19,1,0,12.18.1,UI & interruptions,why the hell no option of skip rating.if I don't want rate.,,,False,c4c982a7-763c-4e2b-889a-17109a961dc7
+140,,False,2026-09-18,1,0,12.18.1,UI & interruptions,Forcing users to compulsorily turn on notifications,,,False,bb8bc95d-2aca-4ea1-8ec2-a6f74f5de33f
+141,,False,2026-09-18,1,0,12.18.1,App stability & speed,it bugs all the time,,,False,11da949e-d57d-4f25-b876-cf9a96bed7ac
+142,,False,2026-09-18,1,0,12.18.1,App stability & speed,"first if the all the app itself is garbage , would crash after every 20days. Then the service , I dont know why companies even go with these retarded service , no ethics and no responsibility at all. Companies should absolutely avoid",,,False,145e34ef-5530-438b-bb8b-9dff2aed6e90
+143,,False,2026-09-17,1,0,12.18.1,,bekaar,,,False,fe44d5ef-c3aa-44f7-9762-7173c2ad97e6
+144,,False,2026-09-17,1,0,12.18.1,,bekar,,,False,dc194232-5824-46a2-ae7e-055e657105ed
+145,,False,2026-09-17,1,0,12.18.1,,not good app,,,False,29869433-ee7b-46d7-bd21-b374b7dd8406
+146,,False,2026-09-16,1,0,,Issue reporting & support,not avle to connect with helpdesk,,,False,1d7aa4a5-419d-42f4-8be5-d9096c09746d
+147,,False,2026-09-16,1,0,,Live tracking & ETA; Notifications,"Sometimes, the map gets stuck, which can cause delays. Please add an important feature where the timer starts at least 5 minutes before the driver arrives at my pickup location.",,,False,0fddfa5e-4c05-4aee-9412-1a44d52a9f1c
+148,,False,2026-09-15,1,0,12.18.0,Allocation & routing; Issue reporting & support,"When trying to reach helpdesk, the line disconnects. Cab ETA keeps changing and the worst part is routing & pickup timings, spending over 2 hours to reach office with in Gurugram",,,False,1239e342-ffd6-4a27-b815-54f7f3711b06
+149,,False,2026-09-15,3,0,12.18.1,Login & home address,it took time for generating OTP,,,False,3db67aeb-2d7f-4b6a-ab28-bd4ebd0e3199
+150,,False,2026-09-15,2,0,,App stability & speed; UI & interruptions,Worst app. Very very slow. Show Address is navigating 4 times to the same screen.,,,False,90549e2d-6239-4ea2-b6d9-8377168c8e3f
+151,,False,2026-09-15,1,0,12.18.1,,waste,,,False,907f3c80-e25a-4702-8fdd-33e0e538f88b
+152,,False,2026-09-14,1,0,,Allocation & routing,"filthy app, stupid pickup location for login time. The handlers of this app lack common sense. The best thing to do is to get a motorcycle or any private transport. public transport is a kind of slavery & top much dependency on stupid peoples",,,False,82341476-c4db-46e0-86f1-670fe93b74ca
+153,,False,2026-09-14,1,0,12.18.1,Live tracking & ETA,damned!! worst app. Can't do live tracking or live boarding activities. suddenly it shows up at your location. You guys loved surprises huh??!!! Ridiculous,,,False,7a6441a0-2383-4dd7-83f7-8d54c4af8111
+154,,False,2026-09-11,1,0,11.5.21,Issue reporting & support; Login & home address,I'm not able to login as it was automatically logged out and no otp received with registered mobile number and no one is helping me,,,False,c9c2d1f3-da5a-457f-b3cd-479afddacd8a
+155,,False,2026-09-11,1,0,12.18.1,,worst allstate cab management services!!! Very unprofessional... not recommended at all.,,,False,e6077207-c5c0-4521-8a4e-ee00d18263aa
+156,,False,2026-09-11,1,0,12.18.1,,it has good features,,,False,3090c84f-7a5e-4041-b578-2090f3a70536
+157,,False,2026-09-10,1,0,12.18.0,Ride & drop; Self-booking,waste app. driver will come to pickup point and wait for 1 hour but won't give a short call. this app will only accept 12 hour prior booking and 4 hour before return booking. rapido. uber and ola are better than this app,,,False,ac05786a-a047-40b3-8174-d8434282ad60
+158,,False,2026-09-09,3,0,12.18.0,Pickup & boarding,Can we get a chat+location option in this as it is difficult to co-ordinate with each other when there is a new pickup,,,False,0fd3b9d4-e346-452f-950b-46f7292733ed
+159,,False,2026-09-09,1,0,12.18.1,Login & home address,Unable to login in the App. Both Mobile Otp and Email OTP options are not working,,,False,d6cbf0b5-c7e3-4474-8a61-6a65d98ba8cf
+160,,False,2026-09-09,3,0,12.17.0,App stability & speed,app keeps showing no network even though the network is stable and all other apps working fine,,,False,2b0213c8-2dfe-4116-aecc-a27929059916
+161,,False,2026-09-09,1,0,12.18.0,,Such a worst App and worst moveinsync team,,,False,0bd62eff-171a-49ee-b384-3e468d20094e
+162,,False,2026-09-08,1,0,12.18.0,Pickup & boarding,can't even wait for 10min,,,False,efd234c0-5557-4143-b7e4-f850b2da668e
+163,,False,2026-09-08,1,0,12.18.0,Live tracking & ETA,"The Cab Tracker is useless, and it doesn't even update on time.",,,False,2211ba73-2abc-4b42-8664-6f77105ff11b
+164,,False,2026-09-07,1,0,12.17.0,Allocation & routing,worst routing location,,,False,0e4dbe76-d1d1-49f2-8f4b-e608c076e7c1
+165,,False,2026-09-07,1,0,12.16.1,UI & interruptions,"does give option to rate the trip, irrespective it's complete, no show or give any feedback",,,False,edf9c82f-f269-4a7a-a3b4-a6342ea5afc3
+166,,False,2026-09-05,3,0,12.17.0,Self-booking,bookings on Saturday not showing but there are logout trips that i just recently found out.,,,False,39af8053-adf1-4976-a101-6e6458bf659c
+167,,False,2026-09-04,1,0,12.17.0,Login & home address,"doesn't send OTP, email, txt, WhatsApp no otps.",,,False,d0013885-22ce-4c15-b188-eb1b58d912d3
+168,,False,2026-09-04,1,0,12.17.0,Issue reporting & support; Notifications,worst app. no feedback link. message comes wrongly before the vehicle arrives or reaches destination,,,False,2767a152-7aaa-4a0e-904c-1d620a20052f
+169,,False,2026-09-03,1,0,12.18.0,Issue reporting & support,no option to contact help desk,,,False,a2233738-7d08-4cfc-9f30-3756b03c91c6
+170,,False,2026-09-03,1,0,12.18.0,,The worst service as well as the worst app.,,,False,225443f9-4d69-4543-bb85-6c04f9f9a28a
+171,,False,2026-09-02,1,0,12.17.0,Login & home address,I couldn't able to access not even getting otp,,,False,19c6de5d-efbf-4f17-b143-fd1f3c48ac48
+172,,False,2026-09-02,2,0,12.17.0,Pickup & boarding,once we book a bus it should not have to be cancelled or made changes by other than employee. but here booked bus are till about to travel but reflecting no show,,,False,0f947251-87c6-4244-92b9-0df3218ca71e
+173,,False,2026-09-02,1,0,12.17.0,Login & home address,app is not working at all. it's not verifying my no neither my email.,,,False,73674f3d-0411-4948-b335-e3c379e3ba59
+174,,False,2026-09-02,1,0,12.17.0,Login & home address,OTP not received on mobile number and also not received on WhatsApp also,,,False,90c5e4ac-a4cd-41a0-b791-0afd21073740
+175,,False,2026-09-01,1,0,12.17.0,App stability & speed,"third class app, not working on mobile data anymore from last few days. works only on wifi. do you expect people carry wifi.",,,False,c8818d4d-e060-4f33-8025-07cd16bded1c
+176,,False,2026-09-01,1,0,12.18.0,Issue reporting & support; Self-booking,unable to book cabs and even the support team is not helping fix the issue ...,,,False,5b8a7608-5d55-47f7-a262-6872ef125240
+177,,False,2026-09-01,1,0,12.18.0,,worst apl ever,,,False,d385448a-e035-4a20-a220-aad62186e061
+178,,False,2026-08-31,1,0,12.17.0,App stability & speed,just keeps giving a blank screen everytime i try to open it,,,False,2b1d5a87-3cdf-44c9-9e75-54abae6ae991
+179,,False,2026-08-31,1,0,,UI & interruptions,Need to simplify the UI. There is alot of simplification needed,,,False,46d3b709-e3eb-4be3-a5af-50868cfc215a
+180,,False,2026-08-30,1,0,12.18.0,App stability & speed,"loads info very slow, to do the booking.",,,False,f01b63b7-917d-477d-9b44-cbae0f383bae
+181,,False,2026-08-29,1,0,,Issue reporting & support; Login & home address; Self-booking,Always help desk number is not reachable and for updating the mobile number is also not available 😕 😔 and for adhoc cab booking also not available via movei n syn app,,,False,8018129f-9ca4-4d16-8b16-575d62c5f6b2
+182,,False,2026-08-29,1,0,12.18.0,,super bad service with bad transport management. Company should release these transport vendors.,,,False,2964c65f-3c5f-4e55-9816-0db634fae32d
